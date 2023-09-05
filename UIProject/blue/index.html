@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html> 
+<head> 
+    <title>ViSAP - ExcelSoft</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
+    <link href="style/index.css" rel="stylesheet" />
+    <link href="style/slider.css" rel="stylesheet" />
+    <link href="../style/default/jcarousel.basic.css" rel="stylesheet" />
+    <link href="style/player.blue.css" rel="stylesheet" type="text/css" /> 
+    <style type="text/css">
+        .mcd-menu li a > i.icon2
+        {
+            background-position: -42px -46px;
+        }
+    </style>
+    <link href="style/player.blue.css" rel="stylesheet" type="text/css" />
+    <script src="../scripts/frameworks/jquery/jquery-1.10.2.min.js"></script>
+    <script src="../scripts/frameworks/jquery/jquery.cslider.js"></script>
+    <script src="../scripts/frameworks/jquery/jquery.blockUI.js"></script>
+    <script src="script/modernizr.custom.28468.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="../scripts/frameworks/visap.js"></script>
+    <script src="../scripts/frameworks/player.js"></script>
+    <script src="script/index.js"></script>
+    <script type="text/javascript">        $(document).ready(ViBlue.getReady);</script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="main">
+            <div class="logout_section">
+                Welcome,&nbsp;<label id="uName">Username</label>
+                <a href="#" onclick="ViBlue.logout();" class="logout">Logout</a>
+            </div>
+            <!-- start main -->
+            <div class="grid1_of_1">
+                <!-- start grid1_of_1 -->
+                <div class="menu">
+                    <!-- start menu -->
+                    <ul class="mcd-menu">
+                        <li><a href="http://www.youtube.com/videoediting" target="_blank"><i class="icon1"></i>
+                            <strong>Blog</strong> </a></li>
+                        <li><a href="#" class="active"><i class="icon2"></i><strong>Catalog</strong> </a>
+                        </li>
+                        <li><a href="editActions.html"><i class="icon5"></i><strong>Edit</strong> </a></li>
+                        <li><a href="#contactUs" onclick="javascript:ViBlue.showPlayer(false);">
+                            <i class=" icon3"></i><strong>Contact</strong> </a></li>
+                    </ul>
+                </div>
+                <!-- end menu -->
+                <div class="grids_of_2" id="mainViConatainer">
+                    <!-- start grids_of_2 -->
+                    <div id="subcontainer">
+                        <div class="slider">
+                            <!-- start slider -->
+                            <div id="da-slider" class="da-slider da-cusor">
+                                <!-- start slider -->
+                                <nav class="da-arrows">
+                                    <span class="da-arrows-prev"></span><span class="da-arrows-next"></span>
+                                </nav>
+                            </div>
+                            <!-- end slider -->
+                        </div>
+                        <!-- end slider -->
+                        <div class="grid_right">
+                            <ul>
+                                <li class="color1">
+                                    <img src="" alt="" onerror="javascript:ViBlue.onImgError(this);" id="favVid1" class="da-cusor vidImg" />
+                                </li>
+                                <li class="color2">
+                                    <img src="" alt="" onerror="javascript:ViBlue.onImgError(this);" id="favVid2" class="da-cusor vidImg" />
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                    <!-- Player -Start- -->
+                    <div id="playContainer" class="hideEle">
+                        <div class="da-wrapper">
+                            <div>
+                                <div id="videoContainer" class="vidcontainer">
+                                </div>
+                                <div id="tags" class="divTags"></div>
+                                 <div id="myLinks" class="divTags"></div>	 
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Player -End- -->
+                </div>
+                <!-- end grids_of_2 -->
+            </div>
+            <!-- end grid1_of_1 -->
+            <div class="grid1_of_2">
+                <!-- start grid1_of_2 -->
+                <div class="grid1_of_list1">
+                    <!-- start grid1_of_list1 -->
+                    <div class="grid_img">
+                        <img src="images/visap2.png" alt="" />
+                    </div>
+                    <div class="grid_text3">
+                        <input type="text" placeholder="Search video" class="searchVideo" title="Search video by Title / Tag"
+                            onkeyup="javascript: ViBlue.doVidSearch({ obj: this, e: event });" />
+                    </div>
+                    <div class="grid_text grid_text2" id="videoListContainer">
+                        <ul class="list1" id="videoList">
+                            <div class="clear">
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end grid1_of_2 -->
+            <div class="clear">
+            </div>
+            <div class="copy">
+                <!-- start copy -->
+                <p class="link">
+                    <span>© All rights reserved | ViSAP by&nbsp;<a href="http://www.excelindia.com/"
+                        target="_blank"> Excelsoft</a></span>
+                </p>
+            </div>
+            <div class="spans_of_2" id="contactUs">
+                <!-- start spans_of_2 -->
+                <div class="span_of_1">
+                    <!-- start span_of_1 -->
+                    <div class="span_of_text">
+                        <h4>
+                            contact form</h4>
+                    </div>
+                    <div class="contact_form">
+                        <span>your mail</span>
+                        <input type="text" class="text" placeholder="hello@mail.com">
+                        <span>subject</span>
+                        <input type="text" class="text" placeholder="Add a subject here">
+                        <span>message</span>
+                        <textarea placeholder="Message"></textarea>
+                        <div>
+                            <input type="reset" value="cancel" onclick="document.location='#top';">
+                            <input type="submit" value="send mail">
+                            <div class="clear">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end span1_of_1 -->
+                <div class="span_of_2">
+                    <!-- start span_of_2 -->
+                    <span class="span_of_img">
+                        <img src="images/excelsoft.jpeg" alt="" class="excelsoftimg" />
+                    </span>
+                    <div class="span_of_list">
+                        <div class="span1_of_1">
+                            <h4>
+                                contact US</h4>
+                        </div>
+                        <div class="span1_of_2">
+                            <p>
+                                <h4>
+                                    Company Information :
+                                </h4>
+                                Excelsoft Technologies Pvt Ltd</br> 1-B, Hootagalli Industrial Area,</br> Belwadi
+                                Post, Mysore- 570018,</br> Karnataka,</br> Phone:(0821) 4282000,</br> Fax: (0821)
+                                4282208.</br>
+                            </p>
+                            <a class="arrow" href="#"><span>Home</span></a>
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+                <!-- end span_of_2 -->
+                <div class="clear">
+                </div>
+            </div>
+            <!-- end spans_of_2 -->
+            <div class="copy">
+                <p class="link">
+                    <span>© All rights reserved | ViSAP by&nbsp;<a href="http://www.excelindia.com/"
+                        target="_blank"> Excelsoft</a></span>
+                </p>
+            </div>
+            <!-- Login dialog -Start- -->
+            <div class="span_of_1 loginform hideEle" id="loginform">
+                <div class="span_of_text span_of_text2" id="textofspan">
+                    <h4>
+                        Login</h4>
+                </div>
+                <div class="contact_form logininfo" id="logininfo">
+                    <label class="wrgmsg hideEle" id="loginmsg">
+                    </label>
+                    <span></span>
+                    <input type="text" class="text" list="dtUserList" placeholder="Username" title="Username"
+                        id="txtUsername">
+                    <span></span>
+                    <input type="password" class="text" placeholder="Password" title="Password" id="txtPassword">
+                    <div>
+                         <input type="submit" value="Login" class="login" onclick="ViBlue.login();">
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+                <datalist id="dtUserList">
+                    <option value="Instructor1"></option>
+                    <option value="Instructor2"></option>
+                    <option value="Student1"></option>
+                    <option value="Student2"></option>
+                </datalist>
+            </div>
+            <!-- Login dialog -End- -->
+        </div>
+        <!-- end main -->
+    </div>
+</body>
+</html>

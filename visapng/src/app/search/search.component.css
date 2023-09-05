@@ -1,0 +1,151 @@
+.search,.search__clear,.search__button,.search--adv,.search__input--adv {
+    font-size: 1em
+}
+
+.search,.search--adv {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    display: block;
+    position: relative;
+    height: 35px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.06);
+    padding-left: 5px;
+    padding-right: 6.5em
+}
+
+.search--adv {
+    padding-right: 3.5em
+}
+
+ 
+.search__input,.search__input--adv {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 14px;
+    font-weight: normal;
+    color: #333;
+    display: block;
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0;
+    height: 34px;
+    z-index: 1;
+    position: relative;
+    top: -1px;
+}
+
+
+.search__clear,.search__button,.search__button--hero {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    speak: none;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    width: 1em;
+    display: block;
+    cursor: pointer;
+    background: transparent;
+    text-align: center;
+    border: none;
+   
+    line-height: 2.45em;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 2px;
+    left: auto;
+    margin: auto;
+    z-index: 2;
+    outline: none
+}
+
+.search__clear:active,.search__button:active,.search__button--hero:active {
+    -moz-transition: none .3s ease-in-out 0s;
+    -o-transition: none .3s ease-in-out 0s;
+    -webkit-transition: none .3s ease-in-out;
+    -webkit-transition-delay: 0s;
+    transition: none .3s ease-in-out 0s
+}
+
+ 
+ 
+.search__clear {
+    padding: 1px;
+    line-height: 1;
+    min-width: 15px;
+    margin-right: 35px;
+    color: #aaa;
+    opacity: 0.9;
+    margin-top: 6px;
+}
+
+ 
+.search__button,.search__button--hero {
+    -moz-border-radius: 0 2px 2px 0;
+    -webkit-border-radius: 0;
+    border-radius: 0 2px 2px 0;
+    min-width: 10px;
+    color: #999;
+    padding: 4px 9px;
+    height: auto;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    margin-right: -3px;
+    line-height: 1.5;
+    background-color: transparent;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+ 
+.search:hover .search__button,.search__input:focus ~ .search__button,.search--header.has-text.search--hover .search__button,.search--header.has-text.search--focus .search__button,.search--home.has-text .search__button {
+    background-color: #5b9e4d;
+    color: white
+}
+
+.search__button:hover,.search__button:focus,.search:hover .search__button:focus,.search--header.has-text.search--hover .search__button:hover,.search--header.has-text.search--focus .search__button:hover,.search--home.has-text .search__button:focus,.search--home.has-text .search__button:hover {
+    background-color: #66ad57;
+    color: white
+}
+
+.search__button:active,.search:hover .search__button:active,.search--header.has-text.search--hover .search__button:active,.search--home.has-text .search__button:active {
+    background-color: #333
+}
+
+.search__button--active {
+    background-color: #5b9e4d;
+    color: #fff
+}
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 

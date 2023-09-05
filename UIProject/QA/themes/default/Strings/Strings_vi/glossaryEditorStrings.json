@@ -1,0 +1,16 @@
+{
+    "CHANGED_SUCCESSFULLY": "Thuật ngữ đã được thay đổi thành công",
+    "DELETED_SUCCESSFULLY": "Thuật ngữ đã được xóa",
+    "TERM_ALREADY_EXIST": "Thuật ngữ này đã tồn tại, bạn không thể lưu.",
+    "TERM_VALIDATION_MESSAGE": "Vui lòng nhập thuật ngữ trong mục nhập từ",
+    "DEFINITION_VALIDATION_MESSAGE": "Vui lòng nhập định nghĩa cho thuật ngữ",
+    "YOU_CANNOT_SAVE_BLANK_MESSAGE": "bạn không thể để trống ",
+    "DELETE_LABEL": "Xóa",
+	"MORE_LABEL": "thêm",
+	"SELECTED_ALPHABHET": "Một",
+	"BROWSE_LABEL": "Duyệt",
+	"FILE_FORMAT_ERROR":"Bạn đã chọn định dạng file không được hỗ trợ. Vui lòng kiểm tra và thử lại.",
+	"SAVE_TERM_CONFIMATION_MESSAGE": "Bạn có muốn lưu thuật ngữ này?",
+	"SAVE_CONFIMATION_TITLE": "Xác nhận",
+	"NO_GLOSSARY_TERM": "Không có thuật ngữ."
+}

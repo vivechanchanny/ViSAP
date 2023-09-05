@@ -1,0 +1,58 @@
+<vis-category *ngIf="!skipTmLineVideos" (vidEvent)="getCategoryVideos($event)" [categoryList]="category"></vis-category>
+<div class="txt-msg" *ngIf="sourcelist?.length === 0">
+    <p>No videos found.</p>
+  </div>
+<div class="video-list">
+  <md-card fxLayout="column" [ngClass]="(snapSize=='large')?'snap-size-large':'snap-size-small'" *ngFor="let video of sourcelist;">
+    <md-card-header fxLayout="row" fxLayoutAlign=" center">
+      <div md-card-avatar [ngClass]="getIcon(video)"></div>
+      <md-card-title class="video-title" mdTooltip="{{unescapeVid(video.title)}}">{{unescapeVid(video.title)}}</md-card-title>
+    </md-card-header>
+    <md-card-content (click)="onPlay(video)">
+      <div class="vi-click"></div>
+      <div class="duration">{{getTime(video.videototalduration)}} </div>
+      <div>
+        <img md-card-image [src]="getSnapSource(video)">
+      </div>
+    </md-card-content>
+    <md-card-footer fxLayout="row" class="md-card-footer" fxLayoutAlign=" center">
+      <div fxFlex="85">
+        <span class="checkpublish">
+          <md-checkbox *ngIf="isCollaboration" #publishBtn value="{{video._id}}" [checked]="isChecked" (change)="checkAll(video._id,$event)"></md-checkbox>
+        </span>
+        <span class="vid-owner">{{video.ownername}}</span>
+      </div>
+      <div>
+        <button md-icon-button [mdMenuTriggerFor]="menuVideoList" *ngIf="!skipTmLineVideos && showActionIcons == 'true'">
+          <md-icon class="more_icons_color" fxLayoutAlign="end">more_vert</md-icon>
+        </button>
+        <md-menu #menuVideoList="mdMenu">
+          <button md-menu-item (click)="editTmLine(video._id)" *ngIf="video.sourcetype == 2">
+            <md-icon>edit</md-icon>
+            <span>Edit</span>
+          </button>
+          <button md-menu-item (click)="EditTittleDesc(video.title,video.desc,video._id,video.category)" *ngIf="isCollaboration && video.userid == userId">
+            <md-icon>edit</md-icon>
+            <span>Edit</span>
+          </button>
+          <button md-menu-item  *ngIf="video.userid == userId" (click)="onDlelete(video._id)">
+            <md-icon>delete</md-icon>
+            <span>Delete</span>
+          </button>
+          <button md-menu-item (click)="setVideoID(video._id)">
+            <md-icon>link</md-icon>
+            <span>Integration ID</span>
+          </button>
+          <button md-menu-item  *ngIf="video.userid == userId" (click)="assignVideo(video._id,video.title)">
+            <md-icon>assignment</md-icon>
+            <span>Assign</span>
+          </button>
+          <button md-menu-item (click)="onPublish(video._id)" *ngIf="isCollaboration">
+            <md-icon>done_all</md-icon>
+            <span>Publish</span>
+          </button>
+        </md-menu>
+      </div>
+    </md-card-footer>
+  </md-card>
+</div>

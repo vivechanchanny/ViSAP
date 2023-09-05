@@ -1,0 +1,30 @@
+.toolwidth{
+    width:305px;
+}
+
+.margin30{
+    margin: 0px 20px auto;
+}
+
+.margin20{
+    margin: 20px;
+}
+
+.spacebtn{
+    margin-right: 5px;
+}
+
+.labelrobota{
+    font-family: Roboto;
+    font-size: 14px;
+    
+}
+
+.labelrobota2{
+    font-family: Roboto;
+    font-size: 15px;
+}
+
+.max-error-msg {
+    margin-bottom: 5px;
+}

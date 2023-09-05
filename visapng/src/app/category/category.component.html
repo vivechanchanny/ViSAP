@@ -1,0 +1,10 @@
+<md-card *ngIf="categoryList !== undefined">
+<div fxLayout='row' fxLayoutGap='1%'>
+   <md-chip class="category-chips" color="primary" (click)="selectedCategory()" selected="{{ anyCategory }}"><b>Any</b></md-chip>
+    <md-chip-list *ngFor="let item of categoryList; let i = index">
+        <md-chip class="category-chips category-name" color="primary" (click)="selectedCategory(i,item)" selected="{{ (i=== activeCategory) ? true : false}}" mdTooltip="{{ item }}">{{item}}</md-chip>
+    </md-chip-list>
+</div>
+</md-card>
+  
+ 

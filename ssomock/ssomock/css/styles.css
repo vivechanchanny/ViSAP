@@ -1,0 +1,13 @@
+.modal-footer {   border-top: 0px; }
+
+.modal
+{
+
+ background-image: url(../images/bg1.png);
+ background-size: cover;
+}
+
+.modal-content
+{
+margin-top:150px;
+}

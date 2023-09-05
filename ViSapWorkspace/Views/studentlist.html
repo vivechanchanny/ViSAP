@@ -1,0 +1,41 @@
+﻿
+<div class="modal-header">
+	<button type="button" class="close" ng-click="$dismiss('cancel')" aria-label="Close">
+	<span aria-hidden="true" ng-i18next="[title]common.close">&times;</span>
+</button>
+<h4 class="modal-title truncate-text large-width" id="myModalLabel" ng-modal="GroupModalName"><span ng-i18next="group.manageUsers"></span> : {{groupname}}</h4>
+</div>
+<!--MODAL CREATE Group START--> 
+<!-- Modal -->
+
+<div ng-show='userlist' class="userlist"><p ng-i18next="group.noUser"></p> </div>
+<div id="errormessage" class="alertDecorater" style="display: none;left:10px" >
+                    </div>
+<div class="modal-body modal-subtitle" ng-show='userContainer'>
+
+          <table class="table table-striped">
+            <thead>
+              <tr class="actions-heading">
+               <th><span class="modal-checkbox" title="Select All"><input type="checkbox" ng-model="selectedAll" ng-click="selectAllGroups()" /></span></th>
+                <th>User Name</th>
+                <th class="" ng-i18next="user.role"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="employee in employees">
+              <td><input name="" type="checkbox" id="{{employee.id}}" value="{{employee.firstname}}" ng-model="employee.isMapped" ng-change="SelectedUser(employee)"></td>
+              <td class="truncate-name"><span title="{{employee.lastname}},{{employee.firstname}}">{{employee.lastname}},{{employee.firstname}}</span></td>
+              <td class=""><span title="{{employee.role}}">{{employee.role}}<span></td>
+              </tr>
+            </tbody>
+          </table>
+		</div>
+<div class="modal-footer">
+         <button type="button" class="btn btn-primary" ng-click="addUsertoGroup()"  id="add" ng-i18next="group.addUsers"></button>
+	     <button type="button" ng-click="$dismiss('cancel')" class="btn btn-default" id="cancel" ng-i18next="common.cancel"></button>
+      </div>
+
+<!--MODAL CREATE Group END--> 	
+
+
+

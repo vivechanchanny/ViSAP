@@ -1,0 +1,118 @@
+{
+    "title": "FIB dropDown",
+    "testid": "",
+    "questionsData": [
+        {
+            "id": "99",
+            "answers": [
+                [
+                    0
+                ],
+                [
+                    3
+                ],
+                [
+                    1
+                ]
+            ],
+            "leftCol": [],
+            "modelParagraph": "",
+            "options": [
+                [
+                    {
+                        "data": "FSH",
+                        "type": "text"
+                    },
+                    {
+                        "data": "LH",
+                        "type": "text"
+                    },
+                    {
+                        "data": "Oestrogen",
+                        "type": "text"
+                    },
+                    {
+                        "data": "Progesterone",
+                        "type": "text"
+                    }
+                ],
+                [
+                    {
+                        "data": "FSH",
+                        "type": "text"
+                    },
+                    {
+                        "data": "LH",
+                        "type": "text"
+                    },
+                    {
+                        "data": "Oestrogen",
+                        "type": "text"
+                    },
+                    {
+                        "data": "Progesterone",
+                        "type": "text"
+                    }
+                ],
+                [
+                    {
+                        "data": "FSH",
+                        "type": "text"
+                    },
+                    {
+                        "data": "LH",
+                        "type": "text"
+                    },
+                    {
+                        "data": "Oestrogen",
+                        "type": "text"
+                    },
+                    {
+                        "data": "Progesterone",
+                        "type": "text"
+                    }
+                ]
+            ],
+            "optionsLayout": "",
+            "questionBody": [
+                {
+                    "data": "The diagram shows some of the events in a woman's monthly cycle. Several hormones are involved in control of the menstrual cycle.<br/>A) Which hormone secreted by the pituitary gland causes an egg to mature in the ovary? ",
+                    "type": "text"
+                },
+                "GAP",
+                {
+                    "data": " <br/> B) Which hormone stimulates the release of an egg from the ovary?",
+                    "type": "text"
+                },
+                "GAP",
+                {
+                    "data": " . <br/> C) Which hormone is secreted from the ovaries to inhibit production of FSH? ",
+                    "type": "text"
+                },
+                "GAP",
+                {
+                    "data": " .",
+                    "type": "text"
+                }
+            ],
+            "heading": [],
+            "questionLayout": "",
+            "responseType": "DROPDOWN",
+            "rightCol": [],
+            "rubric": [
+                {
+                    "data": "Choose the correct word or phrase to complete the sentences.",
+                    "type": "text"
+                }
+            ],
+            "questionMedia": [],
+            "optionsMedia": [],
+            "title": "FIB Dropdown",
+            "maxpoints": [
+                "3"
+            ],
+            "type": "FIBDROPDOWN",
+            "metadata": "Metadata"
+        }
+    ]
+}

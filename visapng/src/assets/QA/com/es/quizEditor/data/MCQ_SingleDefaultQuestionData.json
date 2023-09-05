@@ -1,0 +1,31 @@
+
+						{
+							"id" : "",
+							"answers":[],
+							"heading":[],
+							"leftCol":[],
+							"modelParagraph":"",
+							"options":[
+									[{
+										"data":"Option 1",
+										"type":"text"
+									}],
+									[{
+										"data":"Option 2",
+										"type":"text"
+									}]
+							],
+							"optionsLayout":"",
+							"questionBody":[],
+							"questionLayout":"",
+							"responseType":"BUTTON",
+							"rightCol":[],
+							"rubric":[],
+							"questionMedia" : [],
+							"optionsMedia" : [],
+							"title": "",
+							"maxpoints":["1"],
+							"type":"MCQ",
+							"metadata":"Metadata"
+					
+}	

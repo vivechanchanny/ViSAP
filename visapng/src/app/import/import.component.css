@@ -1,0 +1,84 @@
+
+.title-modal {
+  background: #3f51b5;
+  color: hsla(0, 0%, 100%, .87);
+  height: 40px !important;
+}
+
+li {
+  padding: 5px;
+}
+
+.cancelBtn {
+  margin-left: 30px;
+}
+
+.mat-chip:not(.mat-basic-chip) {
+  padding: 1px 0px 0px 8px!important;
+}
+
+.material-icons {
+  font-size: 16px!important;
+}
+
+.container {
+  font-family: Roboto;
+}
+.closeBtn{ 
+  font-size:20px!important;  
+  cursor: pointer;
+}
+
+.mat-input-container {
+  display: block !important;
+  width: 100%;
+}
+
+.md-chip{
+  padding: 8px 12px 8px 12px !important;
+}
+
+.category{
+ position: relative;
+  z-index: 9000;
+}
+.txt{
+  font-size: 11px;
+}
+.videoFile{
+  margin-top: 30px;
+}
+.headertitle{
+  font-family: Roboto;
+  font-size: 20px;
+}
+.ytUrl{
+  margin: 51px 0px 52px 0px;
+}
+.form-container{
+  font-family: Roboto;
+}
+
+/* TODO:custom theme using angular material*/
+.button-main{
+background-color: #5C6BC0;
+color: white;
+}
+
+.max-error-msg {
+  margin-bottom: 5px;
+}
+
+.fileName {
+  margin-top: 35px;
+  margin-left: 10px;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+  font-size: 14px;
+}
+
+.dirUrlCcFileName{
+  margin-top: 10px;
+  margin-left: 10px;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+  font-size: 14px;
+}

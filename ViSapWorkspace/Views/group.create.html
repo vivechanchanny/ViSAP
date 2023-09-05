@@ -1,0 +1,37 @@
+﻿
+<div class="modal-header">
+	<button type="button" class="close" ng-click="$dismiss('cancel')" aria-label="Close">
+	<span aria-hidden="true" ng-i18next="[title]common.close">&times;</span>
+</button>
+<h4 class="modal-title" id="myModalLabel" ng-modal="GroupModalName">{{GroupModalName}}</h4>
+</div>
+<!--MODAL CREATE Group START--> 
+<!-- Modal -->
+ 
+ <div class="modal-body">
+ <div id="errormessage" class="alertDecorater" style="display: none;" >
+                    </div>
+  <form  name="myForm" novalidate>
+    <div class="form-group">
+        <label for="exampleInputEmail1"><span ng-i18next="common.name"></span><span class="required">* </span>
+             <span class="wrgmsg"  ng-show="submitted && myForm.name.$error.required" ng-i18next="msg.blank"></span>
+             <span class="wrgmsg"  ng-show="submitted && myForm.name.$error.maxlength" ng-i18next="group.lengthyGn"></span>        
+       </label>
+       <input type="text" class="form-control" ng-i18next="[placeholder]group.groupName" name="name" ng-model="name" ng-trim="true"  ng-keyup="keyPress($event.value)"  maxlength="255" required>
+     </div>
+ </form>
+ </div>
+<div class="modal-footer">
+         <button type="button" class="btn btn-primary" ng-click="submitted=true;saveGroup()"  id="save" ng-i18next="common.save"></button>
+	     <button type="button" ng-click="$dismiss('cancel')" class="btn btn-default" id="cancel" ng-i18next="common.cancel"></button>
+      </div>
+
+<!--MODAL CREATE Group END--> 
+
+
+ 
+	
+	
+
+
+

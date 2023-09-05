@@ -1,0 +1,15 @@
+.margin30{
+    margin: 20px 20px auto;
+}
+
+.questcontainer{
+    margin: 30px 5px auto;
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+.labelrobota{
+    font-family: Roboto;
+    font-size: 14px;
+    
+}

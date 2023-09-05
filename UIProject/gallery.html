@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="images/common/v-sap.ico">
+<title>V-SAP</title>
+
+<!-- Bootstrap core CSS -->
+<link href="style/external/bootstrap.min.css" rel="stylesheet">
+<link href="style/default/default.css" rel="stylesheet" type="text/css">
+
+<!-- Custom styles for this template -->
+
+<link href="style/common/style.css" rel="stylesheet" type="text/css">
+<link href="style/common/player.css" rel="stylesheet" type="text/css">
+<link href="style/common/player.brown.css" rel="stylesheet" type="text/css">
+<link href="style/common/fonts.css" rel="stylesheet" type="text/css"> 
+<link href="style/common/gallary.css" rel="stylesheet" type="text/css">
+<link href="style/common/clean.css" rel="stylesheet" type="text/css">
+
+    <!--CSS for question while rendering-->
+  <link rel="stylesheet" type="text/css" href="QA/css/widget.css" />
+
+<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <script type="text/javascript" src="scripts/frameworks/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="scripts/frameworks/jquery/jquery.cslider.js"></script>
+    <script type="text/javascript" src="scripts/frameworks/jquery/jquery.blockUI.js"></script>
+    <script src="scripts/frameworks/jquery/jquery.timeago.js" type="text/javascript"></script>
+    <script src="scripts/frameworks/jquery/jquery.cookie.js" type="text/javascript"></script>
+    <script src="scripts/external/jquery.columns-1.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="scripts/frameworks/jquery/i18next.js"></script>
+    <script type="text/javascript" src="config.js"></script>
+   
+    <script type="text/javascript" src="scripts/visap.localize.js"></script>
+    <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+    <script type="text/javascript" src="/ViSAPFx/scripts/visap.js"></script>
+    <script type="text/javascript" src="/ViSAPFx/scripts/visap.quiz.js"></script>
+    <script type="text/javascript" src="/ViSAPFx/scripts/visap.aelib.js"></script>
+    <script type="text/javascript" src="/ViSAPFx/scripts/logger.js"></script>
+    <script type="text/javascript" src="/ViSAPFx/scripts/visap.logger.js"></script>
+    <script type="text/javascript" src="scripts/common.js"></script>
+    <script type="text/javascript" src="scripts/visap.analytics.js"></script>
+    <script type="text/javascript" src="scripts/gallary.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script type="text/javascript" src="scripts/category.js"></script>
+    <script type="text/javascript" src="scripts/visap.message.js"></script>
+    <script src="scripts/frameworks/jquery/jquery-ui.1.10.4.js" type="text/javascript"></script>
+    <script type="text/javascript" src="scripts/analytic/analytics.js" ></script>
+    
+    <link rel="stylesheet" type="text/css" href="QA/css/widget_global.css" />
+    <link rel="stylesheet" type="text/css" href="QA/css/widget_color.css" />
+    <link rel="stylesheet" type="text/css" href="QA/css/widgets_utils.css" />
+    <link rel="stylesheet" type="text/css" href="QA/css/widget.css" />
+    <link rel="stylesheet" type="text/css" href="QA/themes/default/css/widgets_theme.css">
+    <link rel="stylesheet" type="text/css" href="QA/css/widgets_quizCreator.css" />
+    <link rel="stylesheet" type="text/css" href="QA/css/widgets_popup.css" />
+    <link rel="stylesheet" type="text/css" href="QA/css/widgets_quizEditor.css" />
+    
+    <link rel="stylesheet" type="text/css" href="QA/css//widgets_iFrameWidget.css"/>
+    <link rel="stylesheet" type="text/css" href="QA/themes/default/css/widgets_iframeTheme.css">
+    
+    <script src="QA/com/external/backbone/underscore.js"></script>
+    <script src="QA/com/external/backbone/backbone.js"></script>
+    <script src="QA/com/external/iscroll.js"></script>
+    <script src="QA/com/external/rangy-core.js"></script>
+    <script src="QA/com/external/DetectMobileBrowser.js"></script>
+    <script>var require = {baseUrl : './QA/'};</script>
+    <script>var require = {baseUrl : './QA/', deps:["com/es/mainRenderer"]};</script>
+    <script data-main="com/es/mainQuizEditor" src="QA/com/external/require.js"></script>
+
+    <script type="text/javascript" src="QA/com/es/mainRenderer.js"></script>
+     
+</head>
+
+<body>
+<!--/.nav-start --> 
+<nav class="navbar navbar-inverse navBar bg-banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only" data-i18n="header.navigation"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" ><img src="images/common/v-sap.png" data-i18n="[title]header.title" width="91" height="24" alt="V-SAP"></a> </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav top-nav">
+        <li class="active"><a href="gallery.html" data-i18n="menu.gallery"></a></li>
+        <li><a class="hidden" href="myspace.html" id="myspace" data-i18n="menu.myspace"></a></li>
+        <li><a class="hidden" href="collaboration.html" id="collaboration" data-i18n="menu.collaboration"></a></li>
+        <li class="divider-top hidden hidden-xs" id="divider">&nbsp;</li>
+        <li><a class="hidden" href="/visap/visapworkspace/index.html#/group" id="group" data-i18n="menu.group"></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li class="top-nav-rt" style="text-align:right"><span data-i18n="header.welcomeLabel"></span><span>, </span><span id="uName" class="wsName"></span> <a href="#" class="logout"  onclick="ViTagUI.logout();" data-i18n="[title]header.logout"></a><br>
+        <span class="youareIn"><span data-i18n="header.workspaceLabel"></span><span>: </span><span class="wsName" id="wrokspace"></span></span></li>
+      </ul>
+    </div>
+    <!--/.nav-collapse --> 
+  </div>
+  
+  <!--/Submenu   http://visapdemo.excelindia.com/visap/visapworkspace/index.html#/group start-->
+<div class=" bg-submenu" id="bgsubmenu">
+  <div id='searchcontainer' class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <table style="width: 100%; border-spacing: 0; border: 0; padding: 0;" class="search-main">
+          <tr>
+            <td class="viewby"><span  data-i18n="search.label"></span> :</td>
+            <td style="width:100%; position:relative;"> 
+
+              <input type="text" class="form-control" id="vidSearch" data-i18n="[placeholder]search.placeholderGallery;[title]search.titleGallery" 
+            style="padding-right:30px !important;" onkeypress="javascript: ViTagUI.SearchVidOnEnterKey({ obj: this, e: event,gallery:true,isStaging:false,ishome:true});"> </input>
+       <span style="position:absolute; top:18px; right:15px; cursor:pointer;" data-i18n="[title]search.clearText"><img src="images/actions/search-close.png" alt="close-img" width="17" height="19" onclick="ViTagUI.clrSearchTxt()"></span>          
+          </td>
+            <td style="width:50px;"><button type="submit" class="btn btn-primary" data-i18n="search.button"
+            onclick="javascript: ViTagUI.doVidSearch({obj: this, e: event,gallery:true,isStaging:false,ishome:true});"></button></td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-md-6"> </div>
+
+      
+    </div>
+    
+  </div>
+</div>
+
+</div>
+<!--/Submenu end -->
+</nav>
+<!--/.nav-end --> 
+
+<div  id="iframeErr" class="iframeErr" style="display:none">
+      <!-- ================Iframe-Error page ================-->
+  </div>
+
+<div class="container container-body"> 
+<div id="errormessage" class="alertDecorater  message" style="display: none; float : left">
+  </div>
+                    
+  <div class="row" id="category">
+    <div class="col-xs-6 col-md-4" style="width:20%;"> <span class="category-title" data-i18n="category.category"></span>
+      <ul class="category-list" id="categorylist">
+        <li><span class="any" id="anycategory" onclick='ViTagUI.getGalleryVideos()' data-i18n="category.any"></span></li>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-8" style="width:80%; background-color:#fff; border: 1px solid #CCC; padding-top:15px; margin-bottom:15px; margin-left:-15px;">
+    <!--  ================Thumbnail content start ================================== -->
+    <div id='thumbnails'>
+     <div id="myCarousel" class="carousel slide" data-ride="carousel"> 
+       <ol class="carousel-indicators" id="indicators">
+       </ol>
+       <div class="carousel-inner" role="listbox" id="itemsList"></div>
+       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> 
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only"></span> </a> 
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> 
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 
+          <span class="sr-only"></span> </a>
+        </div>
+        <div class="row video-List" id="videoList">     
+        </div>
+      </div>
+    </div>
+  </div>
+ <!-- =================Thumbnail content ends=================================== -->
+ 
+
+  <!--  ================Player region start ================================== -->
+<div id='playerpart' class='hideEle'>
+    <div class="container">
+      <div class="page-title">
+      <a href="#" class="btn-back" onclick='ViTagUI.backToThumnails()' data-i18n="content.backToVideo"> 
+      </a>
+      <span id='pagetitle' class="truncate-text large-width"></span>
+      <span id="tocLabel">: <span data-i18n="toc.label"></span></span>
+      </div>
+    </div>
+   
+     <div class="container">
+      <div id="videoTitleContainer" class="video-title hideEle"><span id='videotitle' class="truncate-text small-width"></span><span id='videoTagTilte' class="truncate-text medium-width"></span></div>
+    </div>
+     <div class="container">
+      <div class="video-description" id='videodesc'> </div>
+    </div>
+            <div class="container-fluid" id="maintable">
+                <div class="row">
+                    <div class="col-xs-12 col-md-3 no-margin tagCont" id="tagQuestContainer">
+                        <div id='tagbutton' class="pull-right">
+                            <div class="tag-btn" onclick='ViTagUI.getTagsLinks()'></div>
+                        </div>
+                       
+                        <div class="clearfix main-tag" id='slider'>
+                            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                <!-- Tags and links are shown here -->
+                            </div>
+                        </div>
+                          <!-- question block are shown here -->
+                        <div id="questContainer" class='hideEle'>
+                            <div class="quest-main" id="aelibquestblock"></div>
+                        </div>
+                         <div id="QAPlaceHolder"></div>
+                    </div>
+                    <div class="col-xs-12 col-md-6  no-margin" id="playerCont">
+                        <div>
+                            <!-- =================Player Conatiner starts=================================== -->
+                            <div id="playContainer">
+                                <div id="videoContainer" class="vidcontainer">
+                                </div>
+                            </div>
+                            <!--  ================Player Container Ends ================================== -->
+                        </div>
+                    </div>
+                   
+                </div>
+
+            </div>
+  </div>
+ <!-- =================Player region ends=================================== -->
+</div>
+<!-- container --> 
+
+<div class="modal fade" id="myModalQestResp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" style="display: none;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" id="questDataform">
+     <div id="gruopmessage1" class="alertDecorater  message" style="display: none; float : left">
+                    </div>
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" data-i18n='[title]common.close'>&times;</span></button>
+        <span class="modal-title title-modal" id="myModalLabel2" data-i18n="subMenu.titelViewSubmission"></span>
+      </div>
+      <div class="modal-body" id="tblQuestData">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModalQestRespFullDetails" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" style="display: none;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" id="questDataform">
+     <div id="gruopmessage1" class="alertDecorater  message" style="display: none; float : left">
+                    </div>
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" data-i18n='[title]common.close'>&times;</span></button>
+        <span class="modal-title title-modal" id="myModalLabel2" data-i18n="subMenu.titelViewSubmission"></span>
+      </div>
+      <div class="modal-body" id="tblQuestDetails">
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+<!--footer start-->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="footer-links">
+          <li class="hidden" id="footerlinks">
+          <a href="gallery.html" data-i18n="menu.gallery"></a>
+          <a id="myspacefooter" href="myspace.html">| <span data-i18n="menu.myspace"></span> |</a>
+          <a  id="collaborationfooter" href="collaboration.html" data-i18n="menu.collaboration"></a>
+         </li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul class="footer-links navbar-right footer-links-rt">
+          <li><a href="aboutus.html" data-i18n="footer.aboutUs"></a> | <a href="contact.html" data-i18n="footer.contact"></a></li>
+          <li>© <span data-i18n="footer.copyRight"></span> | <a href="privacypolicy.html" data-i18n="footer.privacyPolicy"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--/footer end--> 
+
+<!-- Bootstrap core JavaScript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script type="text/javascript" src="scripts/external/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/external/ie10-viewport-bug-workaround.js"></script>
+<script type="text/javascript" src="scripts/external/ie-emulation-modes-warning.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+
+<script type="text/javascript">
+    if (ViTagUI.checkLibraryObj(true)) {
+        $(document).ready(ViTagUI.getReady);
+        $(document).ready(ViTagUI.ready);
+    }
+</script>
+</body>
+</html>
+  

@@ -1,0 +1,26 @@
+<div id="controls" class="margin30" fxLayout="row" fxLayout.xs="column"  >
+  <select name="category[]" id="questions_dropdown" class="labelrobota" onchange="ViTag.aelib.initQuizEditor()">
+    <option value="000" data-i18n="question.selectQuestion" >Select Question</option>
+    <option value="101" data-i18n="question.mcqSingleResponse">MCQ Single Response</option>
+    <option value="102" data-i18n="question.mcqMultipleResponse">MCQ Multiple Response</option>
+    <option value="103" data-i18n="question.fibText">FIB Text</option>
+    <option value="104" data-i18n="question.fibTapAndPlace">FIB Tap and Place</option>
+    <option value="105" data-i18n="question.fibDropDown">FIB Drop Down</option>
+    <option value="106" data-i18n="question.matchingQuestion">Matching Question</option>
+    <option value="107" data-i18n="question.groupingQuestion">Grouping Question</option>
+    <option value="108" data-i18n="question.trueOrFalse">True or False</option>
+  </select>
+ <span style="margin-left:10px">
+    <md-select class="aelibTagList labelrobota" placeholder="Select Tag" name="tags" [(ngModel)]="selectedValue" (change)="onTagChange()">
+      <md-option mdTooltip = "{{tag.d}}" *ngFor="let tag of tags" [value]="tag.d">
+        {{ (tag.d.length>20)? (tag.d | slice:0:20)+'...':(tag.d) }}
+      </md-option>
+    </md-select>
+  </span>
+</div>
+<div id="aelib" class="questcontainer">
+  
+    <div id="showQuizType" style="margin-left:15px"></div>
+
+</div>
+  

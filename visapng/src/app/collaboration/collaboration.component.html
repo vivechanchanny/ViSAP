@@ -1,0 +1,8 @@
+<vis-video-list (playEvent)="onPlayEvent($event)" showActionIcons="true"  (Publish)="vidPublish($event)" (selCheckbxList)="getCheckBxList($event)"
+    (videoIntegration)="setVid($event)" (assign)="assignVid($event)" (onEdit)="videoEditTittleDesc($event)" isStage="true"></vis-video-list>
+<ng2-float-btn [mainButton]="mainButton" [buttons]="buttons" [isMini]="true" [direction]="'up'" style="position: fixed; bottom: 60px;right: 0;"
+    mdTooltip="{{buttons.label}}">
+    <div>
+        <ng2-float-btn [mainButton]="mainButton" [buttons]="buttons" [direction]="'up'" mdTooltip="{{buttons.label}}">
+        </ng2-float-btn>
+    </div>

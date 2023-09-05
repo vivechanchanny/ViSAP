@@ -1,0 +1,46 @@
+.container {
+ margin:3%;
+ min-height: 500px;
+}
+
+.player-part {
+ border:1px solid gainsboro;
+ border-radius: 5px;
+ margin: 20px;
+}
+
+.snap-shot {
+  background-image: url(../../assets/images/common/video/bg-tl.png);
+  background-repeat: repeat-x;
+  background-position: left center;
+  margin-top: 20px;
+  overflow: auto;
+  min-height: 108px;
+  max-width: 415px;
+}
+
+.show-msg {
+  position: relative;
+  top: 40%;
+  text-align: center;
+  font-size: 2em;
+}
+
+.timeline-container { 
+  margin-top: 50px;
+}
+
+.margin-btn {
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-top: 15px;
+}
+
+.max-error-msg {
+  margin-bottom: 5px;
+}
+ 
+ 
+ 
+ 
+

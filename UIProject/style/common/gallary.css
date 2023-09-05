@@ -1,0 +1,57 @@
+﻿@charset "utf-8";
+
+/* CSS Document */
+
+/* overring some classes for responsive player in gallary page and added some new classes */
+.tag-btn {
+    top: 0;
+    background-color: #666;
+    width: 39px;
+    height: 39px;
+    background-image: url(../../images/common/video/icn-tag.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.main-tag {
+    width: 300px;
+    overflow-y: auto;
+    max-height: 380px;
+    float: right!important;
+}
+
+.no-margin {
+    margin: 0;
+    padding: 0;
+}
+
+/*.tagCont {
+    float: left;
+}*/
+.questContent {
+    float: left!important;
+}
+
+.questClass {
+    width: 39.666667%;
+}
+
+.questContainer {
+    left: 0!important;
+}
+
+.questContainerFS {
+    height: inherit;
+}
+.videoTag {
+    width: 100%;
+    max-width: 100%;
+}
+.vidcontainer table {
+    width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+ .tagCont {float: left;}
+}

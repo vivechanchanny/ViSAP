@@ -1,0 +1,34 @@
+## Build.rsp
+##
+##  Contains default parameters for Msbuild 
+/nologo
+
+# insert your tfs username and password here
+/p:TFSUser=vstfadmin;TFSPass=team
+
+# values are debug or release
+/p:configuration=release
+#/p:configuration=debug
+#/p:FrameWorkPath=..\..\..\..\Frameworks\Dev
+
+
+# testing parameters
+#/p:rsptest=SUCCESS
+
+
+#
+# Example label for command line, or RSP file.
+#
+/p:Label=V2015.2.296.0
+#/p:FrameWorkLabel=5.15.5.0_FW
+
+# Use the below parameters to provide a comprehensive label for the source-code.
+# in the previous case; Major = 3, Minor = 3, Build = 129 and Revision is 0
+/p:Major=0;Minor=0;Build=0;Revision=0
+
+#/p:Timestamp=10/9/2009
+
+
+
+
+

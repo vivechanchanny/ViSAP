@@ -1,0 +1,57 @@
+<div fxLayout="row" fxLayout.xs="column" class="container">
+    <div class="player-part" fxFlex="65%" fxFlexOrder.xs="2">
+        <div [hidden]="!isVidPlaying">
+            <vis-player [playerWidth]="playerWidth"></vis-player>
+        </div>
+
+        <div *ngIf="showPlayer" class="show-msg">
+            <p>
+                <b>Please play the video to start capture.</b>
+            </p>
+        </div>
+    </div>
+
+    <div class="timeline-container" fxFlex>
+        <form [formGroup]="tmLineForm">
+            <div fxLayout="column">
+                <md-input-container>
+                    <input mdInput placeholder="Title" formControlName="title">
+                </md-input-container>
+              
+                <div *ngIf="tmLineForm.controls['title'].errors?.maxlength; else tmLineTitle">
+                    <md-error class="max-error-msg">Maximum characters 255 is allowed.</md-error>
+                  </div>
+            
+                  <ng-template #tmLineTitle>
+                    <md-error *ngIf="!tmLineForm.get('title').valid && submitted" [ngStyle]="{'color': 'red'}" class="help-block" i18n>* Title cant be empty.</md-error>
+                  </ng-template>
+
+                <md-input-container>
+                    <input mdInput placeholder="Description" formControlName="description">
+                </md-input-container>
+               
+                <md-error *ngIf="!tmLineForm.get('description').valid && submitted" [ngStyle]="{'color': 'red'}" class="help-block" i18n>* Description cant be empty.</md-error>
+
+            </div>
+            <div class="snap-shot" id="tmLineSnapshot" fxLayout="row" #snapshotContainer>
+            </div>
+            <div>
+                <div fxLayoutAlign="end center">
+                    <button class="margin-btn" md-raised-button color="primary" [disabled]="!tmLineForm.valid" type="submit" (click)="save()">Save</button>
+                    <button class="margin-btn" md-raised-button color="primary" (click)="cancel()">Cancel</button>
+                </div>
+                <hr>
+                <p><b>Click on {{ startTxt }} capture to add the snippet to timeline.</b></p>
+                <div>
+                    <button fxFlexOffset="100px" class="margin-btn" md-raised-button color="primary" [disabled]="!isVidPlaying" (click)="captureVideoDetails()">
+                    {{ captureBtnTxt }}</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+<div class="video-container">
+    <vis-video-list (playEvent)="onPlayEvent($event)" skipTmLineVideos="true" isStage="false"></vis-video-list>
+</div>

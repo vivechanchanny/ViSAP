@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>\\192.168.1.224\d$\Projects\published\vitag</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/ViTag.dll">
+      <publishTime>11/06/2013 10:49:59</publishTime>
+    </File>
+    <File Include="data/Copy of data.js">
+      <publishTime>11/05/2013 11:14:38</publishTime>
+    </File>
+    <File Include="data/data.js">
+      <publishTime>11/06/2013 10:49:19</publishTime>
+    </File>
+    <File Include="edit.htm">
+      <publishTime>11/05/2013 19:54:27</publishTime>
+    </File>
+    <File Include="images/DeleteRed.png">
+      <publishTime>11/05/2013 19:21:35</publishTime>
+    </File>
+    <File Include="index.htm">
+      <publishTime>10/31/2013 14:56:17</publishTime>
+    </File>
+    <File Include="scripts/edit.js">
+      <publishTime>11/05/2013 19:54:40</publishTime>
+    </File>
+    <File Include="scripts/jquery-1.10.2.min.js">
+      <publishTime>10/28/2013 18:20:00</publishTime>
+    </File>
+    <File Include="scripts/JSON2.js">
+      <publishTime>10/31/2013 16:14:52</publishTime>
+    </File>
+    <File Include="scripts/scripts.js">
+      <publishTime>11/05/2013 18:00:27</publishTime>
+    </File>
+    <File Include="scripts/styles.css">
+      <publishTime>11/05/2013 18:59:56</publishTime>
+    </File>
+    <File Include="test.html">
+      <publishTime>10/31/2013 16:16:30</publishTime>
+    </File>
+    <File Include="videos/HTML5_1.mp4">
+      <publishTime>10/28/2013 18:55:09</publishTime>
+    </File>
+    <File Include="videos/HTML5_1.ogg">
+      <publishTime>10/30/2013 11:12:40</publishTime>
+    </File>
+    <File Include="videos/Moving_digits.mp4">
+      <publishTime>10/28/2013 19:06:18</publishTime>
+    </File>
+    <File Include="videos/Moving_digits.ogg">
+      <publishTime>10/30/2013 17:30:36</publishTime>
+    </File>
+    <File Include="videos/mov_bbb.mp4">
+      <publishTime>10/28/2013 19:12:18</publishTime>
+    </File>
+    <File Include="videos/mov_bbb.ogg">
+      <publishTime>10/30/2013 15:45:15</publishTime>
+    </File>
+    <File Include="videos/web.config">
+      <publishTime>10/31/2013 11:05:04</publishTime>
+    </File>
+    <File Include="videos/Wildlife.wmv">
+      <publishTime>10/28/2013 19:07:47</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>11/06/2013 10:50:01</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

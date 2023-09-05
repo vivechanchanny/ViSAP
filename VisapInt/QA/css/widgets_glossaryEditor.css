@@ -1,0 +1,220 @@
+	/*css for glossary editor*/
+.glossaryListTitle, .glossaryListTitle:hover {
+    color: #12a2e8;
+}
+.slider {
+    height: 500px;
+	position: static;
+	bottom: 0;
+	top: 0;
+}
+
+.slider-content {
+    height: 87%;
+}
+
+#glossaryList>ul {
+    padding: 0 6% 0 2%;
+}
+
+.slider-content ul li {
+    font-size: 12px;
+    line-height: 17px;
+    min-height: 17px;
+    word-break:break-all;
+}
+.selectedAlphabet {
+    background: rgba(0,0,0,.5);
+    font-family: open_sanslight;
+}
+.glossaryListTitle, .glossaryListTitle:hover {
+	border-bottom: 0;
+	width: auto;
+	padding:0;
+}
+.slider-content ul ul {
+    border-top: 1px solid #ddd;
+}
+.slider-nav ul {
+	height: 100%;
+}
+.slider-nav li a {
+	font-weight:normal;
+}
+
+.slider-nav li a.selectIndexBar{
+	color:#12a2e8;
+}
+
+.slider-content ul span.more-less-definition{
+	color:#47b3e7;
+	font-size:12px;
+	font-weight:normal;
+	}  
+.slider-content ul span.more-less-definition:after{
+	border-top:5px solid #47b3e7;
+} 
+.slider-content ul span.makeLess:after{
+	border-bottom:5px solid #47b3e7;
+	border-top:0;
+}
+.audioPlayPauseBtnAddNewGlossaryTerm{
+	background-image: url('../images/glossarySoundPauseEditor.png');
+	height: 45px;
+	width: 25px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	margin: 11px 0;
+	vertical-align: middle;
+	display: none;	
+}
+.audioPlayPauseBtnAddNewGlossaryTerm.audioPlayBtn{
+	background-image: url('../images/glossarySoundPlayEditor.png');
+	width: 55px;
+}
+.slider-content ul li.heading span.headingText{
+	min-height: 22px;
+	display: inline-block;
+	float: left;
+	line-height:22px;
+	/*margin: 10px 13px 20px;*/
+	margin-right: 13px;
+}
+.slider-content ul li.image {
+	float: none;
+	margin:0px 0 20px;
+	width:100%;
+}
+.slider-content ul.editableBackground ul li.heading span.headingText{
+	margin: 0;	
+}
+.slider-content ul.editableBackground ul li.heading span.audioPlayPauseBtn{
+	margin: 0;
+	position: absolute;
+	right: -10%;
+	top: 9px;
+}
+.slider-content ul li.image img{
+	max-width: 100%;
+}
+.browseBox{
+	float:right;
+	margin:4px 0 0;
+	width: 75%;
+}
+#audioFileContainer .browseBox:last-child{
+	padding-bottom: 20px;
+}
+.imagePreviewBOx{
+	margin: 5px 0 10px;
+}
+.imagePreviewBOx img.imagePreview{
+	max-height: 100px;
+	max-width: 40%;	
+	display:none;
+}
+.resetSelection{
+	background: url(../images/cross-icon.png) center center no-repeat;
+	display:none;
+	cursor: pointer;
+	height: 22px;
+	width: 22px;
+	vertical-align: middle;
+}
+.inline-block{
+	display:inline-block;
+}
+.edit-term{
+	background: url("../images/glossary-edit.png") no-repeat;
+	cursor: pointer;
+	height: 17px;
+	position: absolute;
+	right: 7%;
+	top: 25px;
+	width: 16px;
+}
+.browseBox span#selectedAudioName, .browseBox #selectedImageName{
+	background: #fff;
+	border: 1px solid #eaeaeb;
+	color: #6e6e6e;
+	display: inline-block;
+	font-size: 12px;
+	float: left;
+	height: 36px;
+	line-height: 36px;
+	overflow: hidden;
+	padding: 0 10px;
+	width: 75%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.browseBox button#browseImage, .browseBox button#browseAudio{
+	background: #47b3e7;
+	border: 0;
+	color: #fff;
+	display: inline-block;
+	font-size: 12px;
+	float: right;
+	height: 36px;
+	line-height: 36px;
+	width: 24%;
+}
+
+#imageSelectionInfo, #audioSelectionInfo{
+	color: #6e6e6e;
+	font-size: 12px;
+	margin: 8px 0 0;
+}
+
+/*CSS for Inline Glossary Page*/
+
+.glossaryInlineContainer  #glossaryEditorPopup {
+	position: relative;
+	background: transparent;
+	padding: 0;
+}
+.glossaryInlineContainer .bottomBar { padding: 15px 0 0 0; background: transparent; display: none; }
+.glossaryInlineContainer .slider-content ul ul { border-bottom: 1px solid #e1e6e9 ; padding: 10px 30px 10px 30px; background: #fff; border-top: 0; }
+.glossaryInlineContainer .slider-content ul.editableBackground ul li.heading, .slider-content ul.editableBackground ul li.description {
+border: 1px solid #c9c9c9; }
+
+.glossaryInlineContainer .radiobuttons .button-label.activeMode { color: #333333; }
+
+.glossaryInlineContainer .glossaryListTitle, .glossaryInlineContainer .glossaryListTitle:hover { color: #414244; padding: 6px 0 5px 30px; }
+.glossaryInlineContainer .glossaryListDiv { border: 1px solid #e1e6e9;}
+.glossaryInlineContainer #glossaryList>ul { padding: 0 50px 0 0; background: #f5f4f4; }
+.glossaryInlineContainer .slider-nav { background: #fff; right: 0px; top: 0px; border: 1px solid #e1e6e9; height: 100%; }
+.glossaryInlineContainer .slider-nav li { padding: 3px 20px 0; }
+.glossaryInlineContainer .slider-nav li a { font-size: 12px !important; }
+.glossaryInlineContainer .slider-content ul li ul li.description { margin: 0; }
+.glossaryInlineContainer .edit-term { right: 70px; }
+.glossaryInlineContainer .slider-content ul.editableBackground ul li.delete-heading span.delete-term { right: 30px !important; }
+.glossaryInlineContainer #glossarySaveBtn { background: #47b3e7;
+border: none;
+color: #fff;
+padding: 6px 15px;
+cursor: pointer;
+font-size: .9em;
+margin-left: 15px;
+font-weight: normal;
+text-shadow: none;
+border-radius: 0;
+}
+
+.glossaryInlineContainer #glossarySaveBtn:hover { background: #328cbc; }
+
+.glossaryInlineContainer .right-action-bar .btnHolder { min-width: 140px; display: inline-block; text-align: right; height: 30px; vertical-align: middle; }
+.glossaryInlineContainer .slider-content { height: 100%; }
+
+.glossaryInlineContainer .slider-content ul li:last-child ul:last-child { border-bottom: 0;} 
+@media screen and (min-width: 768px){
+.glossaryEditorPopupCover .modal-dialog, .glossaryAddNewTermPopupCover .modal-dialog , .glossaryEditNewTermPopupCover .modal-dialog {
+	right: 0;
+	left: 0;
+	top: 0;
+	position: absolute;
+	margin: auto;
+	bottom: 0;
+	height: 552px;
+}
+}

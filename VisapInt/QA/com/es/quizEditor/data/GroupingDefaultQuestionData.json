@@ -1,0 +1,46 @@
+
+        {
+            "id": "",
+            "answers": [],
+            "leftCol": [],
+            "modelParagraph": "",
+            "options": [
+                {
+                    "data": "Group 1",
+                    "type": "text"
+                },
+                {
+                    "data": "Group 2",
+                    "type": "text"
+                }
+            ],
+            "optionsLayout": "",
+            "questionBody": [
+                [
+                    {
+                        "data": "Option 1",
+                        "type": "text"
+                    }
+                ],
+                [
+                    {
+                        "data": "Option 2",
+                        "type": "text"
+                    }
+                ]
+            ],
+            "heading": [],
+            "questionMedia": [],
+            "optionsMedia": [],
+            "questionLayout": "",
+            "responseType": "",
+            "rightCol": [],
+            "rubric": [],
+            "title": "",
+            "maxpoints": [
+                "1"
+            ],
+            "type": "GROUPING",
+            "metadata":"Metadata"
+       
+}

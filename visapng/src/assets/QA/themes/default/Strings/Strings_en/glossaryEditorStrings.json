@@ -1,0 +1,17 @@
+{
+    "CHANGED_SUCCESSFULLY": "Glossary changes have been saved successfully",
+    "DELETED_SUCCESSFULLY": "Glossary Terms have been deleted successfully",
+    "TERM_ALREADY_EXIST": "This term already exists so you can't save it.",
+    "TERM_VALIDATION_MESSAGE": "Please enter any term in word input field",
+    "DEFINITION_VALIDATION_MESSAGE": "Please enter definition for the term",
+    "YOU_CANNOT_SAVE_BLANK_MESSAGE": "you can't save blank ",
+    "DELETE_LABEL": "Delete",
+	"MORE_LABEL": "more",
+	"SELECTED_ALPHABHET": "A",
+	"BROWSE_LABEL": "Browse",
+	"FILE_FORMAT_ERROR":"You have selected an unsupported file format. Please check and try again.",
+	"FILE_SIZE_ERROR": "File selected is greater than specified file size. Please select other file",
+	"SAVE_TERM_CONFIMATION_MESSAGE": "Do you want to save this term?",
+	"SAVE_CONFIMATION_TITLE": "Save Confirmation",
+	"NO_GLOSSARY_TERM": "There is no term for Glossary."
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+     <trans-unit id="login" datatype="html">
+        <source>Login</source>
+        <target>Login</target>
+      </trans-unit>
+
+      <trans-unit id="username" datatype="html">
+        <source>User Name</source>
+        <target>User Name</target>
+      </trans-unit>
+
+      <trans-unit id="password" datatype="html">
+        <source>Password</source>
+        <target>Password</target>
+      </trans-unit>
+ 
+
+      <trans-unit id="validateusername" datatype="html">
+        <source>*Please Enter User Name</source>
+        <target>*Please Enter User Name</target>
+      </trans-unit>
+
+
+      <trans-unit id="validatepassword" datatype="html">
+        <source>*Please Enter password</source>
+        <target>*Please Enter password</target>
+      </trans-unit>
+
+
+      <trans-unit id="tabgallery" datatype="html">
+        <source>GALLERY</source>
+        <target>GALLERY</target>
+      </trans-unit>
+
+
+      <trans-unit id="tabmyspace" datatype="html">
+        <source>MY SPACE</source>
+        <target>MY SPACE</target>
+      </trans-unit>
+
+
+      <trans-unit id="tabcollaboration" datatype="html">
+        <source>COLLABORATION</source>
+        <target>COLLABORATION</target>
+      </trans-unit>
+
+
+      <trans-unit id="notags" datatype="html">
+        <source>NO TAGS FOUND</source>
+        <target>NO TAGS FOUND</target>
+      </trans-unit>
+
+      <trans-unit id="nolinks" datatype="html">
+        <source>NO LINKS FOUND</source>
+        <target>NO LINKS FOUND</target>
+      </trans-unit>
+      
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,102 @@
+<Project  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <ItemGroup>
+    <folderpermission Include="$(TADest)" />
+    <encryptconnectionstring Include="$(VSUI)\Web.config;$(VSWS)\Web.config;;$(VSQuiz)\Web.config"/>
+  </ItemGroup>
+
+  <PropertyGroup>
+  <!--SERVER Details section STARTS-->
+    <BuildFolderPath>D:\GIT\ViSAP\ReleaseEngineering\Build\</BuildFolderPath>
+    <Targetserver>192.168.1.229</Targetserver>
+    <RepositoryServer>192.168.1.229</RepositoryServer>
+    <Websitename>Default Web Site</Websitename>
+    <configuration>release</configuration>
+  <!--SERVER Details section ENDS-->
+  
+  <!--Destination server details and Folder names section STARTS-->
+    <Drivename>D:</Drivename>
+    <Sourcefolder>Projects\published\VISAP</Sourcefolder>
+    <VisapUIfoldername>VisapTest</VisapUIfoldername>
+    <VisapWSfoldername>VisapWorkspace</VisapWSfoldername>
+    <Quizfoldername>Quiz</Quizfoldername>
+    
+   <VideoRepositoryPhysicalpath>D:\Repository\Visap\ViTagRepo</VideoRepositoryPhysicalpath>	
+   <SnapRepositoryPhysicalpath>D:\Repository\Visap\SnapshotRepo</SnapRepositoryPhysicalpath>	
+   <ImageRepositoryPhysicalpath>D:\Repository\Visap\ViTagImageRepo</ImageRepositoryPhysicalpath>	
+   <VideocaptionRepositoryPhysicalpath>D:\Repository\Visap\Videocaption</VideocaptionRepositoryPhysicalpath>	
+  <!--Destination server details and Folder names section ENDS-->
+    
+  <!--Deployment section-->
+    <TASrc>"D:\SARAS\V3.0.0\Applications"</TASrc>
+    <TADest>D:\Projects\published\visap\</TADest>
+    <BackupLocation>\\$(Targetserver)\$(Drivename)$\Builds_backup\VISAP\</BackupLocation>
+	
+  <!--Deployment section end-->
+    
+  <!--App pool section-->
+    <FrameworkVersion>ASP.NET v4.0</FrameworkVersion>
+    <Defaultpool>DefaultAppPool</Defaultpool>
+    <Apppool>VisapAuto</Apppool>
+    <QueueLength>9000</QueueLength>
+    <IdleTimeOut>90</IdleTimeOut>
+    <AppPipelinemode>Integrated</AppPipelinemode>
+    <ASPNetVersion>v4.0</ASPNetVersion>
+	<Enable32BitAppOnWin64>true</Enable32BitAppOnWin64>
+	
+	<VIRepoApppool>VideoRepo</VIRepoApppool>
+	<IMRepoApppool>ImageRepo</IMRepoApppool>
+    
+ <!--App pool section end-->  
+    
+ <!--Virtual directory section VD Name For creation-->
+    
+    <RootVD>VISAP</RootVD>
+    <QuizVD>$(RootVD)/Quiz</QuizVD>
+    <VisapUiVD>$(RootVD)/VisapTest</VisapUiVD>
+    <VisapWsVD>$(RootVD)/VisapWorkspace</VisapWsVD>
+	
+    <SnapshotVD>$(RootVD)/SnapshotRepo</SnapshotVD>
+    <ImageVD>$(RootVD)/ViTagImageRepo</ImageVD>
+	<VideoCpVD>$(VisapUiVD)/Videocaption</VideoCpVD>
+    <VideoVD>$(VisapUiVD)/VideoRepo</VideoVD>
+    
+ <!--Virtual directory section end-->
+
+ <!--User Identity Section-->
+   <IdentityUsername>NetworkService</IdentityUsername>
+    <IdentityPassword>password</IdentityPassword>
+   <!-- <RepServerusername>saras</RepServerusername>
+    <RepServerpassword>setup</RepServerpassword> -->
+   
+ <!--User Identity Section end-->
+
+ <!--Connection string section-->
+    <adminconnectionstring>mongodb://visap:exceladmin@192.168.1.229</adminconnectionstring>
+    
+ <!--Connection string section end-->
+
+ <!--Application folder Physicalpath section STARTS- No need to edit-->
+ 
+	<RootPhysicalpath>$(Drivename):\$(Sourcefolder)</RootPhysicalpath>
+    <VisapUIPhysicalpath>$(Drivename):\$(Sourcefolder)\$(VisapUIfoldername)</VisapUIPhysicalpath>
+    <VisapWSPhysicalpath>$(Drivename):\$(Sourcefolder)\$(VisapWSfoldername)</VisapWSPhysicalpath>
+    <QuizPhysicalpath>$(Drivename):\$(Sourcefolder)\$(Quizfoldername)</QuizPhysicalpath>
+    <VideoRepoPhysicalpath>$(Drivename):\$(Sourcefolder)\$(VideoRepositoryPhysicalpath)</VideoRepoPhysicalpath>
+    <SnapRepoPhysicalpath>$(Drivename):\$(Sourcefolder)\$(SnapRepositoryPhysicalpath)</SnapRepoPhysicalpath>
+    <ImageRepoPhysicalpath>$(Drivename):\$(Sourcefolder)\$(ImageRepositoryPhysicalpath)</ImageRepoPhysicalpath>
+    <VideoCPPhysicalpath>$(Drivename):\$(Sourcefolder)\$(VideocaptionRepositoryPhysicalpath)</VideoCPPhysicalpath>
+    
+	
+    <VSUI>$(TADest)\$(VisapUIfoldername)</VSUI>
+    <VSWS>$(TADest)\$(VisapWSfoldername)</VSWS>
+    <VSQuiz>$(TADest)\$(Quizfoldername)</VSQuiz>
+    <VideoRepo>$(TADest)\$(VideoRepositoryPhysicalpath)</VideoRepo>
+	<snapRepo>$(TADest)\$(SnapRepositoryPhysicalpath)</snapRepo>
+    <ImgRepo>$(TADest)\$(ImageRepositoryPhysicalpath)</ImgRepo>
+    
+ <!--Application folder Physicalpath section ENDS - No need to edit-->
+         
+	</PropertyGroup>
+
+</Project>

@@ -1,0 +1,8 @@
+  <div class="search--adv" >
+    <input mdTooltip="Search by Title/Tag/Category/Caption"  placeholder="Search" #item [(ngModel)]="searchValue" (keyup)="enableClearButton(item.value);" (keyup.enter)="search(item.value);" class="search__input--adv" type="text" autocomplete="off"  
+       value="" autocapitalize="off" autocorrect="off">
+    <md-icon class="search__button"  (click)="search(item.value);">search</md-icon>
+    <md-icon class="search__clear" *ngIf="isValueTyped" aria-label="clear-text" mdTooltip="Clear Text" (click)="clear()">close</md-icon>
+  </div>
+
+ 

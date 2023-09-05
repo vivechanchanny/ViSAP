@@ -1,0 +1,19 @@
+.margin20{
+    margin: 0px 20px auto;
+    max-height: 600px;
+    overflow-y: auto;
+   
+}
+
+.margin10{
+    margin: 10px;
+}
+ 
+.labelrobota{
+    font-family: Roboto;
+    font-size: 15px;
+}
+
+.max-error-msg {
+  margin-bottom: 5px;
+}

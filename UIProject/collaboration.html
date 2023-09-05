@@ -1,0 +1,680 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="images/common/v-sap.ico">
+<title>V-SAP</title>
+
+<!-- Bootstrap core CSS -->
+<link href="style/external/bootstrap.min.css" rel="stylesheet">
+<link href="style/default/default.css" rel="stylesheet" type="text/css">
+<link href="style/common/player.css" rel="stylesheet" type="text/css">
+<link href="style/common/assign.css" rel="stylesheet" type="text/css">
+<link href="style/common/player.brown.css" rel="stylesheet" type="text/css">
+<!-- Custom styles for this template -->
+
+<link href="style/common/style.css" rel="stylesheet" type="text/css">
+<link href="style/common/fonts.css" rel="stylesheet" type="text/css">
+<link href="style/common/literallycanvas.css" rel="stylesheet" type="text/css">
+
+<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    
+    <script type="text/javascript" src="scripts/frameworks/jquery/jquery-1.10.2.min.js"></script>
+
+    <script src="scripts/external/react-with-addons.js" type="text/javascript"></script>
+   
+
+    <script type="text/javascript" src="scripts/frameworks/jquery/jquery.cslider.js"></script>
+    <script type="text/javascript" src="scripts/frameworks/jquery/jquery.blockUI.js"></script>
+    <script src="scripts/frameworks/jquery/jquery-ui.1.10.4.js" type="text/javascript"></script>
+    <script src="scripts/frameworks/jquery/jquery.timeago.js" type="text/javascript"></script>
+    <script type="text/javascript" src="scripts/frameworks/jquery/i18next.js"></script>
+    <script src="scripts/frameworks/jquery/jquery.cookie.js" type="text/javascript"></script>
+    <script type="text/javascript" src="config.js"></script>
+   
+    <script type="text/javascript" src="scripts/visap.localize.js"></script>
+    <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+    <script type="text/javascript" src="/ViSAPFx/scripts/visap.js"></script>
+    <script type="text/javascript" src="scripts/external/literallycanvas.js"></script>
+    <script type="text/javascript" src="/ViSAPFx/scripts/visap.edit.js"></script>
+    <script type="text/javascript" src="/ViSAPFx/scripts/visap.aelib.js"></script>
+    <script type="text/javascript" src="/ViSAPFx/scripts/visap.quiz.js"></script>
+    <script type="text/javascript" src="/ViSAPFx/scripts/visap.litwrapper.js" ></script>
+    <script type="text/javascript" src="/ViSAPFx/scripts/sketcher.js"></script>
+    <script type="text/javascript" src="/ViSAPFx/scripts/visap.factorysketcher.js" ></script>
+    <script type="text/javascript" src="/ViSAPFx/scripts/logger.js"></script>
+    <script type="text/javascript" src="/ViSAPFx/scripts/visap.logger.js"></script>
+    <script type="text/javascript" src="scripts/common.js"></script>
+    <script type="text/javascript" src="scripts/assign.js"></script>
+    <script type="text/javascript" src="scripts/visap.analytics.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script type="text/javascript" src="scripts/category.js"></script>
+    <script type="text/javascript" src="scripts/edit.js" ></script>
+    <script type="text/javascript" src="scripts/visap.message.js" ></script>
+    <script type="text/javascript" src="scripts/analytic/analytics.js" ></script>
+  
+    <script type="text/javascript" src="scripts/ckeditor/ckeditor.js"></script> 
+
+    <link rel="stylesheet" type="text/css" href="QA/css/widget_global.css" />
+    <link rel="stylesheet" type="text/css" href="QA/css/widget_color.css" />
+    <link rel="stylesheet" type="text/css" href="QA/css/widgets_utils.css" />
+    <link rel="stylesheet" type="text/css" href="QA/css/widget.css" />
+    <link rel="stylesheet" type="text/css" href="QA/themes/default/css/widgets_theme.css">
+    <link rel="stylesheet" type="text/css" href="QA/css/widgets_quizCreator.css" />
+    <link rel="stylesheet" type="text/css" href="QA/css/widgets_popup.css" />
+    <link rel="stylesheet" type="text/css" href="QA/css/widgets_quizEditor.css" />
+
+    <link rel="stylesheet" type="text/css" href="QA/css//widgets_iFrameWidget.css"/>
+    <link rel="stylesheet" type="text/css" href="QA/themes/default/css/widgets_iframeTheme.css">
+      <link href="style/external/jquery-ui.1.10.4.css" rel="stylesheet">  
+    <script src="QA/com/external/backbone/underscore.js"></script>
+    <script src="QA/com/external/backbone/backbone.js"></script>
+    <script src="QA/com/external/iscroll.js"></script>
+ 
+    <script src="QA/com/external/rangy-core.js"></script>
+    <script src="QA/com/external/DetectMobileBrowser.js"></script>
+    <script>var require = {baseUrl : './QA/'};</script>
+    <script>var require = {baseUrl : './QA/', deps:["com/es/mainRenderer"]};</script>
+    <script data-main="com/es/mainQuizEditor" src="QA/com/external/require.js"></script>
+
+    <script type="text/javascript" src="QA/com/es/mainRenderer.js"></script>
+ 
+</head>
+<body>
+<!--/.nav-start --> 
+<nav class="navbar navbar-inverse navBar bg-banner" >
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" ><img src="images/common/v-sap.png" title="V-SAP" width="91" height="24" alt="V-SAP"></a> </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav top-nav">
+        <li><a href="gallery.html" data-i18n="menu.gallery"></a></li>
+        <li><a href="myspace.html" data-i18n="menu.myspace"></a></li>
+        <li class="active"><a href="collaboration.html" data-i18n="menu.collaboration"></a></li>
+         <li class="divider-top hidden-xs">&nbsp;</li>
+        <li><a href="/visap/visapworkspace/index.html#/group" id="group" data-i18n="menu.group"></a></li>
+        </ul>
+    
+     <ul class="nav navbar-nav navbar-right">
+      <li class="top-nav-rt" style="text-align:right"><span data-i18n="header.welcomeLabel"></span><span>, </span><span id="uName" class="wsName"></span> <a href="#" class="logout"  data-i18n="[title]header.logout" onclick="ViTagUI.logout();"></a><br>
+        <span class="youareIn"><span data-i18n="header.workspaceLabel"></span><span>: </span><span class="wsName" id="wrokspace"></span></span></li>
+      </ul>
+    </div>
+    <!--/.nav-collapse --> 
+  </div>
+  <!--/Submenu start-->
+<div id="bgsubmenu" class=" bg-submenu">
+  <div class="container" id="searchcontainer">
+    <div class="row">
+      <div class="col-md-6">
+        <table style="width: 100%; border-spacing: 0; border: 0; padding: 0;" class="search-main">
+          <tr>
+            <td class="viewby"><span data-i18n="search.label"></span> :</td>
+            <td style="width:100%; position:relative;"><input type="text" class="form-control" id="vidSearch" data-i18n="[placeholder]search.placeholder;[title]search.title" 
+             style="padding-right:30px !important;" onkeypress="javascript: ViTagUI.SearchVidOnEnterKey({ obj: this, e: event,isStaging:true,ishome:false });">
+             <span style="position:absolute; top:18px; right:15px; cursor:pointer;" data-i18n="[title]search.clearText"><img src="images/actions/search-close.png" alt="search-close-img" width="17" height="19" onclick="ViTagUI.clrSearchTxt()"></span>
+             </td>
+            <td style="width:50px;"><button type="submit" class="btn btn-primary" 
+            onclick="javascript: ViTagUI.SearchVideo({isStaging:true,ishome:false});" data-i18n="search.button"></button></td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-md-6">
+        <ul class="sub-menus">
+          <li><a href="#" class="sub-menus-import" data-i18n="[title]subMenu.titleImportVideo;subMenu.importVideo" data-target="#myModal" data-toggle="modal" onclick="ViTagUI.uploadVid();" > 
+          </a></li>
+          <li><a href="#"  data-i18n="[title]subMenu.titleSelectAll" onclick="javascript: ViTagUI.selectAll();">
+            <input type="checkbox" class="publishchkbox" id="selectchkBox"><span data-i18n="subMenu.selectAll"></span></input></a></li>
+          <li><a href="#" class="sub-menus-publish" data-i18n="[title]subMenu.title;subMenu.copyToMyspace" onclick="javascript: ViTag.publish();" >
+            </a></li>
+         </ul> 
+       </div>
+     </div>
+   </div>
+    <div  class= "hideEle" id ="gradesreport">
+      <ul class="reports">
+		  <li> <a href="#" id="viewReports"   onclick="javascript: ViTag.viewReports();" data-i18n="common.viewReport" target="_blank"></a></li>
+
+      </ul>
+
+  </div>
+  </div> 
+ 
+<!--/Submenu end -->
+</nav>
+<!--/.nav-end -->
+
+ <div  id="iframeErr" class="iframeErr" style="display:none">
+      <!-- ================Iframe-Error page ================-->
+  </div>
+    
+<!--  ================Title Save&Cancel Button Start ================================== -->
+<div id="backToList" class="container gap-title-top hideEle container-body" >
+  <div class="row">
+    <div class="col-md-6 page-title">
+
+   
+    <a href="javascript:void(0)" class="btn-back" onclick='ViTagUI.backToThumnails()' data-i18n="content.backToVideo">
+    </a>
+    <span id='pagetitle' class="truncate-text large-width"></span>
+  </div>
+     
+    <div class="col-md-6">
+      <ul  id="saveCancel"class="btn-main">
+       
+        <li>
+          <button type="submit" class="btn btn-primary" onclick="javascript: ViTagUI.SaveActions();" data-i18n="common.save"></button>
+        </li>
+        <li>
+          <button type="button" class="btn btn-default btn-color" onclick="javascript: ViTagUI.CancelActions();" data-i18n="common.cancel"></button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="video-description" id='videodesc'> </div>
+</div>
+
+    </div>
+<!--  ================Title Save&Cancel Button End ================================== -->
+<!--/Submenu end -->
+ <!--  ================Tab Container Start ================================== -->
+<div id='editContainer' class='hideEle'>
+<div class="container">
+  <ul class="nav nav-tabs sub-menus-edit">
+    <li role="presentation"><a href="javascript:void(0)"  id="tagTab"  class="icn-tag active-tag" onclick="javascript: ViTagUI.ChangeTabs(this.id);" data-i18n='playerEdit.tag'></a></li>
+    <li role="presentation"><a href="javascript:void(0)"  id="linkTab"    class="icn-link" onclick="javascript: ViTagUI.ChangeTabs(this.id);" data-i18n="playerEdit.link"></a></li>
+    <li role="presentation"><a href="javascript:void(0)"  id="sketchTab"  class="icn-sketch" onclick="javascript: ViTagUI.ChangeTabs(this.id);" data-i18n="playerEdit.sketch"></a></li>
+    <li role="presentation"><a href="javascript:void(0)"  id="annotationTab" class="icn-anno" onclick="javascript: ViTagUI.ChangeTabs(this.id);" data-i18n="playerEdit.annotation"></a></li>
+    <li role="presentation"><a href="javascript:void(0)"  id="questionTab" class="icn-quest" onclick="javascript: ViTagUI.ChangeTabs(this.id);" data-i18n="playerEdit.question"></a></li>
+    <li role="presentation"><a href="javascript:void(0)"  id="whiteboardTab" class="icn-whiteboard" onclick="javascript: ViTagUI.ChangeTabs(this.id);" data-i18n="playerEdit.whiteboard"></a></li>
+    <li role="presentation"><a href="javascript:void(0)"  id="hotpotTab" class="icn-hotspot" onclick="javascript: ViTagUI.ChangeTabs(this.id);" data-i18n="playerEdit.hotspot"></a></li>
+  </ul>
+</div>
+</div>
+ <!--  ================Tab Container End ================================== -->
+
+
+<div class="container container-body"> 
+  <div id="errormessage" class="alertDecorater  message" style="display: none;">
+  </div>
+
+<!-- ================ Confirmation Modal starts ================-->
+<div id="confirmationModal" >
+  
+</div>
+<!-- ================Confirmation Modal End ================-->
+
+   
+
+  <!--  ================Thumbnail content start ================================== -->
+  <div id='thumbnails'>
+  
+        <div id="divVideoList"></div>
+         <div id="displayAssignMsg"></div>
+       <div class="row video-List" id="videoList">     </div>
+     </div>
+ 
+  
+   <!-- =================Thumbnail content ends=================================== -->
+
+ <!--  ================Player region start ================================== -->
+  <div id='playerpart' class='hideEle playerpart'>
+    <div class="container">
+     
+    </div>
+        <div class="container">
+     
+    </div>
+     <div id="message" class="decorater  message" style="display: none;">
+                    </div>
+    <div class="container" id="maintable"> 
+       <table style="width : 0; border :0; margin-left:auto; margin-right:auto; padding:10; border-spacing: 0;" class="vi-main">
+        <tr>
+          <td class="aligntop" >
+            <div class="tag-main" id='slider'>
+            
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <!-- Tags and links are shown here -->
+            </div>
+            
+             <!-- question block are shown here -->
+            <div id="questContainer" class='hideEle'>
+             <div class="quest-main" id="aelibquestblock"></div>
+           </div>
+              <div id="QAPlaceHolder"></div>  <!-- to diaplay aelib question in ipad we have placed this div with id QAPlaceHolder  -->
+          </div>
+        </td>
+          <td class="aligntop"><div class="btn-tag" onclick='ViTagUI.getTagsLinks()'></div>
+            <div> 
+
+ <!-- =================Player Conatiner starts=================================== -->
+  <div id="playContainer">
+     <div id="videoContainer" class="vidcontainer">
+     </div>
+  </div>
+  <!--  ================Player Container Ends ================================== -->
+  
+                </div></td>
+            <td id="actionsContainer" class="settings-hide"><div class="settings-main">
+              <div class="panel panel-default no-left-border">
+                <div class="actions-heading">
+                  <h3 id="actionHeading" class="panel-title act-heading"></h3>
+                </div>
+                <div class="panel-body panel-height"> 
+                 <!------------------Action Tag..............-->   
+                
+                <div id=tagcontainer class='hideEle'>
+                 <span data-i18n="playerEdit.name"></span><br>
+                <input name="" type="text" id="txtTag" class="modal-textfield" size="30" maxlength="30"
+                       style="width: 90%;"><span class="wrgmsg"> * </span>
+                       <div class="hideEle" id="tagtimediv">
+                                             <span data-i18n="playerEdit.time"></span><br>
+                                            <input type="text" class="modal-textfield" id="TagTime" maxlength="10">
+                                           <label id="vidDuration" class="wrgmsg"><span data-i18n="playerEdit.vidduration"></span>(<span id="tagDurationtime">:</span><span data-i18n="playerEdit.sec"></span>)</label>
+                                            <label id="errmsg"></label>
+                                        </div>
+               </div>
+               
+                  <!-------------------End of Tag..............--> 
+                
+                 <!----------------Action link..............-->  
+                 <div id="linkcontainer" class='hideEle'>
+                     <div>
+                <span data-i18n="playerEdit.name"></span><br>
+               <input name="" type="text" class="modal-textfield" style="width: 90%;" id="linkName" maxlength="30"> <span class="wrgmsg">*</span>
+           </div>
+           <br>
+           <div>
+                <span data-i18n="playerEdit.url"></span><br>
+               <input name="" type="text" class="modal-textfield" style="width: 90%;" id="linkUrl" maxlength="200"> <span class="wrgmsg">*</span>
+           </div>
+             </div>
+             
+                <!-------------------End of link..............--> 
+                
+                <!--whiteboard Action ..............--> 
+                     
+                     <div id="whiteboard" class="hideEle">
+                   
+                   <dl>
+                       <dt>
+                           <input type="radio" name="switchwbAction" id="wbtext" value="wbtext" checked="checked"><span data-i18n="playerEdit.text"></span></input>
+                           <input type="radio" name="switchwbAction" id="wbsketch" value="wbsketch"><span data-i18n="playerEdit.sketch"></span></input>
+                       </dt>
+                       <dt onchange="ViTag.DisplayingWhiteboard(this);">
+                           <input type="radio" id="wbLeftPos" name="direction" value="left" checked="checked">
+                           <span data-i18n="playerEdit.left"></span>
+                           <input type="radio" id="wbRightPos" name="direction" value="right" disabled="true">
+                           <span data-i18n="playerEdit.right"></span>
+                       
+                       </dt>
+                       <dt data-i18n="playerEdit.duration"></dt>
+                       <dd>
+                           <input class="modal-textfield" name="" type="text" id="whiteboardDuration" onkeyup="ViTagUI.validatenumber(this); ViTag.onChangeDuration(this.value,this.id)"
+                                  size="8" maxlength="3">
+                          <input type="button" value="+" size="10"  name="whiteboardDuration" onclick="ViTag.incDuration(this.name);">
+                          <input type="button" value="-" size="10"  name="whiteboardDuration" onclick="ViTag.decDuration(this.name);">
+                           <span class="wrgmsg">*</span>
+                       </dd>
+                       <dd><dt>
+                           <input name="" type="checkbox" id="whiteboardPauseOnShow" class="modal-textfield" size="3" maxlength="3"> <span data-i18n="playerEdit.pauseOnShow"></span></dt> 
+                   </dl>
+                </div>
+                     
+                     <!--End of whiteboard Action ..............--> 
+                 <!---Action sketch..............-->   
+             <div id="sketch" class="hideEle">
+               
+             </div>
+            
+                 <!--End of  sketch Action ..............--> 
+                   
+                   <!--Action annotation..............-->   
+                  <div id="annotate" class='hideEle'>
+                     <dl>
+                         <dt data-i18n="playerEdit.title"> </dt>
+                         <dd>
+                             <label class="required">
+                                 <input name="" type="text" id="cmtTitle" class="modal-textfield" maxlength="50" size="30">
+                             </label>
+                         </dd>
+                         <dt data-i18n="playerEdit.duration"></dt>
+                         <dd>
+                             <label class="required">
+                                 <input name="" type="text" id="cmtDuration" onkeyup="ViTagUI.validatenumber(this);ViTag.onChangeDuration(this.value,this.id)"
+                                        class="modal-textfield" size="8" maxlength="3">
+                                <input type="button" value="+" size="10"  name="cmtDuration" onclick="ViTag.incDuration(this.name);">
+                                <input type="button" value="-" size="10"  name="cmtDuration" onclick="ViTag.decDuration(this.name);">       
+                             </label>
+                            
+                          </dd>
+                           
+                            <label>
+                                <input name="" type="checkbox" id="annotatePauseOnShow" class="modal-textfield" size="8" maxlength="3">
+                            </label>
+                           <span data-i18n="playerEdit.pauseOnShow"></span>
+                         <dt data-i18n="playerEdit.description"></dt>
+                         <dd>
+                             <label class="required">
+                                 <textarea name="" cols="" rows="4" id="cmtDesc" class="modal-textfield" style="width: 90%"></textarea>
+                             </label>
+                         </dd>
+                          <dd>
+                          <button type="button" class="btn-secondary" onclick="ViTagUI.previewAnnotation();" data-i18n="playerEdit.preview"></button>
+                         </dd>
+                     </dl>
+                 </div>
+                    <!--End of  annotation Action ..............-->  
+                   
+                                       <!--Action native question..............-->
+                 <div id="questions" class="hideEle">
+                <dl>
+                  <div> 
+                    <dt data-i18n="playerEdit.title"></dt>
+               <dd>
+                 <label class="required">
+                  <input name="" type="text" id="qTitle" class="modal-textfield" size="25" maxlength="150">
+                  </lable> 
+               </dd>
+               <dt data-i18n="playerEdit.tag"></dt>
+               <dd>
+                   <input name="" id="tagTitle" list="dtTagList" type="text" class="modal-textfield" />
+                   <datalist id="dtTagList"></datalist>
+               </dd>
+               <dt data-i18n="question.selectAnswere"></dt>
+               <div id="divOptions">
+                   <span style="display: block; margin: 10px;">
+                       <input name="optGroup" type="radio" value=""><input name="optGroup" type="text" class="modal-textfield"
+                                                                           size="25" maxlength="25">
+                       <img src="images/actions/icn-delete.png" alt="" class="imgStyle1" onclick="ViTag.question.deleteOption(this);" />
+                   </span>
+               </div>
+           </div>
+           <dd>
+               <input style="margin-left: 21px; margin-top: 5px;" class="import" id="btnAddOpt"
+                      name="Add Options" type="button" value="Add Options" onclick="ViTag.question.addOption();">
+                </dd>
+                  </dl>
+                  
+               </div>
+              <!--End of  native question action ..............-->   
+                   
+                   <!--Action aelib question..............-->
+                   
+             <div id='aelib' class="hideEle">
+                <div id="controls" style="display: block;">
+                  <select name="category[]" id="questions_dropdown" onchange="ViTag.aelib.initQuizEditor()">
+                    <option value="000" data-i18n="question.selectQuestion"></option>
+                    <option value="101" data-i18n="question.mcqSingleResponse"></option>
+                    <option value="102" data-i18n="question.mcqMultipleResponse"></option>
+                    <option value="103" data-i18n="question.fibText"></option>
+                    <option value="104" data-i18n="question.fibTapAndPlace"></option>
+                    <option value="105" data-i18n="question.fibDropDown"></option>
+                    <option value="106" data-i18n="question.matchingQuestion"></option>
+                    <option value="107" data-i18n="question.groupingQuestion"></option>
+                    <option value="108" data-i18n="question.trueOrFalse"></option>
+                  </select>
+                 <span style="margin-left:20px">
+                    <select id="aelibTagList" class="aelibTagList"></select></span>
+                </div>
+
+                <div id="showQuizType" style="margin-left:15px"></div>
+
+              </div>
+                    <!--End of aelib question Action ..............--> 
+                    
+                      <!--hotspot Action ..............--> 
+                    <div id="hotspot" class='hideEle'>
+                    <dl>
+                        <dt data-i18n="playerEdit.title"></dt>
+                        <dd>
+                            <label class="required">
+                                <input name="" type="text" id="hotspotTittle" class="modal-textfield" maxlength="50" size="40">
+                            </label>
+                        </dd>
+                        <dt data-i18n="playerEdit.duration"></dt>
+                        <dd>
+                            <label class="required">
+                                <input name="" type="text" id="hotspotDuration" onkeyup="ViTagUI.validatenumber(this); ViTag.onChangeDuration(this.value,this.id)" onchange="" class="modal-textfield" size="8" maxlength="3">
+                                <input type="button" value="+" size="10"  name="hotspotDuration" onclick="ViTag.incDuration(this.name);">
+                                <input type="button" value="-" size="10"  name="hotspotDuration" onclick="ViTag.decDuration(this.name);">
+                            </label>
+                        </dd>
+                       
+                            <label>
+                                <input name="" type="checkbox" id="hotspotOnpause" class="modal-textfield" size="8" maxlength="3">
+                            </label>  <span data-i18n="playerEdit.pauseOnShow"></span>
+                        <dt data-i18n="playerEdit.description"></dt>
+                        <dd>
+                            <label class="required">
+                                <textarea name="" cols="50" rows="4" id="hotspotContent" class="modal-textfield" style="width: 90%"></textarea>
+                            </label>
+                        </dd>
+                         <dd>
+                          <button type="button" class="btn-secondary" onclick="ViTagUI.previewHotspot();" data-i18n="playerEdit.preview"></button>
+                        </dd>
+                    </dl>
+                    </div>
+                      <!--End of hotspot Action ..............--> 
+                    
+                     <div id="timeline"></div>
+                    </div>  
+                </div>
+              </div>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+  </div>
+  
+   <!-- =================Player region ends=================================== -->
+   <div id="alertmessage" class="alertDecorater  message" style="display: none;">
+                    </div> 
+    <!--Action list display starts ===========================--> 
+     <div>
+        <table style="width:100%;">
+         <!--Action list display starts ..............--> 
+         <tr>
+          <td>
+            <div class="panel-group accordion-Actions" id="accordionActions" role="tablist" aria-multiselectable="true">
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+    </div>
+  <!--Action list display ends ===========================--> 
+
+</div>
+<!-- /.container --> 
+
+<!-- Modal begin -->
+<div class="modal fade" id="assignModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" data-i18n="[title]common.close">&times;</span></button>
+        <span class="modal-title title-modal" id="myAssignModalLabel"><span data-i18n="assign.videoName"></span><span> : </span><span id="vidName" class="truncate-text large-width"></span></span> 
+      </div>
+     
+      <div class="modal-body" id='displaygroups' style="text-align:center">
+      <div id="gruopmessage" class="assignDecorater1  message" style="display: none; float : left">
+                    </div>
+      
+       <div class="">
+	      <div class="actions-heading">
+            <span class="modal-checkbox"><input name="assignvideo" type="checkbox" value="" id="selectAllCheckbox" class="sel-AllCheck"></span>
+            <span data-i18n="subMenu.selectAll"></span></div>
+			 <div class="modal-subtitle">
+				 <div class="panel-group" id="accordionGroup" role="tablist" aria-multiselectable="true">
+					<!-- Groups are shown here -->
+				</div>
+			</div>
+         
+         
+         </div>
+         
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" onclick="ViTagUI.AssigningVideo()" data-i18n="assign.assign"></button>
+        <button type="button" class="btn btn-primary" onclick="ViTagUI.UnAssigningVideo()" data-i18n="assign.unAssign"></button>
+         <button type="button" class="btn btn-primary" data-dismiss="modal" data-i18n="playerEdit.cancel"></button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of Modal -->
+
+<!--MODAL IMPORT START--> 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" id="uploadform">
+     <div id="gruopmessage1" class="alertDecorater  message" style="display: none; float : left">
+                    </div>
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" data-i18n='[title]common.close'>&times;</span></button>
+        <span class="modal-title title-modal" id="myModalLabel" data-i18n="subMenu.improtVideo"></span>
+      </div>
+      <div class="modal-body">
+        <form>
+         <label class="wrgmsg" id="lblWrgMsg"></label>
+          <div class="form-group">
+            <label for="exampleInputEmail1"><span data-i18n="playerEdit.title"></span><span class="required"></span></label>
+            <input type="text" class="form-control" id="fileTitle" data-i18n="[placeholder]import.title;[title]import.title">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1"><span data-i18n="playerEdit.description"></span><span class="required"></span></label>
+            <input type="text" class="form-control" id="fileDesc" data-i18n="[placeholder]import.description;[title]import.description">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1" data-i18n="category.category"></label>
+            
+		   <input type="text"  class="form-control filecategory" id="fileCategory" data-i18n="[placeholder]category.category;[title]category.category" maxlength="255"> 
+          </div>
+          <div  id="fileupload" class="file-upload">
+          <div class="form-group">
+            <label for="exampleInputPassword1"><span data-i18n="import.uploadVideo"></span><span class="required"></span></label><span class="required uplmandatory1" data-i18n="import.mp4"></span>
+             <div class='upload-file'>
+              <input type='file' id='vidFile' class='input-file' onchange="ViTagUI.getFileName(this,'uploadTxt');"> <span class='input-text' id='uploadTxt' data-i18n='import.chooseText'></span>
+              <input type='button' id="vidFileBtn" class='select-file' data-i18n='[value]import.chooseFile' onclick="ViTagUI.chooseFile('vidFile');">
+             </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1"><span data-i18n="import.captionByStatic"></span><span class="required"></span></label><span class="required uplmandatory1" data-i18n="import.vtt"></span>
+             <div class='upload-file'>
+              <input type='file' id='ccFile' class='input-file' onchange="ViTagUI.getFileName(this,'ccFileTxt');"> <span class='input-text' id='ccFileTxt' data-i18n='import.chooseText'></span>
+              <input type='button' id='ccFileBtn' class='select-file' data-i18n='[value]import.chooseFile' onclick="ViTagUI.chooseFile('ccFile');">
+             </div>             
+          </div>
+          
+            <div class="form-group">
+            <label for="exampleInputPassword1" data-i18n="import.uploadYT"></label>
+             <input type="checkbox" data-i18n="[title]import.uploadYT" id="chkYTvideo"  onclick="ViTagUI.enableFileBrowse(this)">
+             <input type="text" class="form-control" data-i18n="[placeholder]import.placeholderYT" title="Enter Youtube video ID" id="txtYTvideo" disabled="">  
+        </div>
+          
+          <div class="form-group">
+            <label for="exampleInputPassword1" data-i18n="import.uploadDirectURL"></label>
+             <input type="checkbox" data-i18n="[title]import.uploadDirectURL" id="chkVideoUrl"  onclick="ViTagUI.enableURLField(this)">
+             <input type="text" class="form-control" data-i18n="[placeholder]import.vidFormate;[title]import.vidFormate" id="VideoUrl" disabled="">   
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1" data-i18n="import.captionByDirectURL"></label>
+             <input type="checkbox" title="Upload caption by DirectURL" id="chkCaptionUrl"  onclick="ViTagUI.enableCapURLField(this)" disabled="">
+             <input type="text" class="form-control" placeholder="Enter Direct caption URL(vtt)" title="Enter Direct caption URL(vtt)" id="captionUrl" disabled="">   
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1"><span data-i18n="import.captionByStatic"></span><span class="required"></span></label><span class="required uplmandatory1" data-i18n="import.vtt"></span>
+            <input type="checkbox" data-i18n="[title]import.captionDirectVid" id="chkCaptionFile"  onclick="ViTagUI.enableCapBrowse(this)" disabled="">
+             <div class='upload-file'>
+              <input type='file' id='dirCcFile' class='input-file' onchange="ViTagUI.getFileName(this,'dirCcTxt');"> <span class='input-text' id='dirCcTxt' data-i18n='import.chooseText'></span>
+              <input type='button' id='dirCcFileBtn' class='select-file' data-i18n='[value]import.chooseFile' onclick="ViTagUI.chooseFile('dirCcFile');">
+             </div>              
+          </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="Import" class="btn btn-primary" onclick="ViTag.upload()" data-i18n="import.importButton">
+         </button>
+         <button type="button" id="Update" class="btn btn-primary" data-i18n="import.update" onclick="ViTag.updateEditedTittleorDesc()">
+         </button>
+         <button type="button" class="btn btn-secondary" data-dismiss="modal" data-i18n="playerEdit.cancel">
+         </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--MODAL IMPORT END--> 
+ <!--MODAL VISAPINT START--> 
+	    <div class="modal fade in" id="visapIntmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none; padding-left: 6px;">
+     <div class="modal-dialog" role="document">
+    <div class="modal-content" id="uploadform">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"val>×</span></button>
+        <span class="modal-title title-modal" id="myModalLabel" data-i18n="integration.visapIntModal"></span>
+      </div>
+      <div class="modal-body">
+        <form>
+            <div class="form-group">
+				<label for="exampleInputPassword1" data-i18n="integration.videoId"></label>
+			   <input type="text"  class="form-control filecategory" id="videoId" > 
+			  </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" data-i18n="playerEdit.cancel">
+      </button>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<!-- =================model pop up ends ============= -->
+
+<!--/footer start-->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="footer-links">
+          <li><a href="gallery.html" data-i18n="menu.gallery"></a>|<a href="myspace.html" data-i18n="menu.myspace"></a>|<a href="collaboration.html" data-i18n="menu.collaboration"></a></li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul class="footer-links navbar-right footer-links-rt">
+           <li><a href="aboutus.html" data-i18n="footer.aboutUs"></a> | <a href="contact.html" data-i18n="footer.contact"></a></li>
+          <li>© <span data-i18n="footer.copyRight"></span> | <a href="privacypolicy.html" data-i18n="footer.privacyPolicy"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--/footer end--> 
+
+<!-- Bootstrap core JavaScript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script type="text/javascript" src="scripts/external/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/external/ie10-viewport-bug-workaround.js"></script>
+<script type="text/javascript" src="scripts/external/ie-emulation-modes-warning.js"></script>
+ <script type="text/javascript">
+    if (ViTagUI.checkLibraryObj(false)) {
+        $(document).ready(function() {
+            ViTagUI.getEditModeReady({
+                isStaging: true
+            });
+        });
+    }
+</script>
+</body>
+</html>

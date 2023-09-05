@@ -1,0 +1,58 @@
+{
+    "title": "True / false",
+    "testid": "",
+    "questionsData" : [
+						{
+                        "id": "",
+                        "heading": [],
+                        "maxpoints": [
+                            "4"
+                        ],
+                        "answers": [
+                            "1",
+                            "0",
+                            "1"
+                           
+                        ],
+                        "leftCol": [],
+                        "modelParagraph": "",
+                        "options": [
+                            {
+                                "data": "The coldest temperature is 0 ",
+                                "type": "text"
+                            }, 
+                            {
+                                "data": "The coldest temperature is -5 .",
+                                "type": "text"
+                            }, 
+                            {
+                                "data": "The warmest temperature is 3 ",
+                                "type": "text"
+                            } 
+                            
+                            ],
+                        "optionsLayout": "",
+                        "questionBody": [{
+                            "data": "Here are some temperatures:    5    -2     0     2    3    -5    -3 ",
+                            "type": "text"
+                        }],
+                        "questionMedia": [{
+                            "data": "",
+                            "type": ""
+                        }],
+                        "optionsMedia": [],
+                        "questionLayout": "",
+                        "responseType": "BINARY",
+                        "rightCol": [],
+                        "rubric": [{
+                            "data": "Decide whether each of the statements is true or false.",
+                            "type": "text"
+                        }],    
+                        "title": "True or False",
+                        "type": "MCQ",
+                        "labelTrue" : "True",
+                        "labelFalse" : "False",
+                        "metadata":"Metadata"
+                               
+                }]
+}    

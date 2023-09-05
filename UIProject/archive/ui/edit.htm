@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Video Tag</title>
+
+        <link href="style/default/jquery-ui.1.10.4.css" rel="Stylesheet" />
+        <link href="style/default/jquery.dataTables.css" rel="Stylesheet" />
+        <script src="scripts/frameworks/jquery/jquery-1.10.2.min.js" type="text/javascript"></script>
+        <script src="scripts/frameworks/jquery/jquery-ui.1.10.4.js" type="text/javascript"></script>
+        <script src="scripts/frameworks/jquery/JSON2.js" type="text/javascript"></script>
+        <script src="scripts/frameworks/jquery/jquery.blockUI.js" type="text/javascript"></script>
+        <script src="scripts/frameworks/jquery/jquery.dataTables.min.js" type="text/javascript"></script>
+        <script src="https://www.youtube.com/iframe_api"></script>
+
+        <link href="style/default/default.css" rel="stylesheet" />
+        <link href="style/default/Search.css" rel="Stylesheet" />
+        <link href="style/default/player.dark.css" rel="stylesheet" />
+        <script src="scripts/index.js" type="text/javascript"></script>
+        <script src="scripts/frameworks/visap.js" type="text/javascript"></script>
+        <script src="scripts/frameworks/player.js" type="text/javascript"></script>
+        <script src="scripts/frameworks/visap.edit.js" type="text/javascript"></script>
+        <script src="scripts/frameworks/canvas.js" type="text/javascript"></script>
+        <script src="scripts/index.edit.js" type="text/javascript"></script>
+
+    </head>
+    <body>
+        <form id="form1" runat="server">
+            <div class="divStyle5">
+                <div class="topbar">
+                    <div class="logo">
+                        <a href="catalog.html">
+                            <img src="images/logo.png" title="logo" />
+                        </a>
+                    </div>
+                    <div>
+                        <div class="top-nav">
+                            <ul>
+                                <li><a href="http://www.youtube.com/videoediting" target="_blank">Blog</a></li>
+                                <li id="tabCat_Edit"><a href="demo/catalog.html">Catalog</a></li>
+                                <li><a href="demo/contact.html">Contact</a></li>
+                                <li><a href="#" onclick="video.file.showBrowser();">Upload</a></li>
+                            </ul>
+                        </div>
+                        <br />
+                        <br />
+                        <div class="searchview">
+                            <input type="text" id="vSearchEdit" class="textbox" placeholder="Search Video">
+                            <input type="button" value=" " class="searchbtn" onclick="searcher.init();" />
+                        </div>
+                        <div class="clear">
+                        </div>
+                        <div class="logout">
+                            <div class="uname">
+                                <label id="username"></label>
+                                <label><a class="aLogout" href="#" onclick="video.logout();">Logout</a></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+                <br />
+                <div class="divStyle">
+                    <div id="header">
+                        <a>Note: pause the video to add tags and more </a>
+                    </div>
+                    <ul class="tabs">
+                        <li><a href="#Staging">Staging</a></li>
+                        <li><a href="#Published">Published</a></li>
+                    </ul>
+                    <div class="tab_container" id="divVideoList">
+                        <div class="type-videos" id="divContainer">
+                        </div>
+                        <div id="Staging" class="tab_content">
+                            <div class="type-videos" id="tagspanelstaging" style="text-overflow: ellipsis;">
+                            </div>
+                            <hr class="hrStyle" />
+                        </div>
+                        <div id="Published" class="tab_content">
+                            <div class="type-videos" id="tagspanelpublished">
+                            </div>
+                        </div>
+                        <div>
+                            <button id="button_publish" class="publishbtn">
+                                click to publish
+                            </button>
+                        </div>
+                    </div>
+                    <div id="videoContainer" class="containervideo"></div>
+                </div>
+                <br />
+                <div class="tagContainer2">
+                    <div id="editContainer">
+                        <ul>
+                            <li><a href="#editTags">Edit Tags</a></li>
+                            <li><a href="#sketch">Sketch</a></li>
+                            <li><a href="#annotate">Annotate</a></li>
+                            <li><a href="#questions">Questions</a></li>
+                            <li><a href="#links">Links</a></li>
+                            <li><a href="#tabs-n">...</a></li>
+                        </ul>
+                        <br />
+                        <div id="message" class="decorater">Message</div>
+                        <div id="editTags">
+                            <table class="decorater">
+                                <tr>
+                                    <td>
+                                        Enter new tag:
+                                        <input type="text" name="txtTag" id="txtTag" maxlength="25" value="" /><input type="button" name="btn"
+                                                                                                                      id="btn" value="Save" />
+                                        <input type="button" name="btnCancel"
+                                               id="btnCancel" value="Cancel" /><br /><br />
+                                        <label id="lblTagTime" for="chkTagTime">
+                                            <input type="checkbox" name="chkTagTime" id="chkTagTime" />&nbsp;Tag to current topic
+                                        </label>
+                                        <br />
+                                        <br />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div id="tagList">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="sketch" class="decorater">
+                            <table cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td width="30%">
+                                        <div>
+                                            <div class="divStyle3">
+                                                Color:&nbsp;&nbsp;
+                                            </div>
+                                            <ul id="colors">
+                                                <li style="background-color: black;"></li>
+                                                <li style="background-color: red;"></li>
+                                                <li style="background-color: green;"></li>
+                                                <li style="background-color: orange;"></li>
+                                                <li style="background-color: brown;"></li>
+                                                <li style="background-color: #d2232a;"></li>
+                                                <li style="background-color: #fcb017;"></li>
+                                                <li style="background-color: #fff460;"></li>
+                                                <li style="background-color: #9ecc3b;"></li>
+                                                <li style="background-color: #fcb017;"></li>
+                                                <li style="background-color: #fff460;"></li>
+                                                <li style="background-color: #F43059;"></li>
+                                                <li style="background-color: #82B82C;"></li>
+                                                <li style="background-color: #0099FF;"></li>
+                                                <li style="background-color: #ff00ff;"></li>
+                                            </ul>
+                                        </div>
+                                        <br class="brStyle" />
+                                        <br />
+
+                                        <div>
+                                            <div class="divStyle3_shapes" id="Shapescontainer">
+                                                Shapes:&nbsp;&nbsp;
+                                            </div>
+
+                                            <div id="dtool">
+                                                <button id="pencil" name="shapes" title="Pencil"></button>
+                                                <button id="line" name="shapes" title="Line"></button>
+                                                <button id="rect" name="shapes" title="Rectangle"></button>
+                                                <button id="fill" name="shapes" title="Fill"></button>
+                                                <button id="circle" name="shapes" title="Circle"></button>
+                                                <button id="text" name="shapes" title="Text"></button>
+                                            </div>
+                                        </div>
+                                        <br class="brStyle" />
+
+                                        <label for="brush">
+                                            Brush Size:
+                                        </label><input name="brush" id="brush_size" type="range" value="1" min="1"
+                                                       max="100" />
+                                        <br class="brStyle" />
+                                        <br />
+                                        <button id="undo">
+                                            Undo
+                                        </button>
+                                        <button id="clear">
+                                            Reset
+                                        </button>
+                                        <button id="saveOverlay">
+                                            Save
+                                        </button>
+                                        <button id="cancelOverlay">
+                                            Cancel
+                                        </button>
+                                    </td>
+                                    <td width=50%>
+                                        <div id="overlayList" class="divStyle6"></div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="annotate">
+                            <table class="decorater">
+                                <tr>
+                                    <td class="tdStyle4">
+                                        <label for="cmtTitle">Enter Title:</label>
+                                        <input type="text" name="txtAnnotate" id="cmtTitle" value=""  maxlength="50" class="ipStyle" />
+                                        <label class="mandatory">&nbsp;*</label>
+                                        <br /><br />
+                                        <label for="cmtDuration">Enter Duration:</label>
+                                        <input type="text" step="1" pattern="\d+" name="txtAnnotate" id="cmtDuration" class="ipStyle2" value="5" onkeyup="validatenumber(this);" />
+                                        <label class="mandatory">&nbsp;*</label>
+                                        <label class="lblStyle2">&nbsp;(secs)</label>
+                                        <br /><br />
+                                        <label for="cmtDesc">Enter Annotation:</label>
+                                        <textarea cols="30" rows="5" id="cmtDesc" style="resize:none" maxlength="200"></textarea>
+                                        <label class="mandatory">&nbsp;*</label>
+                                        <br /><br />
+                                        <input type="button" name="btn" id="cmtSave" value="Save" class="lblStyle3" />
+                                        <input type="button" name="btnCancel" id="cmtCancel" value="Cancel" />
+                                        <br />
+                                        <br />
+                                    </td>
+                                    <td>
+                                        <div id="annotateList">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="questions" class="decorater">
+                            <table cellpadding="0" cellspacing="10  " width="100%" border="0">
+                                <tr>
+                                    <td class="tdStyle5 tdStyle6">
+                                        <div id="divOptions">
+                                            <br />
+                                            <label for="qTitle">Title:</label><input type="text" id="qTitle" class="ipStyle4" /><div class="compulsory">*</div>
+                                            <br /><br />
+                                            <label for="tagTitle">Tag:</label><input id="tagTitle" list="dtTagList" class="ipStyle1" /><datalist id="dtTagList"></datalist><br /><br />
+                                            <p>Select answer below.</p>
+                                            <span><input type="radio" name="optGroup" /><input type="text" name="optGroup" />&nbsp;<img src="images/DeleteRed.png" alt="" class="imgStyle1" onclick="ViTag.question.deleteOption(this);" /><br /></span>
+                                        </div><br />
+                                        <input type="button" id="btnAddOpt" value="ADD Options" onclick="ViTag.question.addOption();" class="ipStyle3" /><br /><br />
+                                        <input type="button" id="saveQues" value="Save" /><input type="button" id="cancelQues" value="Cancel" /><br /><br />
+                                    </td>
+                                    <td class="tdStyle7">
+                                        <table id="tblQuestions" class="tblStyle1"></table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="links" class="decorater">
+                            <label for="linkName">Name: <input type="text" id="linkName" maxlength="30" /><div class="compulsorylinks">*</div></label><br /><br />
+                            <label for="linkUrl">&nbsp;&nbsp;&nbsp;URL: <input type="text" id="linkUrl" maxlength="30" /><div class="compulsorylinks">*</div></label><br /><br />
+                            <div class="divStyle4">
+                                <input type="button" id="saveLink" value="Save" />&nbsp;
+                                <input type="button" id="cnlLink" value="Cancel" /><br /><br />
+                                <div id="LinkList"></div>
+                            </div>
+                        </div>
+                        <div id="tabs-n" class="decorater">
+                            n tab
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div id="topics" class="topics">
+                    <div id="tags">
+                    </div>
+                </div>
+                <br />
+                <div class="topics">
+                    <div id="myLinks"></div>
+                </div>
+            </div>
+            <div id="playersnapshot" class="hideEle">
+                <video id="vidsnapshot" autoplay></video>
+                <canvas id="cansnapshot"></canvas>
+            </div>
+            <div class="footer">
+                HTML5 Support is required to use this site Recommended browsers: Firefox (version
+                21+), Google Chrome (version 28+), IE (version 9+)<br />
+                <a href="http://caniuse.com/#search=video" target="_blank">Refer here for browser comparision</a>
+            </div>
+            <div class="vidouter" style="display:none;">
+                <img id="imgValx" alt="" src="images/spacer.gif" class="imgValx" />
+                <!--<img id="imgMute" alt="" src="images/spacer.gif" class="imgMute"/>-->
+                <img id="imgValm" alt="" src="images/spacer.gif" class="imgValm" />
+                <img id="imgFS" alt="" src="images/spacer.gif" class="imgFS" />
+            </div>
+        </form>
+    </body>
+</html>

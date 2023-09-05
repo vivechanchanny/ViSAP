@@ -1,0 +1,15 @@
+﻿{ 
+  "playerEdit": {
+    "save": "enregistrer",
+    "cancel": "Annuler",
+    "Tag":"Marque",
+    "Link":"Lien",
+    "Sketch":"Esquisser",
+    "Annotation":"Annotation",
+    "Question":"Des questions",
+    "Whiteboard":"Tableau blanc",
+    "Hotspot":"Point chaud"
+  }
+}
+
+

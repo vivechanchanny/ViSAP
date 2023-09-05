@@ -1,0 +1,165 @@
+﻿#imgOverlay { display:none; }
+#seek-bar { width:100%; cursor:pointer; }
+
+/*.tdStyle2 { padding:5px;vertical-align:top; float:left; display:inline-flex; width:95%; }*/
+.tdStyle { height:22px;color:White;font-family:arial;font-weight:lighter;font-size:12px;vertical-align:middle;padding-left: 20px; text-align: left;}
+.viStyle { position:relative;margin:0 20px 0 20px; }
+.hideEle { display:none; }
+.imgOverlay { position: absolute; top:0px; left:0px; z-index:2147483640; display:inline-block; float:left; }
+.imgOverlay { /*position: absolute;top: 0px;left: 0px;z-index: 2147483640;display: inline-block;*/float: right; }
+.divVolbar { float:left; margin: 0px 0px 10px 0px;width:90%; }
+.divFullScreen { float:right; padding:5px 0px 0px 8px; }
+.divSeekbar { float:left; margin: 0px 0px 11px 0px;width:90%; }
+.midmidN2 { background:url(../../images/download.jpg); background-repeat: repeat-y;background-color:White; }
+.imgFS { background-repeat: no-repeat;cursor: pointer;width: 25px;height: 18px;}
+.defaultVideo, .tdStyle6, .tdStyle7 { border-collapse: separate;border-spacing: 0;border: 1px solid #173044;border-radius: 5px;-moz-border-radius: 5px; }
+.midmidN3 { width:18% !important; }
+.midmidN5, .midmidN3 { background:url(../../images/bgBar.png); background-repeat: repeat-x;}
+.divAnnotate {
+	-ms-filter: 'progid:DXImageTransform.Microsoft.Alpha'(Opacity=0.24); 
+	-moz-border-radius: 12px!important;
+	-webkit-border-radius:12px!important;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 12px;
+	padding: 15px;
+	border-radius: 28px;
+	position: absolute;
+	top: 10px;
+	width: 200px;
+	z-index: 2147483640;
+	float: right;
+	background: #616161;
+	background: rgba(0,0,0,0.5);
+	display: none;
+	overflow-y: auto;
+}
+.crlStyle, .imgPlay, .imgPause, .imgStop, .imgReplay {
+	background-repeat: no-repeat;
+	cursor: pointer;
+	width: 30px;
+	height: 24px;
+	float: left;
+}   
+.imgPause { background-image:url(../../images/pause2.png); }
+.imgValx, .imgMute {
+	background-repeat: no-repeat;
+	cursor: pointer;
+	width: 18px;
+	height: 18px;
+	float: left;
+}
+input[type="range"] {
+	-webkit-appearance: none;
+	background-color: black;
+	height: 2px;
+	width:100%;
+}
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	position: relative;
+	top: -2px;
+	z-index: 1;
+	width: 12px;
+	height: 12px;
+	cursor: pointer;
+	-webkit-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.6);
+	-moz-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.6);
+	box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.6);
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 80px;
+	background-repeat: no-repeat;
+	background-image:url(../../images/volumedrag.png);
+	/*background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebf1f6), color-stop(50%,#abd3ee), color-stop(51%,#89c3eb), color-stop(100%,#d5ebfb));*/
+}
+
+/*Custom controls -Start- */
+.crlStyle, .imgPlay, .imgPause, .imgStop, .imgReplay, .imgVal, .imgValm, .imgValx, .imgMute, .imgFS {
+	background-repeat: no-repeat;
+	cursor: pointer;
+	width: 24px;
+	height: 24px;
+	float: left;
+	border:0px!important;
+	
+	
+}
+.imgVal, .imgValm, .imgValx, .imgMute 
+{
+    width: 18px;
+	height: 18px;
+	padding: 2px;
+}
+
+.imgPlay {
+	background-image: url(../../images/play2.png);
+	
+}
+.imgPause {
+	background-image: url(../../images/pause2.png);
+	
+}
+.imgReplay {
+	background-image: url(../../images/replay2.png);
+	
+}
+.imgStop {
+	background-image: url(../../images/stop2.png);
+	
+}
+.imgVal {
+	background-image: url(../../images/volumeMid.png);
+	 margin-top:6px;
+}
+.imgValm {
+	background-image: url(../../images/volumeLess.png);
+}
+.imgValx {
+	background-image: url(../../images/volumeMore.png);
+	 margin-top:6px;
+}
+.imgMute {
+	background-image: url(../../images/volumeMute.png);
+	 margin-top:6px;
+}
+.imgFS { 
+	background-image:url(../../images/fullscreen.png); 
+
+}
+.imgFSLow { 
+	background-image:url(../../images/fullscreen_low.png); 
+	 margin: -3px;
+}
+.timevalues, .timevalues2 {
+
+	font-family: arial,sans-serif;
+    font-size  : 10px;
+    color: #fff;
+    margin:7px 0px 9px 1px;
+   
+}
+ .timevalues2 {
+    float: left;  
+    padding-right: 5px; 
+    margin-left: 10px;
+}
+.imgp1 {
+    width:87px;
+    vertical-align: middle;
+     /*width:81px;*/
+}
+.imgp3 {
+    width:73px;
+    /*width:52px;*/
+    padding:0px 2px 0px 2px;
+}
+.imgp5 {
+    width:30px;
+}
+.imgcontrols {
+    padding: 5px 20px;
+    width: 100%;
+    border-collapse: inherit;
+}
+/*Custom controls -End- */

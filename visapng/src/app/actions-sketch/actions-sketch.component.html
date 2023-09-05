@@ -1,0 +1,27 @@
+<div class="margin30">
+  <div fxLayout="column">
+    <form [formGroup]="Form">
+      <!-- <md-icon class="poniter"  (click)="increment(tag)">add_circle</md-icon> -->
+      <md-input-container>
+        <input mdInput class="form-control" min="1" max="{{ maxDuration }}" step="1" placeholder="Duration" formControlName="duration" type="number"
+        (ngModelChange)="onDurationChange($event)" [(ngModel)]='duration'>
+      </md-input-container>
+      <md-error  *ngIf="ismaxDurationReached" [ngStyle]="{'color': 'red'}" class="help-block" i18n>The action can only be upto {{restDurationValue}} seconds</md-error>
+      <ng-container *ngIf="Form.controls['duration'].errors?.min; else valid">
+        <md-error class="max-error-msg">* Duration should be atleast 1 sec.</md-error>
+      </ng-container>
+      <ng-template #valid>
+        <ng-container *ngIf="Form.controls['duration'].errors?.number || !Form.get('duration').valid && submitted">
+          <md-error class="max-error-msg">* Please enter valid duration in seconds</md-error>
+        </ng-container>
+      </ng-template>
+
+      <div id="sketch" class="toolwidth"></div>
+      <div class="mat-input-infix"  fxLayoutAlign="end center">
+        <button md-raised-button color="primary" class="spacebtn" (click)="onSave(Form.valid)" type="submit" i18n>Save</button>
+        <button md-raised-button color="primary" (click)="cancel()" i18n>Cancel</button>
+      </div>
+   
+    </form>
+  </div>
+</div>

@@ -1,0 +1,581 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="image/v-sap.ico">
+    <title>Excelsoft</title>
+    <link href="style/style.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="style/carousel-bootstrap.css" rel="stylesheet" />
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="script/ie-emulation-modes-warning.js" type="text/javascript"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="script/ie10-viewport-bug-workaround.js"></script>
+     
+    <link href="style/carousel.css" rel="stylesheet" />
+    <link href="style/player.brown.css" rel="stylesheet" type="text/css" />
+    <script src="jquery/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="jquery/jquery.cookie.js"></script>
+  
+    <script src="jquery/jquery.cslider.js" type="text/javascript"></script>
+    <script src="jquery/jquery.blockUI.js" type="text/javascript"></script>
+    <script src="script/modernizr.custom.28468.js" type="text/javascript"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    
+    <script src="jquery/jquery.dataTables.min.js"></script>
+    <script src="visap.js" type="text/javascript"></script>
+    <script src="visap.mockedit.js" type="text/javascript"></script>
+    
+     
+    <script src="jquery/jquery-ui.1.10.4.js" type="text/javascript"></script>
+  
+    <script type="text/javascript">        $(document).ready(ViTagUI.getEditModeReady);</script>
+    <script src="jquery/jquery-1.10.2.min.js"></script>
+     
+    
+   
+    <script src="mockindex.js"></script>
+
+
+</head>
+<body style="border:yellow;">
+    <div class="banner">
+        <div class="container">
+            <div class="logo">
+                <div>
+                    <span>VIDEO SEARCH ADAPT & PLAY</span>
+                </div>
+            </div>
+            <div class="flt-rt links-container">
+                <ul class="links-rt">
+                    <li><a href="contact.html" class="icn-contact">Contact</a></li>
+                    <li class="profile" style="border-left: thin #666 solid;">
+                        <span id="uName"></span>
+                    </li>
+                    <li class="power" title="Logout">
+                        <a class="" href="#" onclick="ViTagUI.logout();"></a>
+                    </li>
+                </ul>
+                <ul class="links-rt-main">
+                
+                    <li><a href="Embedded.aspx" class="link-catalogue-n">HOME</a></li>
+                    <li><a href="mockedit.html" class="link-edit-s">EDIT</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="col-lft" id="mainViConatainer">
+                <div class="carosel" id="subcontainer">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators" id="indicators">
+                            <!-- <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                            <li data-target="#myCarousel" data-slide-to="4"></li>-->
+                        </ol>
+                        <div class="carousel-inner" id="itemsList">
+                        </div>
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left">
+                                <img src="image/arrow-back.png" width="23" height="23">
+                            </span>
+                        </a> <a class="right carousel-control"
+                                href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right">
+                                <img src="image/arrow-next.png" width="23" height="23">
+                            </span>
+                        </a>
+                    </div>
+                    <!-- /.carousel -->
+                </div>
+                <div id="playContainer" class="hideEle" style="width:540px">
+                    <!--//classs carosel2-->
+                    <div id="videoContainer" class="vidcontainer">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-rt">
+                <div class="content-rt">
+                    <ul class="tab-nav">
+                        <li class="not-selected1">
+                            <a value="Published" id="published" class="not-selected"
+                               onclick="javascript: ViTagUI.changeMode({ active: '#published', inActive: '#staging', isStaging: false });">
+                                MYSPACE
+                            </a>
+                        </li>
+                        <li class="selected1">
+                            <a value="Staging" id="staging" class="selected" onclick="javascript: ViTagUI.changeMode({ active: '#staging', inActive: '#published', isStaging: true });">
+                                COLLABORATION
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="search">
+                        <input type="text" placeholder="Title,Tags" title="Search video by Title / Tag" onkeyup="javascript: ViTagUI.doVidSearch({ obj: this, e: event });"
+                               id="vidSearch"></input>
+                    </div>
+                    <div id="importPublishbtn">
+                        <!--<input name="Import Video" type="button" value="Import Video (.mp4 only)">-->
+                        <button type="button" class="import" data-toggle="modal" data-target="#myModal" onclick="ViTagUI.uploadVid();">
+                            Import Video
+                        </button>
+                        <button type="button" class="btn-publish" onclick="javascript: ViTag.publish();">
+                            Publish Video
+                        </button>
+                    </div>
+                    <div id="timelinebtn" class="hideEle">
+                        <img src="image/btn_new_tl.png" width="145" height="34" onclick="javascript:ViTagUI.newTimeLine();">
+                    </div>
+                    <div class="modal fade in" id="myModal" tabindex="-1" role="dialog" data-backdrop="static"
+                         data-keyboard="false" aria-labelledby="myModalLabel" aria-hidden="false" style="display: none;">
+                        <div class="modal-dialog">
+                            <div class="modal-content" id="uploadform">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title" id="myModalLabel">
+                                        Video upload
+                                    </h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div style="padding: 20px;">
+                                        <div class="contact_form">
+                                            <label class="wrgmsg" id="lblWrgMsg">
+                                            </label>
+                                            <span></span>
+                                            <input type="text" placeholder="Title" title="Tittle" id="fileTitle" maxlength="25"><span class="uplmandatory">*</span> <span></span>
+                                            <input type="text" class="text uploadtxt" placeholder="Description" title="Description"
+                                                   id="fileDesc" maxlength="60"><span class="uplmandatory">*</span> <span></span>
+                                            <label class="uploadlbl">
+                                                Upload video:
+                                            </label><input type="file" class="text uploadfile " placeholder="Upload video"
+                                                           title="Upload video" id="vidFile">
+                                            <span class="uplmandatory1">* supports only mp4 files</span>
+                                            <br />
+                                            <label class="uploadlbl">
+                                                Upload youtube videos:
+                                            </label><input type="checkbox" class="text uploadckbox" title="Upload youtube videos"
+                                                           id="chkYTvideo" onclick="ViTagUI.enableFileBrowsee(this)">
+                                            <input type="text" class="text uploadtxt" placeholder="Enter Youtube video ID" maxlength="40"
+                                                   title="Enter Youtube video ID" id="txtYTvideo" disabled=""><span class="uplmandatory">*</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" onclick="ViTag.upload()">
+                                        Import
+                                    </button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Thumb-->
+                    <ul class="video-list" id="videoList"></ul>
+                    <div id="divVideoList">
+                    </div>
+                    <!-- Thumb-->
+                </div>
+            </div>
+        </div>
+        <div style="overflow: hidden;" class="hideEle" id="taglinks">
+            <div class="tags-links">
+                <div id="tags" class="tags">
+                </div>
+                <div id="myLinks" class="links">
+                </div>
+            </div>
+        </div>
+        <div class="timeline  hideEle" id="timelineContainer">
+
+            <div>
+
+                <a>
+                    <img id="CaptureBtn" class="startCapture" width="145" height="34" onclick="ViTag.timeline.captureVideoDetails()" />
+                </a>
+                <div id="divtimer"><span id="starttimer">00:00:00</span></div>
+                <div id="timelineMessage" class="decorater message"></div>
+            </div></br>
+
+
+            <div class="tl-title">Title&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" id="tmTitle" /><span class="wrgmsg"> * </span></div></br>
+            <div class="ti-details">Description <input type="text" id="tmDesc" /><span class="wrgmsg"> * </span></div>
+
+
+            <div class="timeline-main">
+                <div id="startcapture" class="bg-timeline">
+
+
+
+
+                </div>
+
+            </div>
+            <div class="btn-edit">
+                <input type="button" id="timelineSaveBtn" class="btn-primary" value="Save" />
+                <input type="button" id="timelineCancelBtn" class="btn-secondary" value="Cancel" />
+            </div>
+        </div>
+
+
+
+        <div id="main-edit">
+            <div class="content-main" id="editContainer">
+                <!-- Modal content-->
+                <div>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#home" role="tab" data-toggle="tab"
+                               id="editTab" class="btn-add-edit" onclick="ViTagUI.ChangeTabs(this.id);">
+                                ADD / EDIT
+                                TAGS
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#profile" role="tab" data-toggle="tab" id="actionTab"
+                               onclick="ViTagUI.ChangeTabs(this.id);" class="btn-actions">ACTIONS</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#messages" role="tab" data-toggle="tab" id="linkTab"
+                               onclick="ViTagUI.ChangeTabs(this.id);" class="btn-links">LINKS</a>
+                        </li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div id="message" class="decorater  message" style="display: none;">
+                    </div>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="home">
+                            <div class="row">
+                                <div class="col-lft-50">
+                                    <div>
+                                        Tag Name<br>
+                                        <input name="" type="text" id="txtTag" class="modal-textfield" size="30" maxlength="30"
+                                               style="width: 90%;"><span class="wrgmsg"> * </span>
+                                        <div class="hideEle" id="tagtimediv">
+                                            Tag Time<br>
+                                            <input type="text" class="modal-textfield" id="TagTime" onkeyup="ViTagUI.validateTagtime(this);" />
+                                            <label id="vidDuration" class="wrgmsg"></label>
+                                            <label id="errmsg"></label>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div style="width: 100%; text-align: left; display: none;">
+                                        <input name="chkTagTime" type="checkbox" value="" id="chkTagTime">
+                                        Tag to current topic
+                                    </div>
+                                </div>
+                                <div class="col-rt-50">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="edit-rt" id="tagList"></table>
+                                    <!-- <ul class="actions-list" id="tagList">
+                                    </ul>-->
+                                </div>
+                            </div>
+                            <div class="btn-edit">
+                                <button type="button" class="btn-primary" id="btn" data-dismiss="modal">
+                                    Save
+                                </button>
+                                <!-- <button type="button" class="btn-secondary"  data-dismiss="modal"> Save and Close</button>-->
+                                <button type="button" class="btn-secondary" data-dismiss="modal" id="btnCancel">
+                                    Cancel
+                                </button>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="profile">
+                            <div class="row">
+                                <div>
+                                    <form name="form" id="form">
+                                        <select name="jumpMenu" id="drop" onchange="ViTagUI.GetActions(this);" class="modal-textfield">
+                                            <option value="Choose Actions">Choose Actions</option>
+                                            <option value="sketch">sketch</option>
+                                            <option value="Annotations">Annotations</option>
+                                            <option value="Questions">Questions</option>
+                                            <option value="hotspot">Hotspot</option>
+                                        </select>
+                                    </form>
+                                </div>
+                            </div>
+                            <div id="message1" class="decorater" style="display: none;">
+                            </div>
+                            <hr>
+                            <div class="r-d-main" style="min-height: 200px;">
+                                <!--Actions..............-->
+                                <div id="sketch" class="hideEle">
+                                    <div class="r-d">
+                                        <div class="row">
+                                            <div class="col-lft-50">
+                                                <dl>
+                                                    <dt>Color</dt>
+                                                    <dd>
+                                                        <ul id="colors" style="margin-left: -40px;">
+                                                            <li style="background-color: black;" class="selected"></li>
+                                                            <li style="background-color: red;"></li>
+                                                            <li style="background-color: green;"></li>
+                                                            <li style="background-color: orange;"></li>
+                                                            <li style="background-color: brown;"></li>
+                                                            <li style="background-color: #d2232a;"></li>
+                                                            <li style="background-color: #fcb017;"></li>
+                                                            <li style="background-color: #fff460;"></li>
+                                                            <li style="background-color: #9ecc3b;"></li>
+                                                            <li style="background-color: #fcb017;"></li>
+                                                            <li style="background-color: #fff460;"></li>
+                                                            <li style="background-color: #F43059;"></li>
+                                                            <li style="background-color: #82B82C;"></li>
+                                                            <li style="background-color: #0099FF;"></li>
+                                                            <li style="background-color: #ff00ff;"></li>
+                                                        </ul>
+                                                    </dd>
+                                                    <dt>Shapes</dt>
+                                                    <dd>
+                                                        <div id="dtool">
+                                                            <ul class="shapes">
+                                                                <li class="pencil" name="shapes" id="pencil" title="pencil"></li>
+                                                                <li class="line" name="shapes" id="line" title="line"></li>
+                                                                <li class="box" name="shapes" id="rect" title="rect"></li>
+                                                                <li class="box-fill" name="shapes" id="fill" title="fill"></li>
+                                                                <li class="circle" name="shapes" id="circle" title="circle"></li>
+                                                                <li class="tooltext" name="shapes" id="text" title="Text"></li>
+                                                            </ul>
+                                                        </div>
+                                                    </dd>
+                                                    <dt>Duration</dt>
+                                                    <dd>
+                                                        <input class="modal-textfield" name="" type="text" id="sketchDuration" onkeyup="ViTagUI.validatenumber(this);"
+                                                               size="3" maxlength="3">
+                                                        <span class="wrgmsg">*</span>
+                                                    </dd>
+                                                    <dt>Brush Size</dt>
+                                                    <dd>
+                                                        <input name="brush" id="brush_size" type="range" value="1" min="1" max="100">
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                        <div class="btn-edit">
+                                            <button type="button" id="undo" class="btn-secondary" data-dismiss="modal">
+                                                Undo
+                                            </button>
+                                            <button type="button" id="clear" class="btn-secondary" data-dismiss="modal">
+                                                Reset
+                                            </button>
+                                            <button type="button" id="saveOverlay" class="btn-primary" data-dismiss="modal">
+                                                Save
+                                            </button>
+                                            <button type="button" id="cancelOverlay" class="btn-secondary" data-dismiss="modal">
+                                                Cancel
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Actions annotation..............-->
+                                <div id="annotate" class="hideEle">
+                                    <div class="r-d">
+                                        <div class="row">
+                                            <div class="col-lft-50">
+                                                <dl>
+                                                    <dt>Title</dt>
+                                                    <dd>
+                                                        <label class="required">
+                                                            <input name="" type="text" id="cmtTitle" class="modal-textfield" maxlength="50" size="50">
+                                                        </label>
+                                                    </dd>
+                                                    <dt>Duration</dt>
+                                                    <dd>
+                                                        <label class="required">
+                                                            <input name="" type="text" id="cmtDuration" onkeyup="ViTagUI.validatenumber(this);"
+                                                                   class="modal-textfield" size="3" maxlength="3">
+                                                        </label>
+                                                    </dd>
+                                                    <dt>Description</dt>
+                                                    <dd>
+                                                        <label class="required">
+                                                            <textarea name="" cols="" rows="4" id="cmtDesc" class="modal-textfield" style="width: 90%"></textarea>
+                                                        </label>
+                                                    </dd>
+
+                                                </dl>
+                                            </div>
+                                        </div>
+                                        <div class="btn-edit">
+                                            <button type="button" class="btn-primary" id="cmtSave" name="btn">
+                                                Save
+                                            </button>
+                                            <button type="button" class="btn-secondary" data-dismiss="modal" id="cmtCancel" name="btnCancel">
+                                                Cancel
+                                            </button>
+                                            <button type="button" class="btn-secondary" onclick="ViTagUI.previewAnnotation();">Preview</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Actions question..............-->
+                                <div id="questions" class="hideEle">
+                                    <div class="r-d">
+                                        <div class="row">
+                                            <div class="col-lft-50">
+                                                <dl>
+                                                    <div>
+                                                        <dt>Title</dt>
+                                                        <dd>
+                                                            <pre class="required"><input name="" type="text" id="qTitle" class="modal-textfield" size="25" maxlength="150"></pre>
+                                                        </dd>
+                                                        <dt>Tag</dt>
+                                                        <dd>
+                                                            <input name="" id="tagTitle" list="dtTagList" type="text" class="modal-textfield" />
+                                                            <datalist id="dtTagList"></datalist>
+                                                        </dd>
+                                                        <dt>Select answer below.</dt>
+                                                        <div id="divOptions">
+                                                            <span style="display: block; margin: 10px;">
+                                                                <input name="optGroup" type="radio" value=""><input name="optGroup" type="text" class="modal-textfield"
+                                                                                                                    size="25" maxlength="25">
+                                                                <img src="image/icn-delete.png" alt="" class="imgStyle1" onclick="ViTag.question.deleteOption(this);" />
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <dd>
+                                                        <input style="margin-left: 21px; margin-top: 5px;" class="import" id="btnAddOpt"
+                                                               name="Add Options" type="button" value="Add Options" onclick="ViTag.question.addOption();">
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                        <div class="btn-edit">
+                                            <button type="button" id="saveQues" class="btn-primary" data-dismiss="modal">
+                                                Save
+                                            </button>
+                                            <!--<button type="button" class="btn-secondary" onClick="MM_goToURL('parent','staging.html');return document.MM_returnValue" data-dismiss="modal">Save and Close</button>-->
+                                            <button type="button" id="cancelQues" class="btn-secondary" data-dismiss="modal">
+                                                Cancel
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Actions hotspot..............-->
+                                <div id="hotspot" class="hideEle">
+                                    <div class="r-d">
+                                        <div class="row">
+                                            <div class="col-lft-50">
+                                                <dl>
+                                                    <dt>Title</dt>
+                                                    <dd>
+                                                        <label class="required">
+                                                            <input name="" type="text" id="hotspotTittle" class="modal-textfield" maxlength="50" size="50">
+                                                        </label>
+                                                    </dd>
+                                                    <dt>Duration</dt>
+                                                    <dd>
+                                                        <label class="required">
+                                                            <input name="" type="text" id="hotspotDuration" onkeyup="ViTagUI.validatenumber(this);"
+                                                                   class="modal-textfield" size="3" maxlength="3">
+                                                        </label>
+                                                    </dd>
+                                                    <dt>Show on Pause</dt>
+                                                    <dd>
+                                                        <label>
+                                                            <input name="" type="checkbox" id="hotspotOnpause"
+                                                                   class="modal-textfield" size="3" maxlength="3">
+                                                        </label>
+                                                    </dd>
+                                                    <dt>Description</dt>
+                                                    <dd>
+                                                        <label class="required">
+                                                            <textarea name="" cols="" rows="4" id="hotspotContent" class="modal-textfield" style="width: 90%"></textarea>
+                                                        </label>
+                                                    </dd>
+
+                                                </dl>
+                                            </div>
+                                        </div>
+                                        <div class="btn-edit">
+                                            <button type="button" class="btn-primary" id="hotspotsave" name="btn">
+                                                Save
+                                            </button>
+                                            <button type="button" class="btn-secondary" data-dismiss="modal" id="hotspotcanel" name="btnCancel">
+                                                Cancel
+                                            </button>
+                                            <button type="button" class="btn-secondary" onclick="ViTagUI.previewHotspot();">Preview</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-rt-50-r-d" style="display: block" id="actionsContainer">
+                                    <div class="hdr-pausetime">
+                                        Pause Time
+                                    </div>
+                                    <div id="allActions" style="float: left; width:25%; text-align: right; text-align: left;
+                                        padding-top: 10px;">
+                                    </div>
+                                    <table width="64%" border="0" cellspacing="0" cellpadding="0" class="edit-rt" id="savedActions"
+                                           style="padding-left: 20px; text-align: right;"></table>
+                                    <!-- <div id="savedActions" style="padding-left:20px;" >
+                                        </div>-->
+                                </div>
+                            </div>
+                            <!--Actions..............-->
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="messages">
+                            <div class="row">
+                                <div class="col-lft-50">
+                                    <div>
+                                        Name<br>
+                                        <input name="" type="text" class="modal-textfield" style="width: 90%;" id="linkName" maxlength="30"> <span class="wrgmsg">*</span>
+                                    </div>
+                                    <br>
+                                    <div>
+                                        URL<br>
+                                        <input name="" type="text" class="modal-textfield" style="width: 90%;" id="linkUrl" maxlength="200"> <span class="wrgmsg">*</span>
+                                    </div>
+                                </div>
+                                <div class="col-rt-50">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="edit-rt" id="LinkList"></table>
+                                </div>
+                            </div>
+                            <div class="btn-edit">
+                                <button type="button" class="btn-primary" data-dismiss="modal" id="saveLink">
+                                    Save
+                                </button>
+                                <!--<button type="button" class="btn-secondary" onclick="MM_goToURL('parent','staging.html');return document.MM_returnValue"
+                                data-dismiss="modal">
+                                Save and Close</button>-->
+                                <button type="button" class="btn-secondary" data-dismiss="modal" id="cnlLink">
+                                    Cancel
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal content-->
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <div class="footer-main">
+                    <div class="footer-text">
+                        © All rights reserved &nbsp;&nbsp;|&nbsp;&nbsp;Powered by Pegasus
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+        <script src="script/bootstrap.min.js"></script>
+        <script src="script/docs.min.js"></script>
+
+</body>
+</html>

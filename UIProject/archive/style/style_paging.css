@@ -1,0 +1,111 @@
+ 
+/*
+  @@ Essentials
+*/
+.pull-left { float: left; }
+.pull-right { float: right; }
+.hide { display: none; }
+.show { display: block; }
+.no-margin { margin: 0 !important; }
+.no-padding { padding: 0 !important; }
+.light-text { color: #808080; }
+.small-text { font-size: 13px; }
+.strong { font-weight: bold; }
+.clearfix { *zoom: 1; }
+
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.clearfix:after { clear: both; }
+
+/*
+  @@ Body
+*/
+ 
+
+/*
+  @@ Page
+*/
+ 
+ 
+
+.container {
+  width: 50px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.content {
+  width: 450px;
+  margin: 0 auto;
+
+}
+
+.highlight {
+  background: #f6f67a;
+  padding: 1px 3px;
+}
+
+.page-header { margin: 30px 0; }
+
+.page-footer {
+  margin: 30px 0px;
+  border-top: 1px dotted #e3e3e8;
+  width: 650px;
+}
+
+.page-header h1 {
+  font-size: 11px;
+  padding: 5px 0;
+  border-bottom: 1px dotted #e3e3e8;
+}
+
+.page-footer p, .page-header p {
+  font-size: 11px;
+  line-height: 16px;
+}
+
+/*
+  @@ Demo
+*/
+ 
+
+ 
+
+/*
+  @@ Pagination
+*/
+.holder { margin: 5px 0; }
+
+.holder a {
+  font-size: 12px;
+  cursor: pointer;
+  margin: 0 5px;
+  color: #333;
+}
+
+.holder a:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+.holder a.jp-previous { margin-right: 15px; }
+.holder a.jp-next { margin-left: 15px; }
+
+.holder a.jp-current, a.jp-current:hover { 
+  color: #ed4e2a;
+  font-weight: bold;
+}
+
+.holder a.jp-disabled, a.jp-disabled:hover { color: #bbb; }
+
+.holder a.jp-current, a.jp-current:hover,
+.holder a.jp-disabled, a.jp-disabled:hover {
+  cursor: default; 
+  background: none;
+}
+
+.holder span { margin: 0 5px; }

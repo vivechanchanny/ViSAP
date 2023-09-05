@@ -1,0 +1,24 @@
+
+                       {
+                            "id": "",
+                            "heading": [],
+                            "leftCol": [],
+                            "rightCol": [],
+                            "optionsLayout": "",
+                            "questionLayout": "",
+                            "modelParagraph": "",
+                            "answers": [],
+                            "options": [],
+                            "questionBody": [],
+                            "questionMedia": [],
+                            "optionsMedia": [],
+                            "maxpoints": [
+                                "1"
+                            ],
+                            "type": "FIB",
+                            "responseType": "DRAGDROP",
+                            "title": "",
+                            "rubric": [],
+                            "metadata":"Metadata"
+                       
+}

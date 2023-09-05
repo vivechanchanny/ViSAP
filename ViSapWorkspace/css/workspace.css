@@ -1,0 +1,536 @@
+﻿@charset "utf-8";
+@import url(fonts.css);
+/* CSS Document */
+.starter-template {
+	padding: 40px 15px;
+	text-align: center;
+}
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 130px;
+  background-color: #f2f2f2;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 75px;
+  background-color: #303334;
+  font-size:12px;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.footer-links-rt {
+ text-align:right; 
+}
+
+/*
+@media (max-width:991px) {
+.footer {
+ 
+  height: 250px;
+
+}
+.footer-links-rt {
+ text-align:left; 
+}
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 400px;
+  margin-bottom: 30px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 400px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+ /* height: 400px;*/
+   height:auto;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+
+
+
+.top-nav {
+	font-size: 14px;
+	font-family: "open_sanssemibold";
+	margin-top: 10px;
+}
+.navbar-brand {
+	margin-right: 30px;
+}
+.bg-submenu {
+	background-color: #3a4b5f;
+	min-height: 60px;
+	margin-bottom: 40px;
+}
+.search-main td {
+	padding-top: 12px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+.search-main label {
+	padding-top: 10px;
+	color: #ccc;
+	font-size: 13px;
+	font-family: "open_sansregular";
+	padding-right: 10px;
+}
+.input-group-addon {
+	cursor: pointer;
+}
+.viewby {
+	color: #ccc;
+	white-space: nowrap;
+	font-size: 12px;
+}
+.footer-links {
+	margin: 0;
+	color: #999;
+	padding-top: 17px;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+}
+.footer-links li {
+	margin: 0;
+	list-style-type: none;
+	padding-top: 5px;
+	padding-right: 0;
+	padding-bottom: 5px;
+	padding-left: 0;
+}
+.footer-links li a {
+	padding: 3px;
+	color: #999;
+	text-decoration: none;
+}
+.footer-links li a:hover {
+	color: #f58220;
+	text-decoration: none;
+}
+.top-nav-rt {
+	display: inline-block;
+    color: #ccc !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 10px;
+    font-size: 12px !important;
+}
+.top-nav-rt a {
+	display: inline-block !important;
+	color: #ccc !important;
+}
+.logout {
+	background-image: url(../images/logout.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	vertical-align: middle;
+}
+.logout:hover, .logout:focus {
+	background-image: url(../images/logout-off.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	vertical-align: middle;
+}
+.vi-img {
+	width: 100%;
+	height: auto;
+}
+.col-sm-3 { 
+	margin-bottom: 30px;
+	position: relative;
+}
+.grad {
+	padding: 15px;
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.8)); /*Safari 5.1-6*/
+	background: -o-linear-gradient(bottom, rgba(0,0,0,0), rgba(0,0,0,.8)); /*Opera 11.1-12*/
+	background: -moz-linear-gradient(bottom, rgba(0,0,0,0), rgba(0,0,0,.8)); /*Fx 3.6-15*/
+	background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.8)); /*Standard*/
+}
+.vi-control {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	color: #CCC;
+}
+.vi-title {
+	color: #f58220;
+	font-size: 13px;
+	font-family: "open_sansbold";
+	vertical-align: bottom;
+}
+.vi-dura {
+	text-align: right;
+	font-size: 12px;
+	font-family: "open_sansbold";
+	vertical-align: bottom;
+}
+.vi-checkbox {
+	vertical-align: bottom;
+}
+.vi-checkbox input {
+	width: 18px !important;
+	height: 18px;
+	cursor: pointer;
+}
+.icn-delete {
+	display: inline-block;
+	width: 30px;
+	height: 20px;
+	background-image: url(../images/icn-delete.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.icn-publish {
+	display: inline-block;
+	width: 30px;
+	height: 20px;
+	background-image: url(../images/video/icn-publish.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.icn-edit {
+	display: inline-block;
+	width: 30px;
+	height: 20px;
+	margin-left:10px;
+	background-image: url(../images/icn-edit1.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.vi-icn-main {
+	margin-top: 10px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #666;
+}
+.vi-icn-main td {
+	padding-top: 10px;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+}
+.sub-menus {
+	margin:0;
+	padding:0;
+	float:right;
+	margin-top:10px;}
+.sub-menus li {
+	display:inline-block;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	margin-left:10px;
+	margin-right:10px;
+	
+}
+.sub-menus li a {
+	display:inline-block;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	color:#cccccc;
+	padding-top: 23px;
+	text-decoration:none;
+}
+.sub-menus li a:hover {
+	display:inline-block;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	color:#f58220;
+	padding-top: 23px;
+	text-decoration:none;
+}
+.sub-menus-delete {
+	background-image: url(../../images/common/icn-delete.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.sub-menus-publish {
+	background-image: url(../../images/common/icn-publish.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.sub-menus-import {
+	background-image: url(../../images/common/icn-import.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.sub-menus-selectall {
+	background-image: url(../../images/common/icn-selectall.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+ 
+.truncateTxtUser{
+    width:140px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    white-space:nowrap;
+    word-wrap:normal;
+}
+.truncateTxtWorkSpace{
+    width:480px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    white-space:nowrap;
+    word-wrap:break-word;
+    cursor:default;
+}
+.truncate-name
+{
+    width:440px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    white-space:nowrap;
+    word-wrap:break-word;
+    cursor:default;
+}
+.dropdown{
+ width:175px;
+}
+.gridtableWorkspace{
+    border: 1px solid #CCC;
+    height: 300px;
+    background-color:#fff;
+    width:650px!important;
+}
+.gridtableUser{
+    border: 1px solid #CCC;
+    height: 300px;
+    background-color:#fff;
+    width:1015px!important;
+}
+.gridtableGroup{
+    border: 1px solid #CCC;
+    height: 300px;
+    background-color:#fff;
+    width:670px!important;
+}
+.gridtableAdmin{
+    border: 1px solid #CCC;
+    height: 300px;
+    background-color:#fff;
+    width:865px!important;
+} 
+ 
+.createBtn{
+margin-left:20px;
+}
+.gridText{
+margin-left:10px;
+}
+.truncate-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    white-space: nowrap;
+    cursor: default;
+    vertical-align: bottom;
+}
+.large-width {
+    max-width: 425px;
+}
+ 
+.action-checkbox
+{
+	padding-left: 25%;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	line-height: 10px;
+	display: inline;
+	
+}
+.check-box-panel
+{
+	display: inline;
+	max-height: 500px;
+	overflow: auto;
+}
+/*
+.accessVideoslink{
+	display:inline-block;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	color:#cccccc;
+	padding-top: 28px;
+	padding-left: 150px;
+	text-decoration:none;float: center;
+}
+ 
+
+/* unvisited link */
+/*
+.accessVideoslink a:link {
+    color:#cccccc;
+}
+
+/* visited link */
+/*
+.accessVideoslink a:visited {
+    color: #cccccc;
+}
+
+/* mouse over link */
+/*
+.accessVideoslink a:hover {
+    color: #fff;
+    text-decoration:none;
+}
+/* navigation tabs */
+#navtabs
+{
+margin-top:10px;
+} 
+/* navigation tabs end */
+.required 
+{
+    color: #C00;
+    font-size:18px;
+}
+
+/* new css related change*/
+
+.divider-top {
+    background-image: url(../images/divider.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    line-height: 20px;
+    padding: 15px;
+    
+    }
+.hideEle {
+    display: none;
+}
+.create-ws {
+	background-image: url(../images/create-workplace.png);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	padding-left: 34px;
+	} 
+.create-user {
+	background-image: url(../images/create-user.png);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	padding-left: 34px;
+	}
+.create-group {
+	background-image: url(../images/create-group.png);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	padding-left: 38px;
+	}	
+.saveMsg
+{
+   text-align:center;
+}
+.wrgmsg
+{
+    color: Red;
+    font-size:12px;
+    font-family: open_sansregular;
+}
+/* Manage users pop ui strats */
+.manageusers
+{
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    margin-left: 10px;
+    background-image: url(../images/manage-user.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+ 
+ .actions-heading, .settings-heading {
+	background-color: #CCC;
+	color: #333;
+	padding: 10px;
+	font-family: "open_sanssemibold";
+	font-size: 14px;
+}
+.toc-vi-name {
+    min-width: 100px;
+    font-size: 14px;
+}
+.modal-checkbox {
+    padding-right: 6px;
+}
+ 
+.modal-subtitle {
+    max-height: 400px;
+    overflow: auto;
+}
+.userlist{
+   padding:15px;
+   text-align:center;
+}
+/* Manage users pop ui ends */
+
+/*workspace and username related css*/
+.wsName {
+	color: #FF9900;
+}
+
+.alertDecorater {
+    color:red !important;
+    font-weight: 700;
+    width: 100%;
+    font-size: 12px;
+    font-family: open_sansregular;
+}

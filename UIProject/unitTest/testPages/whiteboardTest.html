@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Tag</title>
+    <link rel="stylesheet" href="../css/qunit.css" />
+    <link href="../../style/default/jquery-ui.1.10.4.css" rel="Stylesheet" />
+    <link href="../../style/default/jquery.dataTables.css" rel="Stylesheet" />
+    <script src="../../scripts/frameworks/jquery/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="../../scripts/frameworks/jquery/jquery-ui.1.10.4.js" type="text/javascript"></script>
+    <script src="../../scripts/frameworks/jquery/JSON2.js" type="text/javascript"></script>
+    <script src="../../scripts/frameworks/jquery/jquery.blockUI.js" type="text/javascript"></script>
+    <script src="../../scripts/frameworks/jquery/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="../../scripts/frameworks/jquery/i18next.js" type="text/javascript"></script>
+    <script src="../../scripts/frameworks/jquery/jquery.cookie.js" type="text/javascript"></script>
+    <script src="../../scripts/visap.localize.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../scripts/visap.message.js" ></script>
+    <script src="https://www.youtube.com/iframe_api" type="text/javascript"></script>
+    <script type="text/javascript" src="http://visapdemo.excelindia.com/ViSAPFx/scripts/visap.js"></script>
+    <script type="text/javascript" src="http://visapdemo.excelindia.com/ViSAPFx/scripts/visap.edit.js"></script>
+    <script type="text/javascript" src="http://visapdemo.excelindia.com/ViSAPFx/scripts/sketcher.js"></script>
+    <script type="text/javascript" src="http://visapdemo.excelindia.com/ViSAPFx/scripts/logger.js"></script>
+    <script type="text/javascript" src="http://visapdemo.excelindia.com/ViSAPFx/scripts/visap.logger.js"></script>
+    
+    <script src="../../config.js" type="text/javascript"></script>
+     
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="qunit">
+    </div>
+    <div id="qunit-fixture">
+    </div>
+    
+    
+        <div id="playContainer" class="hideEle" style="width: 540px">
+            <div id="videoContainer" class="vidcontainer">
+            </div>
+        </div>
+    <div id="questions" class="decorater" style="display:none">
+            <div id="divOptions">
+                <input type="text" id="qTitle" class="ipStyle4" />
+                <input id="tagTitle" list="dtTagList" class="ipStyle1" /><datalist id="dtTagList"></datalist>
+                <span>
+                    <input type="radio" name="optGroup" /><input type="text" name="optGroup" />
+                    <img src="images/DeleteRed.png" alt="" class="imgStyle1" onclick="ViTag.question.deleteOption(this);" /></span>
+            </div>
+            <div style="width: 100%; text-align: left; display: none;">
+                                        <input name="chkTagTime" type="checkbox" value="" id="chkTagTime">
+                                       
+                                    </div>
+                                    <div>
+                                      <img alt="" id="WbimgOverlay" src="#" />
+                                    
+                                   
+    </form>
+    <script src="../scripts/testdata.js" type="text/javascript"></script>
+    <script src="../scripts/testfx.js" type="text/javascript"></script>
+    <script src="../scripts/qunit.js" type="text/javascript"></script>
+    <script src="../scripts/qunit-reporter-junit.js" type="text/javascript"></script>
+     <script src="../scripts/whiteboardTest.js" type="text/javascript"></script>
+</body>
+</html>

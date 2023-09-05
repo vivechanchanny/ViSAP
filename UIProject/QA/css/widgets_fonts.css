@@ -1,0 +1,64 @@
+/*font face included*/
+@font-face {
+	font-family: 'open_sanslight';
+	src: url('../fonts/opensans-light-webfont.eot');
+	src: url('../fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/opensans-light-webfont.woff') format('woff'),
+	url('../fonts/opensans-light-webfont.ttf') format('truetype'),
+	url('../fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/OpenSans-Regular-webfont.eot');
+    src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+	font-family: 'OpenSansRegular';
+	src: url('../fonts/opensans-regular.eot');
+	src: url('../fonts/opensans-regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/opensans-regular.woff') format('woff'),
+	url('../fonts/opensans-regular.ttf') format('truetype'),
+	url('../fonts/opensans-regular.svg#open_sanslight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'OpenSansBold';
+	src: url('../fonts/opensans-bold.eot');
+	src: url('../fonts/opensans-bold.eot') format('embedded-opentype'),
+	url('../fonts/opensans-bold.woff') format('woff'),
+	url('../fonts/opensans-bold.ttf') format('truetype'),
+	url('../fonts/opensans-bold.svg#OpenSansBold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'OpenSansSemibold';
+	src: url('../fonts/opensans-semibold.eot');
+	src: url('../fonts/opensans-semibold.eot') format('embedded-opentype'),
+	url('../fonts/opensans-semibold.woff') format('woff'),
+	url('../fonts/opensans-semibold.ttf') format('truetype'),
+	url('../fonts/opensans-semibold.svg#OpenSansSemibold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+  font-family: "op-font-ngl";
+  src:url("../fonts/op-font-ngl.eot");
+  src:url("../fonts/op-font-ngl.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/op-font-ngl.woff") format("woff"),
+    url("../fonts/op-font-ngl.ttf") format("truetype"),
+    url("../fonts/op-font-ngl.svg#op-font-ngl") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+/*font face end*/

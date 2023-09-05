@@ -1,0 +1,105 @@
+
+    {"questionsData" : [
+                       {
+                            "id": "1",
+                            "metadata":"Metadata",
+                            "heading": [],
+                            "leftCol": [],
+                            "rightCol": [],
+                            "optionsLayout": "",
+                            "questionLayout": "",
+                            "modelParagraph": "",
+                            "answers": [
+                                [
+                                    2
+                                ],
+                                [
+                                    5
+                                ],
+                                [
+                                    4
+                                ],
+                                [
+                                    6
+                                ],
+                                [
+                                    3
+                                ],
+                                [
+                                    7
+                                ],
+                                [
+                                    1
+                                ]
+                            ],
+                            "options": [{
+                                "data": "killed",
+                                "type": "text"
+                            }, {
+                                "data": "wood",
+                                "type": "text"
+                            }, {
+                                "data": "Scots",
+                                "type": "text"
+                            }, {
+                                "data": "schiltrons",
+                                "type": "text"
+                            }, {
+                                "data": "loch",
+                                "type": "text"
+                            }, {
+                                "data": "English",
+                                "type": "text"
+                            }, {
+                                "data": "archers",
+                                "type": "text"
+                            }],
+                            "questionBody": [{
+                                    "data": "Wallace and the Scottish army took up a strong defensive position on a hillside with a thick ",
+                                    "type": "text"
+                                },
+                                "GAP", {
+                                    "data": " behind them and a small ",
+                                    "type": "text"
+                                },
+                                "GAP", {
+                                    "data": " in front of them. The Scottish spearmen were arranged in four 'hedgehog-like' circles called ",
+                                    "type": "text"
+                                },
+                                "GAP",
+                    
+                                {
+                                    "data": "<br/>The ",
+                                    "type": "text"
+                                },
+                                "GAP", {
+                                    "data": "horsemen advanced. They split into two sections and each one moved around the loch to attack the sides of the ",
+                                    "type": "text"
+                                },
+                                "GAP", {
+                                    "data": " army. The spearmen stood firm in their schiltrons, and the English knights could not get through them. However, the English ",
+                                    "type": "text"
+                                },
+                                "GAP", {
+                                    "data": " fired their arrows at the centre of the schiltrons. Many Scottish spearmen were ",
+                                    "type": "text"
+                                },
+                                "GAP", {
+                                    "data": " and the English knights were able to break through.<br />The Scottish rebellion was over.",
+                                    "type": "text"
+                                }
+                            ],
+                            "questionMedia": [],
+                            "optionsMedia": [],
+                            "maxpoints": [
+                                "7"
+                            ],
+                            "type": "FIB",
+                            "responseType": "DRAGDROP",
+                            "title": "Fib tap place",
+                            "rubric": [{
+                                "data": "Interactive drag and drop activity. Pupils complete the text about the Battle of Falkirk using the phrases provided.",
+                                "type": "text"
+                            }]
+                            
+                        }]}

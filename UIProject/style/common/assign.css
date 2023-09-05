@@ -1,0 +1,42 @@
+﻿.actions-heading, .settings-heading {
+	background-color: #666;
+	color: #fff;
+	padding: 10px;
+	font-family: "open_sanssemibold";
+	font-size: 14px;
+	text-align:left;
+}
+.modal-subtitle {
+		max-height:400px;
+		overflow:auto;}
+		
+		.action-divider-assign {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+	padding-bottom: 10px !important;
+	padding-top: 10px !important;
+	margin-left: 60px;
+	margin-right:60px;
+	font-size:13px;
+	text-align:left;
+}
+.teacher,.student {  
+	background-image: url(../../images/actions/icn-teacher.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 23px;
+}
+.student {
+	background-image: url(../../images/actions/icn-student.png);
+}
+.teacher1,.student1{
+	background-image: url(../../images/actions/icn-teacher.png);
+	background-repeat: no-repeat;
+	padding-left: 25px;
+	background-position: right center;
+}
+.student1{
+	background-image: url(../../images/actions/icn-student.png);
+}
+

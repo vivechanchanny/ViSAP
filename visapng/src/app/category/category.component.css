@@ -1,0 +1,22 @@
+.category-chips {
+    cursor: pointer;
+    padding: 8px 12px 8px 12px;
+}
+.mat-card {
+    margin: 10px;
+    padding: 5px;
+    overflow: auto;
+}
+
+.mat-chip{
+    border-radius: 5px !important;
+    line-height: 30px;
+}
+
+.category-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    max-width: 150px;
+}

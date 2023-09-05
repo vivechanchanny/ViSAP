@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <link rel="icon" href="image/v-sap.ico"/>
+    <title>Excelsoft</title>
+    <link href="style/style.css" rel="stylesheet" type="text/css"/>
+    <!-- Bootstrap core CSS --> 
+    <link href="style/carousel-bootstrap.css" rel="stylesheet"/>
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Custom styles for this template -->
+    <link href="style/carousel.css" rel="stylesheet"/> 
+    <link href="style/player.brown.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../scripts/frameworks/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../scripts/frameworks/jquery/jquery.cslider.js"></script>
+    <script type="text/javascript" src="../scripts/frameworks/jquery/jquery.blockUI.js"></script>
+    <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+    <script type="text/javascript" src="../scripts/frameworks/visap.js"></script>
+     <script type="text/javascript" src="../scripts/frameworks/logger.js"></script>
+      <script type="text/javascript" src="../scripts/frameworks/visap.logger.js"></script>
+    <script type="text/javascript" src="script/index.js"></script>
+    <script src="../scripts/frameworks/jquery/jquery-ui.1.10.4.js" type="text/javascript"></script>
+    <script type="text/javascript"> $(document).ready(ViTagUI.getReady);</script>
+</head>
+
+ 
+<body>
+<div class="banner">
+  <div class="container">
+    <div class="logo">
+      <div><span>VIDEO SEARCH ADAPT & PLAY</span></div>
+    </div>
+    <div class="flt-rt links-container">
+      
+      <ul class="links-rt">
+             
+              <li><a  href="contact.html"class="icn-contact" >Contact</a></li>
+              <li class="profile" style="border-left:thin #666 solid;"><span id="uName"></span></li>
+               <li class="power" title="Logout"><a class="" href="#" onclick="ViTagUI.logout();"></a></li>
+            </ul>
+            <ul class="links-rt-main">
+                    <li><a id="homeTabs" href="index.html" class="link-catalogue-s">HOME</a></li>
+                      <script>
+                      // if only instructor has to see the edit tabs
+ 						 if(localStorage.getItem('role')== "Instructor")
+             	          $('ul.links-rt-main li:nth-child(1)').after('<li><a id="editTabs" href="edit.html" class="link-edit-n">EDIT</a></li>');
+				   </script>      
+                   <!-- <li><a id="editTabs" href="edit.html" class="link-edit-n">EDIT</a></li>-->
+                   <li><a href="#" id="categoryTabs" onclick="ViTagUI.getCategoryThumbnails();" class="link-catalogue-n">CATEGORY</a></li>
+             </ul>
+
+    </div>
+  </div>
+</div>
+<div id="categoryView" class="hideEle" >
+             <iframe id="category" width="1120" height="616" src="" style="background-color: #fff;margin-left:35px; padding : 25px; align:center" scrolling="auto" frameborder="0" allowfullscreen ></iframe>               
+       </div>
+    <div class="container">
+    
+        <div class="content">
+            <div class="col-lft" id="mainViConatainer">
+                <div class="carosel"  id="subcontainer">
+                      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators" id="indicators">
+                            <!--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                            <li data-target="#myCarousel" data-slide-to="4"></li>-->
+                        </ol>
+                        <div class="carousel-inner" id="itemsList">
+                        </div>
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left">
+                                <img src="image/arrow-back.png" width="23" height="23"></span></a> <a class="right carousel-control"
+                                    href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right">
+                                        <img src="image/arrow-next.png" width="23" height="23"></span></a>
+                    </div>
+                    <!-- /.carousel -->
+                </div>
+                <div id="playContainer" class="hideEle" style="width:540px">
+                           
+                                <div id="videoContainer" class="vidcontainer">
+                               
+                               
+                            </div>
+                       
+                    </div>
+            </div>
+            <div class="col-rt" >
+                <div class="content-rt" >
+                    <ul class="videotabselection" >
+                        <li class="videoTab" style="width:100%">VIDEOS</li>
+                       
+                    </ul>
+                    <div class="search">
+                        <input type="text" placeholder="Title,Tags" title="Search video by Title / Tag"
+                            onkeyup="javascript: ViTagUI.doVidSearch({ obj: this, e: event });" id="vidSearch"> </input></div>
+                    <!-- Thumb-->
+                    <ul class="video-list-video" id="videoList">
+                    </ul>
+                    <!-- Thumb-->
+                </div>
+            </div>
+        </div>
+        
+        <div style="overflow:hidden;" class="hideEle" id="taglinks">
+                <div class="tags-links">
+                 <div id="tags" class="tags">  <span class='tags-links-title'> <div id='tagDiv1' class='tagDiv1'></div></span></div>
+                 <div id="myLinks" class="links"> <span class='tags-links-title'><div id='linkDiv1' class='linkDiv1'></div></span> </div>
+  </div>        
+  </div>
+         
+  <div id="main-edit">
+  
+  
+
+
+       
+    </div>
+<div class="footer">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-text">© All rights reserved &nbsp;&nbsp;|&nbsp;&nbsp;Powered by  Excelsoft</div>
+    </div>
+  </div>
+</div>
+
+
+ <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="script/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>

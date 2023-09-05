@@ -1,0 +1,60 @@
+<div id="hotspot" class="margin30">
+  <div fxLayout="column">
+    <form [formGroup]="Form">
+      <md-input-container class="full-width">
+        <input mdInput class="form-control" formControlName="hotspotTittle" placeholder="Title" [(ngModel)]='hotspotTittle'>
+      </md-input-container>
+      
+      <div *ngIf="Form.controls['hotspotTittle'].errors?.maxlength; else title">
+        <md-error class="max-error-msg">Maximum characters 255 is allowed.</md-error>
+      </div>
+
+      <ng-template #title>
+        <md-error *ngIf="!Form.get('hotspotTittle').valid && submitted" [ngStyle]="{'color': 'red'}" class="help-block" i18n>* Title can't be empty.</md-error>
+      </ng-template>
+
+      <div>
+        <md-input-container>
+          <input mdInput class="form-control form-duration" min="1" max="{{ maxDuration }}" step="1" placeholder="Duration" formControlName="duration"
+            type="number" (ngModelChange)="onDurationChange($event)" [(ngModel)]='duration'>
+        </md-input-container>
+        <md-error  *ngIf="ismaxDurationReached" [ngStyle]="{'color': 'red'}" class="help-block" i18n>The action can only be upto {{restDurationValue}} seconds</md-error>
+        <ng-container *ngIf="Form.controls['duration'].errors?.min; else valid">
+          <md-error class="max-error-msg">* Duration should be atleast 1 sec.</md-error>
+        </ng-container>
+        <ng-template #valid>
+          <ng-container *ngIf="Form.controls['duration'].errors?.number || !Form.get('duration').valid && submitted">
+            <md-error class="max-error-msg">* Please enter valid duration in seconds.</md-error>
+          </ng-container>
+        </ng-template>
+
+      </div>
+
+      <div>
+        <label>
+          <input type="checkbox" name="pauseOnshow" formControlName="pauseOnshow" [(ngModel)]="pauseOnshow">
+          <span class="labelrobota"> Pause on show </span>
+        </label>
+      </div>
+      <div>
+        <md-input-container class="full-width">
+          <textarea mdInput mdTextareaAutosize minRows="6" placeholder="Description" id="description" [(ngModel)]="hotspotContent"
+            formControlName="description"></textarea>
+        </md-input-container>
+      </div>
+      <div *ngIf="!Form.get('description').valid && submitted" [ngStyle]="{'color': 'red'}" class="help-block" i18n>* Description can't be empty</div>
+
+      <div fxLayout="row">
+        <div>
+          <button md-raised-button (click)="previewHotspot();" color="primary" i18n>Preview</button>
+        </div>
+        <div fxFlex>
+        </div>
+        <div>
+          <button md-raised-button color="primary" (click)="onSave(Form.valid)" type="submit" i18n>Save</button>
+          <button md-raised-button color="primary" (click)="cancel()" i18n>Cancel</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

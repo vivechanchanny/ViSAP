@@ -1,0 +1,21 @@
+.mockVid 
+{
+    border: 1px solid #cecece;
+}
+
+.ifrm
+{
+    height: 500px;
+    width: 630px;
+    border: none;
+}
+body
+{
+    font-family: apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size: 1.6em;
+
+}
+.editBtn
+{
+float:right;
+}

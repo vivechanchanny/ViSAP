@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Build.xml -->
+<!--   Used by the build process as the master build file. -->
+  <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets"/>
+    <Import Project="$(MSBuildExtensionsPath)\ExtensionPack\4.0\MSBuild.ExtensionPack.tasks"/>
+    <UsingTask AssemblyFile="CustomTasks\Build.CustomTasks.dll" TaskName="Build.CustomTasks.UpdateBuildNumber"/>
+    <UsingTask AssemblyFile="CustomTasks\Build.CustomTasks.dll" TaskName="Build.CustomTasks.UpdateincBuildNumber"/>
+	<Import Project=".\Build.Properties"/>
+	
+<PropertyGroup>
+
+<Sourcefolder>D:\GIT\ViSAP\UIProject</Sourcefolder>
+<ViSapWorkspaceSource>D:\GIT\ViSAP\ViSapWorkspace</ViSapWorkspaceSource>
+<ViSapQserviceSource>D:\GIT\ViSAP\quizService</ViSapQserviceSource>
+<ViSapFXSource>D:\GIT\ViSAP\ViSAPFx</ViSapFXSource>
+<VisapIntSource>D:\GIT\ViSAP\VisapInt</VisapIntSource>
+<VisapSsoMockSource>D:\GIT\ViSAP\ssomock\ssomock</VisapSsoMockSource>
+
+<Root>D:\Projects\published\VISAP</Root>
+<Destinationfolder>D:\Projects\published\VISAP\VisapTest</Destinationfolder>
+<ViSapWorkspaceDest>D:\Projects\published\VISAP\VisapWorkspace</ViSapWorkspaceDest>
+<ViSapQserviceDest>D:\Projects\published\VISAP\quizService</ViSapQserviceDest>
+<ViSapFXDest>D:\Projects\ViSAPFx</ViSapFXDest>
+<VisapIntDest>D:\Projects\published\VisapInt</VisapIntDest>
+<VisapSsoMockDest>D:\Projects\published\ssomock</VisapSsoMockDest>
+
+<TFSUser>vstfadmin</TFSUser>
+<TFSPass>team</TFSPass>
+<configuration>release</configuration>
+<DestinationServer>192.168.1.229</DestinationServer>
+<Websitename>Default Web Site</Websitename>
+<apppool_name>ASP.NET v4.0</apppool_name>
+
+</PropertyGroup>
+
+<ItemGroup>
+          <Mandatory Include="/VisapTest">
+                <PhysicalPath>$(Destinationfolder)</PhysicalPath>
+                <AppPool>$(apppool_name)</AppPool>
+                </Mandatory>
+</ItemGroup>
+
+	<!-- MASTER BUILD TARGETS DEFINITION START -->
+	<Target Name="buildLabeled" DependsOnTargets="get;clean;compile;Backup;Deploy"/>
+	<Target Name="GitbuildLabeled" DependsOnTargets="Pull;Tag;Clean;Compile;Deploy;Backup"/>	
+	<!-- GET TARGETS START -->
+	<Target Name="get">
+		<Exec Command="TF GET /force /recursive /login:Excelindia\$(TFSUser),$(TFSPass) ..\*.*  "/>
+        <Exec Command="TF GET /force /recursive /login:Excelindia\$(TFSUser),$(TFSPass) ..\*.sln  "/>
+		<Exec Command="TF GET /force /recursive /login:Excelindia\$(TFSUser),$(TFSPass) ..\*.vbproj  "/>
+		<Exec Command="TF GET /force /recursive /login:Excelindia\$(TFSUser),$(TFSPass) ..\*.csproj  "/>
+		
+	</Target>
+	
+	<Target Name="Pull">
+    <Exec Command="git checkout master" />
+    <Exec Command="git pull http://gitrepo:80/scm/git/ViSAP" WorkingDirectory="D:\GIT\ViSAP"/>
+  </Target>
+  
+  <Target Name="Tag">
+    <Exec Command="git tag $(Label)" />
+    <Exec Command="git push http://gitrepo:80/scm/git/ViSAP $(Label)" />
+  </Target>
+  
+	<Target Name="clean">
+		<MSBuild Projects="..\ViTag.sln" Targets="clean" Properties="Configuration=$(configuration)"/>
+		<MSBuild Projects="..\ViSapWorkspace.sln" Targets="clean" Properties="Configuration=$(configuration)"/>
+		<MSBuild Projects="..\quizService\quizService.sln" Targets="clean" Properties="Configuration=$(configuration)"/>
+		<MSBuild Projects="..\VisapInt.sln" Targets="clean" Properties="Configuration=$(configuration)"/>
+		<MSBuild Projects="..\ssomock\ssomock.sln" Targets="clean" Properties="Configuration=$(configuration)"/>
+	</Target>
+	
+  	<!-- COMPILE TARGETS START -->
+	<Target Name="compile">
+		<MSBuild Projects="..\ViTag.sln" Properties="Configuration=$(configuration)" />
+		<MSBuild Projects="..\ViSapWorkspace.sln" Properties="Configuration=$(configuration)" />
+		<MSBuild Projects="..\quizService\quizService.sln" Properties="Configuration=$(configuration)" />
+		<MSBuild Projects="..\VisapInt.sln" Properties="Configuration=$(configuration)"/>
+		<MSBuild Projects="..\ssomock\ssomock.sln" Properties="Configuration=$(configuration)"/>
+	</Target>
+	
+	<!-- LABEL TARGETS START -->
+	<Target Name="label">
+		<Exec Command="TF LABEL $(Label) /recursive /login:Excelindia\$(TFSUser),$(TFSPass) ..\..\ViTag  "/>
+	</Target>
+	
+	<!-- Backup Old build TARGETS START -->
+  
+   <Target Name="Backup">
+		<Exec Command="robocopy $(Root) D:\Builds_backup\VISAP\$(Label) /S /E " ContinueOnError="true" />
+   </Target>
+   
+   <Target Name="Deploy">
+     <Exec Command="Robocopy $(Sourcefolder) $(Destinationfolder) /S /E /XF *.cs *.csproj *.vb *.sln *.user *.vspscc /xd obj Properties svc" ContinueOnError="true" />
+     <Exec Command="Robocopy $(ViSapWorkspaceSource) $(ViSapWorkspaceDest) /S /E /XF *.cs *.csproj *.vb *.sln *.user *.vspscc /xd obj Properties svc" ContinueOnError="true" />	
+     <Exec Command="Robocopy $(ViSapQserviceSource) $(ViSapQserviceDest) /S /E /XF *.cs *.csproj *.vb *.sln *.user *.vspscc /xd obj Properties svc" ContinueOnError="true" />
+     <Exec Command="Robocopy $(ViSapFXSource) $(ViSapFXDest) /S /E /XF *.cs *.csproj *.vb *.sln *.user *.vspscc /xd obj bin Properties svc" ContinueOnError="true" />	 	
+ <Exec Command="Robocopy $(VisapIntSource) $(VisapIntDest) /S /E /XF *.cs *.csproj *.vb *.sln *.user *.vspscc /xd obj Properties svc" ContinueOnError="true" />
+ <Exec Command="Robocopy $(VisapSsoMockSource) $(VisapSsoMockDest) /S /E /XF *.cs *.csproj *.vb *.sln *.user *.vspscc /xd obj  Properties svc" ContinueOnError="true" /> 
+  </Target>
+  
+  <Target Name="CreateMandatoryWebApp">
+  <!-- CreateMandatoryWebApp Target start Time -->
+      <MSBuild.ExtensionPack.Web.Iis7Application TaskAction="CheckExists" Website="$(WebSiteName)" Applications="@(Mandatory)"  MachineName="$(DestinationServer)">
+      <Output TaskParameter="Exists" PropertyName="DoesExist"/>
+      </MSBuild.ExtensionPack.Web.Iis7Application>
+      <MSBuild.ExtensionPack.Web.Iis7Application TaskAction="Delete" Website="$(WebSiteName)" Applications="@(Mandatory)"  MachineName="$(DestinationServer)" Condition="'$(DoesExist)'=='True'"/>
+      <MSBuild.ExtensionPack.Web.Iis7Website TaskAction="AddApplication" Name="$(WebSiteName)" Applications="@(Mandatory)" MachineName="$(DestinationServer)" Force="true"/>
+  <!-- CreateMandatoryWebApp Target End Time -->
+</Target>
+
+    
+  <!-- <Target Name="IncrementBuildLabel">
+    <Message Text="Updating the build label.." />
+    <Build.CustomTasks.UpdateBuildNumber FileWithBuildNumber=".\build.properties"  />
+    <Message Text="Updated Build label for .\build.properties" />
+    <Exec Command="git add build.properties"/>
+    <Exec Command="git commit -m &apos;Incrementing_Tag_Version&apos;"/>
+     <Exec Command="git push origin master"/>
+  </Target> -->
+  
+  <Target Name="IncrementBuildLabel">
+    <Message Text="Updating the build label.." />
+	<Build.CustomTasks.UpdateBuildNumber FileWithBuildNumber="%(FilesWithBuildNumber.Identity)"   />
+    <Build.CustomTasks.UpdateBuildNumber FileWithBuildNumber=".\build.properties"  />
+	<Message Text="Updated Build label for %(FilesWithBuildNumber.Identity)" />
+    <Exec Command="git add -u :/"/>
+    <Exec Command="git commit -m &apos;Incrementing_Tag_Version&apos;"/>
+    <Exec Command="git push origin master"/>
+  </Target>
+  
+  <Target Name="IncrementincBuildLabel">
+    <Message Text="Updating the build label.." />
+	<Build.CustomTasks.UpdateincBuildNumber FileWithBuildNumber="%(FilesWithBuildNumber.Identity)"   />
+    <Build.CustomTasks.UpdateincBuildNumber FileWithBuildNumber=".\build.properties"  />
+	<Message Text="Updated Build label for %(FilesWithBuildNumber.Identity)" />
+    <Exec Command="git add -u :/"/>
+    <Exec Command="git commit -m &apos;Incrementing_Tag_Version&apos;"/>
+    <Exec Command="git push origin master"/>
+  </Target>
+  
+</Project>

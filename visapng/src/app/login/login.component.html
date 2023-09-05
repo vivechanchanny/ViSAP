@@ -1,0 +1,86 @@
+<div class="bg-image login-page">
+
+  <div class="v-sap-small-img-container" fxHide fxShow.lt-sm>
+    <img src="assets/images/common/login/v-sap-big.png" alt="v-sap-big-img" class="v-sap-small-img">
+  </div>
+
+  <!-- <div class="" ngClass.gt-xs="wrapper-xs" ngClass.xs="wrapper-sm" fxLayout="row" fxLayout.xs="column"> -->
+    <div class="" ngClass="wrapper" [ngClass.xs]="{'wrapper':false, 'wrapper-sm':true}" fxLayout="row" fxLayout.xs="column">
+    
+    <div class="description" fxFlex="50%" fxHide fxShow.gt-xs>
+      <div>
+        <img src="assets/images/common/login/v-sap-big.png" alt="v-sap-big-img" class="v-sap-big-img">
+      </div>
+      <h1 i18n>Welcome</h1>
+      <p>
+        Visual Representation is an Effective media of communicating information to an end user and if used creatively, can become
+        a powerful expressive tool. In this Product,Clients can upload and edit static,youtube,direct URL Videos by adding
+        Annotations,Sketches, Questions,Hot spot,Whiteboard,Tags and Links which will provide additional information about
+        the content in different forms.Product Provides the option for the user to have his own store where he can have his
+        Videos.
+      </p>
+    </div>
+
+    <div class="" fxFlex [hidden]="!loginContainer" ngClass.gt-xs="form-container" ngClass.lt-sm="form-container-sm">
+      <h1 class="form-title">Sign in</h1>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+        <md-card-content>
+          <md-input-container class="form-width">
+            <input mdInput formControlName="username" placeholder="Username" id="username">
+          </md-input-container>
+          <md-error *ngIf="!loginForm.get('username').valid && submitted" class="help-block" i18n>*Username is required</md-error>
+          <br/>
+          <md-input-container class="form-width">
+            <input mdInput type="password" placeholder="Password" formControlName="password" id="password">
+          </md-input-container>
+          <md-error *ngIf="!loginForm.get('password').valid && submitted" class="help-block" i18n>*Password is required</md-error>
+          <br/>
+          <md-error *ngIf="invalid" class="margin-bottom" class="help-block" i18n>*Username or password is incorrect</md-error>
+          <div class="margin-bottom">
+            <button md-raised-button class="form-width " color="primary" type="submit" i18n>Submit</button>
+          </div>
+          <div>
+            <a href="javascript:void(0)" (click)="forgotForm()" i18n>Forgot your password?</a>
+          </div>
+        </md-card-content>
+      </form>
+    </div>
+
+    <div class="" fxFlex [hidden]="!forgotContainer" ngClass.gt-xs="form-container" ngClass.lt-sm="form-container-sm">
+      <label class="form-title">Forgot your password?</label>
+      <p>Enter your email address and we'll send you a link to reset your password.</p>
+      <form [formGroup]="forgotPwdForm" (ngSubmit)="forgetPwd(forgotPwdForm.value)">
+        <md-card-content>
+          <md-input-container class="form-width">
+            <input mdInput formControlName="email" placeholder="Email Address" class="form-input">
+          </md-input-container>
+
+          <md-error *ngIf="!forgotPwdForm.get('email').valid && submitted" class="help-block margin-bottom" i18n>*Please enter valid email address.</md-error>
+
+          <md-error *ngIf="invalidEmail" class="margin-bottom" class="help-block margin-bottom" i18n>{{ message }}</md-error>
+          <div class="margin-bottom">
+            <button md-raised-button class="form-width margin-bottom" color="primary" type="submit" i18n>Submit</button>
+          </div>
+          <div>
+            <a  href="javascript:void(0)" (click)="login()" i18n>Return to Sign in</a>
+          </div>
+        </md-card-content>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <ul>
+      <li i18n fxLayoutGap="10px">
+        <a href="aboutus.html" [routerLink]="['/about-us']" i18n>About Us</a>
+        <span>|</span>
+        <a href="contact.html" [routerLink]="['/contact']" i18n>Contact</a>
+        <span>|</span>
+        <a href="privacypolicy.html" [routerLink]="['/privacy-policy']" i18n>Privacy Policy</a>
+        <span>|</span>
+        <span>©</span> 2017 Excelsoft technologies Pvt Ltd. All rights reserved.
+      </li>
+    </ul>
+  </div>
+</div>

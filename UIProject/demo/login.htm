@@ -1,0 +1,162 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Video Tag</title>
+        
+        <link href="../style/default/jquery-ui.1.10.4.css" rel="stylesheet" type="text/css" />
+        <script src="../scripts/frameworks/jquery/jquery-1.10.2.min.js" type="text/javascript"></script>
+        <script src="../scripts/frameworks/jquery/jquery-ui.1.10.4.js" type="text/javascript"></script>
+
+        <link href="../style/default/index.css" rel="stylesheet" type="text/css" />
+        <link href="../style/default/login-box.css" rel="stylesheet" type="text/css" />
+
+        <script type="text/javascript" language="javascript">
+
+            $(document).ready(function () {
+                if ($('#remember_me').is(':checked')) {
+
+                    var cookiename = localStorage.getItem('username');
+                    $('#users').val(cookiename);
+                    $('#password').val(cookiename);
+                } else {
+                    $('#users').val("");
+                    $('#password').val("");
+                }
+                //on press of enter key we can login
+                $("#password").keypress(function (e) {
+                    if (e.which == 13) {
+                        login();
+                    }
+                });
+            });
+
+            var video = {};
+            video.users = [{ "l": "Instructor1", "pwd": "Instructor1", "f": "user1.data.js", "e": 1 }, { "l": "Instructor2", "pwd": "Instructor2", "f": "user2.data.js", "e": 1 }, { "l": "Student1", "pwd": "Student1", "f": "user1.data.js", "e": 0 }, { "l": "Student2", "pwd": "Student2", "f": "user2.data.js", "e": 0 }];
+
+            login = function () {
+                var l = $("#users").val(),
+                pwd = $("#password").val(),
+                msg = getUserDetails(l, pwd);
+                if (l == "") {
+                    $("#lblWarMsg").show().html("Enter username.");
+                }
+                else
+                 {
+                    if (pwd == "")
+                    { $("#lblWarMsg").show().html("Enter password."); }
+                    else {
+
+                            if (!msg) {
+                                window.location.href = 'catalog.html';
+                                localStorage.setItem('username', l);
+                            }
+                            else $("#lblWarMsg").show().html(msg);
+                        } 
+                }
+            };
+
+            getUserDetails = function (l, pwd) {
+
+                var u = $.grep(video.users, function (u) {
+                    return u.l.toLowerCase() == l.toLowerCase();})[0],
+                 p = (u ? u.pwd == pwd : false), msg = false;
+                if (!u)
+                    msg = "Username is incorrect!";
+                else if (!p)
+                    msg = "Password is incorrect!";
+
+                return msg;
+
+            };
+
+        </script>
+  </head>
+    <body>
+        <div class="header">
+            <div class="wrap">
+                <div class="logo">
+                    <a href="login.htm">
+                        <img src="../images/logo.png" title="logo" />
+                    </a>
+                </div>
+                <div class="top-menu">
+                    <div class="top-nav">
+
+                    </div>
+
+                    <div class="clear">
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <div class="main-content">
+            <div class="wrap">
+                <div class="right-content">
+                    <div class="right-content-heading">
+
+
+                        <div class="clear">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div style="margin-left: 34%;">
+            <div id="login-box">
+                <h2>
+                    Login
+                </h2>
+                <label class='wrnMsg' id='lblWarMsg'>
+                  
+                </label>
+                <br />
+                <br />
+                <div id="login-box-name" style="margin-top: 20px;">
+                    Username:
+                </div>
+                <div id="login-box-field" style="margin-top: 20px;">
+                    <input name="q" class="form-login" title="Username" id="users" value="Instructor1" size="30" maxlength="2048"
+                           list="dtUserList" />
+                </div>
+                <br />
+                <br /> <br />
+                <div id="login-box-name">
+                    Password:
+                </div>
+                <div id="login-box-field">
+                    <input name="q" type="password" class="form-login" title="Password" id="password" value="Instructor1" size="30"
+                           maxlength="2048" />
+                </div>
+                <br />
+                <span class="login-box-options">
+                    <input type="checkbox" id="remember_me" checked="true" name="1" value="1">
+                    Remember Me <a href="#" style="margin-left: 30px;">Forgot password?</a>
+                </span>
+                <br />
+                <br />
+                <a href="#" onclick="javascript:login();">
+                    <img src="../demo/images/login-btn.png" width="103" height="42" style=" margin: 21px 0 0 90px;" />
+                </a>
+                <datalist id="dtUserList">
+                    <option value="Instructor1"></option>
+                    <option value="Instructor2"></option>
+                    <option value="Student1"></option>
+                    <option value="Student2"></option>
+                </datalist>
+            </div>
+        </div>
+    </body>
+</html> 

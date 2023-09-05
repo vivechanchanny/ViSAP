@@ -1,0 +1,258 @@
+@charset "utf-8";
+/* CSS Document */
+
+.vi-main {
+	margin-bottom:30px;
+	font-size:13px;}
+.vi-main td {
+/*	vertical-align: top */
+}
+.vi-container {
+	position: relative;
+}
+.btn-tag {
+	position: absolute;
+	top: 0px;
+	left: -39px;
+	background-color: #666;
+	width: 39px;
+	height: 39px;
+	background-image: url(../../images/common/video/icn-tag.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: pointer;
+}
+.actions-main {}
+.tag-main {
+	margin-top: 39px;
+	width: 250px;
+	overflow-y: auto;
+    max-height: 380px;
+}
+.tag-hide {
+	display:none;
+}
+.settings-main {
+	min-width: 270px;
+
+}
+.panel-height {
+	height:421px;
+	overflow:auto;}
+.settings-hide {
+	display: none;
+}
+.toc-pad {
+	padding-bottom: 0px !important;
+	padding-top: 0px !important;
+
+}
+.toc-divider {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+	padding-bottom: 10px !important;
+	padding-top: 10px !important;
+    cursor: pointer;
+}
+.action-divider {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+	padding-bottom: 10px !important;
+	padding-top: 10px !important;
+	margin-left:23px;
+
+}
+.toc-play-pause {
+	width: 15px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+.action-controls {
+	width: 100px;
+	padding-left: 10px;
+	text-align: right;
+}
+.action-name {
+	min-width: 100px;
+	font-size:13px;
+
+}
+.toc-vi-name {
+	min-width: 100px;
+	font-size:14px;
+}
+.toc-exp-col {
+	width: 13px;
+	padding-right: 10px;
+}
+.toc-duration {
+	text-align: right;
+	width: 60px;
+	font-size:12px;
+	cursor: text;
+}
+.toc-icn-tag {
+	background-image: url(../../images/common/video/icn-toc-tag.png);
+	background-repeat: no-repeat;
+	background-position: 7px center;
+	padding-left: 25px;
+}
+.toc-icn-link {
+	background-image: url(../../images/common/video/icn-toc-link.png);
+	background-repeat: no-repeat;
+	background-position: 7px center;
+	padding-left: 25px;
+}
+.settings {
+	padding:0px;
+	margin:0px;}
+	.settings li {
+	padding: 0px;
+	list-style-type: none;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 20px;
+	margin-left: 0px;
+}
+.settings-tools {
+	padding:0px;
+	margin:0px;}
+	.settings-tools li {
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+	display:inline-block;
+	cursor:pointer;
+
+}
+.size-width {
+	margin-bottom:10px;
+	margin-top:10px;
+	position:relative;
+	height:4px;
+	display:block;
+	background-color:#333;}
+	.size-pointer {
+	position: absolute;
+	left: 5%;
+	top: -4px;
+	background-color: #999;
+	width: 8px;
+	display: block;
+	cursor: pointer;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+.duration-width {
+	width:90px;}
+	.btn-settings {
+	padding-top: 10px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #999;
+	margin-top: 30px;
+		}
+		.panel-title-fontsize {
+	font-size: 13px;
+	font-family: "open_sansbold";
+	color: #333;
+}
+.page-title {
+	font-size: 30px;
+	font-family: "open_sanslight";
+	color: #999;
+	margin-bottom: 30px;
+}
+		.page-title img {
+	
+		margin-right:15px;
+		vertical-align:middle;}
+		.act-controls-main {
+			padding:0px;
+			margin:0px;}
+			.act-controls-main li {
+	padding: 0px;
+	list-style-type: none;
+	display: inline-block;
+	margin-top: 0px;
+	margin-right: 3px;
+	margin-bottom: 0px;
+	margin-left: 3px;
+	cursor:pointer;
+}
+.act-controls-main .save {
+	background-image: url(../../images/common/video/icn-save.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 20px;
+	width: 20px;
+}
+.act-controls-main .edit {
+	background-image: url(../../images/common/video/icn-edit1.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 20px;
+	width: 20px;
+}
+.act-controls-main .delete {
+	background-image: url(../../images/common/video/icn-delete-action.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 20px;
+	width: 20px;
+}
+
+.aligntop {
+	vertical-align: top;
+	position: relative;
+}
+.actions-heading {
+    background-color: #666;
+    color: #fff;
+    padding: 10px;
+    font-family: "open_sanssemibold";
+    font-size: 14px;
+}
+.no-left-border {
+    border-left-style: none !important;
+    border-top-color: #666 !important;
+}
+.action-controls1 {
+	width: 14px;
+	min-height:30px;
+	padding-left: 10px;
+	text-align: right;
+}
+.act-controls-main .edit-small {
+	background-image: url(../../images/actions/icn-edit-small.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 14px;
+	width: 14px;
+	margin-top: 2px;
+	margin-right: 1px;
+	margin-bottom: 2px;
+	margin-left: 1px;
+	float:left;
+}
+.act-controls-main .delete-small {
+	background-image: url(../../images/actions/icn-delete-small.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 14px;
+	width: 14px;
+	float: left;
+	margin-top: 2px;
+	margin-right: 1px;
+	margin-bottom: 2px;
+	margin-left: 1px;
+}
+
+.video-title {
+	font-size: 20px;
+	font-family: "open_sanslight";
+	margin-left:385px; 
+}
+

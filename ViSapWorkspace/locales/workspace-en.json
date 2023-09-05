@@ -1,0 +1,116 @@
+﻿{
+	"en": {
+		"translation": {
+			"login": {
+				"userName": "User Name",
+				"password": "Password",
+				"title": "HOME",
+				"visapText": "Visual Representation is an Effective media of communicating information to an end user and if used creatively, can become a powerful expressive tool. In this Product,Clients can upload and edit static,youtube,direct URL Videos by adding Annotations,Sketches, Questions,Hot spot, Whiteboard,Tags and Links which will provide additional information about the content in different forms.Product Provides the option for the user to have his own store where he can have his Videos.",
+				"nameRequired": "Username is required",
+				"passwordRequired":"Password is required",
+				"loginValidation": "Username or Password is Invalid.",
+				"signIn":"Sign in",
+				"sendMail":"Submit",
+				"enterEmail":"Enter email to reset password",
+				"confirmPassword":"Confirm Password",
+				"newPassword":"New Password",
+				"resetPassword":"Reset Password",
+				"emailRequired":"Email is Required",
+				"validEmail":"Please check your Mail to Reset the Password",
+				"notRegisteredEmail":"Email is not Registered",
+				"resetSuccess":"Password Reset Successful  ",
+				"relogin":"Login",
+				"forgotPassword":"Forgot Password?",
+				"notMatched":"Password does not match"
+			
+			},
+			"msg": {
+				"success": "Saved successfully",
+				"blank": "This field should not be blank.",
+				"fnBlank": "First Name should not be blank.",
+				"splChar": "This field contains only special characters.",
+				"fnLongTxt": "First Name is long.",
+				"lnBlank": "Last Name should not be blank.",
+				"lnLongTxt": "Last Name is long.",
+				"loginBlank": "Login Name should not be blank.",
+				"loginLongTxt": "Login Name is long.",
+				"pwdBlank": "Password should not be blank.",
+				"emailBlank": "Email address should not be blank.",
+				"emailInvalid": "Inavalid email address",
+				"selectRole": "Please select the role.",
+				"selectWorkspace": "Please select the workspace.",
+				"workspaceLongTxt": "Workspace name is long.",
+				"delete": "Are you sure you want to delete ?",
+				"workspaceNameExists": "Workspace name already exists. Please choose a different Workspace name.",
+				"failed": "failed",
+				"loginNameExits": "This login name is already registered,Please choose a different login name.",
+				"groupNameExists": "Group name already exists. Please choose a different Group name.",
+				"chooseUser": "Please choose atleast one user.",
+				"registeredEmail":"This Email is already Registered."
+			},
+			"header": {
+				"title": "V-SAP",
+				"navigation": "Toggle navigation",
+				"workspace": "WORKSPACE",
+				"user": "USER",
+				"welcomeLabel": "Welcome",
+				"workspaceLabel": "You are in",
+				"logout": "Logout"
+			},
+			"common": {
+				"search": "Search",
+				"searchLabel": "Search By",
+				"save": "Save",
+				"cancel": "Cancel",
+				"name": "Name",
+				"close": "Close",
+				"edit": "Edit",
+				"delete": "Delete",
+				"action": "Action"
+			},
+			"workspace": {
+				"workspaceName": "Workspace Name",
+				"title": "Search By Workspace Name",
+				"create": "Create Workspace",
+				"edit": "Edit Workspace"
+			},
+			"user": {
+				"placeholder": "First Name,Last Name,Login Name",
+				"title": "Search By First Name,Last Name,Login Name",
+				"create": "Create User",
+				"edit": "Edit User",
+				"firstName": "First Name",
+				"lastName": "Last Name",
+				"loginName": "Login Name",
+				"workspace": "Workspace",
+				"email": "Email",
+				"role": "Role",
+				"userSelectDropdown": "Select WorkspaceName",
+				"selectRoleDropdown": "Select Role"
+			},
+			"footer": {
+				"aboutUs": "About Us",
+				"contact": "Contact",
+				"copyRight": "2015 Excelsoft technologies Pvt Ltd. All rights reserved",
+				"privacyPolicy": "Privacy Policy"
+			},
+			"group": {
+				"group": "GROUP",
+				"groupName": "Group Name",
+				"create": "create Group",
+				"manageUsers": "Manage Users",
+				"lengthyGn": "Group name is long.",
+				"edit": "Edit Group",
+				"noUser": "No users to add.",
+				"addUsers": "Add Users",
+				"vidGallery": "VIDEO GALLERY",
+				"title": "Search By Group Name"
+			},
+     		"confirmation":{
+                "header" : "Confirmation",
+               "ok" : "OK"
+            }
+
+		}
+	}
+}

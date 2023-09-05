@@ -1,0 +1,32 @@
+<div id="mainContainer">
+<div fxLayout="row" fxLayoutAlign="center start" fxLayoutAlign.gt-sm="center start" fxLayoutAlign.gt-xs="center start" fxLayoutAlign.md='center start' fxLayoutAlign.sm='center start' fxLayoutAlign.xs='center'>
+    <div [fxFlex]="playerWidth"  fxFlex.xs="95"  fxFlex.sm="95">
+  <md-sidenav-container [ngClass]="{'sideNavFS': fsMode }">
+      <!--question container starts-->
+      <md-sidenav #questionBlock mode="side" class="quest-sidenav">
+        <div id="questContainer">
+          <div class="quest-main" id="aelibquestblock"></div>
+        </div>
+      </md-sidenav>
+      <!--question container ends-->
+      <block-ui>
+        <div  fxLayout="column" >
+            <button (click)="showBookMark()" md-icon-button [matMenuTriggerFor]="menuBookmark" *ngIf="!isMenuHidden" #menuTrigger="mdMenuTrigger">
+                <md-icon>menu</md-icon>
+              </button>
+              <md-menu #menuBookmark="mdMenu" xPosition="before" [overlapTrigger]="false">
+                <div class='bookmark'>
+                  <vis-bookmark></vis-bookmark>
+                </div>
+              </md-menu>
+              <div id="playContainer" class="playercontainer" fxFlex="100">
+                <div id="videoContainer" class="vidcontainer">
+                </div>
+              </div>
+        </div>
+      </block-ui>
+      <!--player and menu button ends -->
+    </md-sidenav-container>
+  </div>
+  </div>
+</div>

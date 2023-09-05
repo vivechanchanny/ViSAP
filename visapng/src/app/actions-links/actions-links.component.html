@@ -1,0 +1,61 @@
+<div class="margin30">
+  <form [formGroup]="Form" (ngSubmit)="onSave(Form.value,Form.valid)">
+
+    <div fxLayout="column">
+      <md-input-container>
+        <input mdInput class="form-control" placeholder="Link" formControlName="linkname" [(ngModel)]='linkname'>
+      </md-input-container>
+
+      <div *ngIf="Form.controls['linkname'].errors?.maxlength; else link">
+        <md-error class="max-error-msg">Maximum characters 255 is allowed.</md-error>
+      </div>
+
+      <ng-template #link>
+        <md-error *ngIf="!Form.get('linkname').valid && submitted" [ngStyle]="{'color': 'red'}" class="help-block" i18n>* Link cant be empty.</md-error>
+      </ng-template>
+
+      <md-input-container>
+        <input mdInput class="form-control" placeholder="URL" formControlName="linkurl" [(ngModel)]='linkurl'>
+      </md-input-container>
+
+      <div  *ngIf="(Form.get('linkurl').errors && Form.get('linkurl').errors.validUrl); else url">
+        <md-error class="max-error-msg">  * Please Enter valid url.</md-error>
+      </div>
+
+      <ng-template #url>
+        <md-error *ngIf="!Form.get('linkurl').valid && submitted" [ngStyle]="{'color': 'red'}" class="help-block" i18n>
+            * Url cant be empty.
+        </md-error>
+      </ng-template>
+
+      <div fxLayoutAlign="end center">
+        <button md-raised-button color="primary" class="spacebtn" type="submit" i18n>Save</button>
+        <button md-raised-button color="primary" (click)="cancel()" i18n>Cancel</button>
+      </div>
+
+    </div>
+  </form>
+
+
+</div>
+
+<div class="linkscard">
+  <md-card>
+    <span class="mat-card-header-text" *ngIf="links?.length > 0">Current Links:</span>
+    <md-list *ngFor="let link of links">
+      <div>
+        <md-list-item>
+          <h4 md-line class="poniter" (click)="onNavigate(link.u)">{{link.n}}
+          </h4>
+          <md-icon class="poniter" (click)="onEdit(link)">edit</md-icon>
+          <md-icon class="poniter" (click)="onDlelete(link)">delete</md-icon>
+          <md-divider inset=""></md-divider>
+          <md-divider inset=""></md-divider>
+        </md-list-item>
+        <md-divider inset=""></md-divider>
+      </div>
+
+
+    </md-list>
+  </md-card>
+</div>

@@ -1,0 +1,262 @@
+.glossaryPopupCover{display: none;}
+.glossaryPopupCover .modal-content{height: 80%;top:6%;}
+.glossaryTipPopUp{border: 0; padding-left: 10px;overflow: initial;}
+.glossaryTipPopUp div.modal-dialog{max-width: 300px;}
+.glossaryTipPopUp .modal-title{color:#262626; display:inline-block; max-width: 88%; font-size:14px; font-family:OpenSansBold; margin: 0;}
+.glossaryTipPopUp div.modal-body{max-height: 150px;max-width: 100%;width: 270px; margin:7px 0; overflow-y: auto;padding:0px 10px; position:relative; color:#535353; font-size:12px; font-family:OpenSansRegular; line-height:16px; z-index:2; box-sizing: border-box;}
+.glossaryTipPopUp div.modal-content{background:#f5f4f4;border: none;border-radius: 0px; box-shadow: 0px 0px 3px 0 rgba(0,0,0,.4); padding:5px;}
+.glossaryTipPopUp div.modal-dialog{margin:2px;position: fixed;}
+.glossaryTipPopUp div.modal-header{border: none;padding: 5px 15px 0px 10px;}
+.modal-backdrop.transparent{opacity:0!important;}
+
+/*
+.glossaryTipPopUp.in:before {
+left: -5px;
+border: solid transparent;
+content: " ";
+width: 20px;
+position: absolute;
+pointer-events: none;
+border-color: rgba(194, 225, 245, 0);
+border-right-color: #f5f4f4;
+border-width: 10px;
+top: 5px;
+background: none;
+
+}
+*/
+.glossaryTipPopUp div.arrow{ 
+	background:#f5f4f4;
+	width: 15px;
+	height: 15px;
+	overflow: hidden;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+	position: absolute;
+	bottom: -8px;
+	-webkit-transform:rotate(45deg);
+	z-index:1;
+}
+.glossaryTipPopUp div.arrow.up{ 
+	box-shadow: -1px -1px 2px rgba(0,0,0,0.3);
+}
+
+#glossaryList>ul {
+    padding: 0 72px 0 20px;
+}
+
+#glossaryEditorPopup {
+    background: #f1eeee;
+    padding: 2%;
+    overflow: hidden;
+    width: 100%;
+}
+
+.GlossaryEditorPopUpTitle {
+    float: left;
+    line-height: 50px;
+    font-size: 1.12em;
+    font-family: OpenSansRegular;
+
+}
+
+.close-pop {
+    background: url(../images/icon-close.png) center center no-repeat;
+    border: 0;
+    height: 16px;
+    margin: 10px 0px 10px 20px;
+    width: 16px;
+}
+
+.glossaryEditorPopup .right-action-bar {
+    padding-right: 0;
+    margin: 7.5px 0 0;
+}
+
+.glossaryListTitle, .glossaryListTitle:hover {
+    font-size: 20px;
+    font-family: OpenSansSemibold;
+    margin: 10px 0;
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 3px;
+	border-bottom: 2px solid #ddd;
+	width: 100%;
+	padding: 5px 0 10px;
+}
+
+.btn-addword {
+    background: #3faae3;
+    border: 0;
+    color: #fff;
+    font-size: 12px;
+    height: 27px;
+    line-height: 27px;
+    padding: 0;
+    text-align: center;
+}
+
+.btn-addword:hover {
+    background: #328cbc;
+}
+
+.btn-addword:before, .btn-addword:after {
+    background: #328cbc url(../images/icon-plus-white.png) center center no-repeat;
+    content: "";
+    display: block;
+    float: left;
+    height: 27px;
+    width: 25px;
+}
+
+.btn-addword:before {
+    margin-right: 9px;
+}
+
+.btn-addword:after {
+    background:none;
+    float: right;
+    margin-right: 11px;
+	width:0px;
+}
+
+.selectedAlphabet {
+    background: rgba(0,0,0,.8);
+    border-radius: 100%;
+    color: #fff;
+    font-size: 45px;
+    height: 92px;
+    line-height: 92px;
+    position: absolute;
+    right: 60px;
+    text-align: center;
+    width: 92px;
+}
+
+.glossaryEditorPopup .modal-content {
+    border-radius: 0;
+	-webkit-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none
+}
+
+.glossaryEditorPopup .modal-header {
+    background: #f7f7f7;
+    border-bottom: 1px solid #f7f7f7;
+    height: 50px;
+    padding: 0 20px 0 23px;
+}
+
+#editTermContainer, #addWordContainer {
+    background: #f1eeee;
+    padding: 50px 85px 50px 50px;
+    overflow:scroll;
+}
+
+.glossaryEditTermPopup .close-pop , .glossaryAddNewTermPopup .close-pop {
+    float: right;
+    margin-top: 17px;
+}
+
+.glossaryEditTermPopup .GlossaryEditorPopUpTitle span.back-arrow, .glossaryAddNewTermPopup .GlossaryEditorPopUpTitle span.back-arrow {
+    background: url(../images/add-word-back-arrow.png) left center no-repeat;
+	cursor:pointer;
+    padding-left: 32px;
+}
+
+.glossaryEditTermPopup .form-group, .glossaryAddNewTermPopup .form-group {
+    margin: 10px 0 0;
+}
+
+.glossaryEditTermPopup label, .glossaryAddNewTermPopup label {
+    color: #6e6e6e;
+    font-size: 12px;
+    font-family: OpenSansRegular;
+    font-weight: normal;
+    float: left;
+    width: 25%;
+    margin: 14px 0 0;
+}
+
+.glossaryEditTermPopup label span, .glossaryAddNewTermPopup label span {
+    color: #e70101;
+}
+
+.glossaryEditTermPopup input[type="text"], .glossaryEditTermPopup textarea, .glossaryAddNewTermPopup input[type="text"], .glossaryAddNewTermPopup textarea {
+    border: 1px solid #eaeaeb;
+    border-radius: 0;
+    box-shadow: none;
+    float: right;
+    width: 75%;
+}
+
+.glossaryEditTermPopup textarea, .glossaryAddNewTermPopup textarea {
+    height: 210px;
+    resize: none;
+}
+
+.glossaryEditTermPopup .bottomBar div button.btn, .glossaryAddNewTermPopup .bottomBar div button.btn {
+    background: #47b3e7;
+    font-family: OpenSansRegular;
+    font-size: 12px;
+    padding: 5px 23px;
+}
+@media only screen and (max-height: 800px){
+.slider-nav li a {
+    font-size: 10px !important;
+}
+}
+
+.glossaryTipPopUp .modal-content {
+	-webkit-user-select: none;
+	-moz-user-select: none;    
+	-ms-user-select: none; 
+	-o-user-select: none;
+	user-select: none; 
+}
+.toolTipAudio{
+    background-image: url('../images/glossarySoundPause.png');
+    height: 22px;
+    width: 14px;
+    display: none;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin: 0px 0;
+    vertical-align: top;
+}
+.toolTipImage {
+    display: none;
+    float:left;
+    margin: 0 10px 4px 0;
+    max-width: 100%;
+}
+.toolTipAudio.play{
+    background-image: url('../images/glossarySoundPlay.png');
+    width: 27px;
+}
+.audioPlayPauseBtn{
+    background-image: url('../images/glossarySoundPause.png');
+    height: 22px;
+    width: 27px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin: -2px 0 0 8px;
+}
+.audioPlayBtn{
+    background-image: url('../images/glossarySoundPlay.png');
+}
+.slider-content ul.editableBackground ul li .audioPlayPauseBtn{
+    margin: 8px 0 0;
+}
+.slider-content ul li.heading span.headingText {
+min-height: 22px;
+display: inline-block;
+float: left;
+line-height: 22px;
+margin-right: 13px;
+}
+.disable{
+	opacity: 0.5;
+	cursor: default !important;
+}

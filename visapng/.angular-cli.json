@@ -1,0 +1,85 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "vis-v4"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico",
+        "v-sap.png"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "vis",
+      "styles": [
+        "styles.css",
+        "./assets/style/common/player.brown.css",
+        "./assets/style/default/default.css",
+        "./assets/style/common/literallycanvas.css"
+
+      ],
+      "scripts": [
+        
+         "./assets/scripts/external/react-with-addons.js",
+         "./assets/scripts/ckeditor/ckeditor.js",
+         "./assets/scripts/external/literallycanvas.js",
+        "./assets/ViSAPFx/scripts/visap.js",
+        "./assets/ViSAPFx/scripts/visap.edit.js",
+        "./assets/ViSAPFx/scripts/sketcher.js",
+        "./assets/ViSAPFx/scripts/visap.litwrapper.js",
+        "./assets/ViSAPFx/scripts/visap.factorysketcher.js",
+        "./assets/scripts/frameworks/jquery/i18next.js",
+        "./assets/scripts/visap.localize.js",
+        "./assets/config/config.js",
+        "./assets/ViSAPFx/scripts/logger.js",
+        "./assets/ViSAPFx/scripts/visap.logger.js",
+        "./assets/ViSAPFx/scripts/visap.quiz.js",
+        "./assets/ViSAPFx/scripts/visap.aelib.js" 
+      
+        
+
+        ],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "src/tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}

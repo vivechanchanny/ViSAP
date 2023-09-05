@@ -1,0 +1,31 @@
+
+						{
+                        "id": "",
+                        "heading": [],
+                        "maxpoints": ["1"],
+                        "answers": ["0"],
+                        "leftCol": [],
+                        "modelParagraph": "",
+                        "options": [ {
+                                "data": "statment 1",
+                                "type": "text"
+                            }],
+                        "optionsLayout": "",
+                        "questionBody": [],
+                        "questionMedia": [{
+                            "data": "",
+                            "type": ""
+                        }],
+                        "optionsMedia": [],
+                        "questionLayout": "",
+                        "responseType": "BINARY",
+                        "rightCol": [],
+                        "rubric": [],    
+                        "title": "",
+                        "type": "MCQ",
+                        "labelTrue" : "True",
+                        "labelFalse" : "False",
+                        "metadata":"Metadata"
+                    
+                
+}    

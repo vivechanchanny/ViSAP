@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="images/common/v-sap.ico">
+    <!-- Bootstrap core CSS -->
+
+    <link href="css/default.css" rel="stylesheet" type="text/css">
+    <link href="css/fonts.css" rel="stylesheet" type="text/css">
+
+
+    <title ng-i18next="header.title"></title>
+</head>
+
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6"> </div>
+            <div class="col-md-6">
+                <ul class="footer-links navbar-right footer-links-rt">
+                    <li>
+                        <a href="/VISAP/visaptest/aboutus.html" ng-i18next="footer.aboutUs"></a> |
+                        <a href="/VISAP/visaptest/contact.html" ng-i18next="footer.contact"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top:70px;">
+        <!--/content start-->
+        <div class="logo-big"><img src="images/v-sap-big.png" alt="v-sap-big-img" width="261" height="68"></div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="login-text">
+                    <div class="logintext-big" ng-i18next="header.welcomeLabel"></div>
+                    <p ng-i18next="login.visapText">
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="login-box">
+                    <div class="login-fields">
+                        <form name="form" ng-submit="" novalidate>
+                            <div class="form-group">
+                                <h2 id="loginmsg" class="err-msg"></h2>
+                                <label for="txtUsername" ng-i18next="login.userName"></label>
+                                <input type="text" class="form-control" name="username" id="username" placeholder="User Name" ng-model="username" ng-required="true" />
+                                <span ng-show="form.$submitted && form.username.$error.required" ng-i18next="login.nameRequired"></span></br>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="txtPassword" ng-i18next="login.password"></label>
+                                <input type="password" class="form-control" name="password" id="password" ng-model="password" placeholder="Password" ng-required="true">
+                                <span ng-show="form.$submitted && form.password.$error.required" ng-i18next="login.passwordRequired"></span></br>
+                            </div>
+
+                            <button class="btn btn-success" id="save" ng-click="validateuser()" type="submit" ng-i18next="login.signIn" ></button>
+                            
+							<a ng-click="navigate()" href="" ng-i18next="login.forgotPassword"></a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/content end-->
+
+    </div>
+
+    <!--/footer start-->
+    <footer class="footer" style="background-color:transparent !important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6"> </div>
+                <div class="col-md-6">
+                    <ul class="footer-links navbar-right footer-links-rt">
+                        <li>© <span ng-i18next="footer.copyRight"></span> |
+                            <a href="/VISAP/visaptest/privacypolicy.html" ng-i18next="footer.privacyPolicy"></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--/footer end-->
+</div>
+
+</html>

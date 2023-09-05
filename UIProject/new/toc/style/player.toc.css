@@ -1,0 +1,400 @@
+﻿#imgOverlay { display:none; }
+#seek-bar { width:90%; cursor:pointer; }
+
+/*table { border-collapse:collapse;border-spacing:0; }*/
+/*td, tr { display: block; }*/
+
+/*.tdStyle2 { padding:5px;vertical-align:top; float:left; display:inline-flex; width:95%; }*/
+ 
+ 
+.divAnnotate {
+	-ms-filter: 'progid:DXImageTransform.Microsoft.Alpha'(Opacity=0.24); 
+	-moz-border-radius: 12px!important;
+	-webkit-border-radius:12px!important;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 12px;
+	padding: 15px;
+	border-radius: 28px;
+	position: absolute;
+	/*width: 200px;*/
+	z-index: 2147483640;
+	float: right;
+	background: #616161;
+	background: rgba(0,0,0,0.5);
+	display: none;
+	overflow-y: auto;
+	/*word-wrap: break-word;*/
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    background: #333;
+    height:10px;
+    width: 95%;
+    background-repeat: repeat-x;
+    /*margin-left:-7px;*/
+    cursor: pointer;
+    padding: 0px;
+}
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	position: relative;
+	top: 0px;
+	z-index: 1;
+	width: 10px;
+	height: 12px;
+	cursor: pointer;
+	-webkit-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.6);
+	-moz-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.6);
+     -ms-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.6);
+	box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.6);
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+     -ms-border-radius:0px;
+	border-radius: 0px;
+	background-repeat: repeat-x;
+	background:url('../player/slider.png');
+	/*background-image:url(../../player/volumedrag.png);*/
+	/*background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebf1f6), color-stop(50%,#abd3ee), color-stop(51%,#89c3eb), color-stop(100%,#d5ebfb));*/
+}
+input[type=range]::-ms-thumb {
+   -webkit-appearance: none;
+	position: relative;
+	top: 0px;
+	z-index: 1;
+	width: 10px;
+	height: 12px;
+	cursor: pointer;
+    -ms-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.6);
+	box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.6);
+    -ms-border-radius:0px;
+	border-radius: 0px;
+	background-repeat: repeat-x;
+	background:url('../player/slider.png');
+  
+}
+
+/*Custom controls -Start- */
+.crlStyle, .imgPlay, .imgPause, .imgStop, .imgReplay, .imgVal, .imgValm, .imgValx, .imgMute, .imgFS {
+	background-repeat: no-repeat;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	float: left;
+	border:0px!important;
+	padding: 0px;
+	margin:1px;
+	
+}
+.imgVal, .imgValm, .imgValx, .imgMute 
+{
+    width: 18px;
+	height: 18px;
+	padding: 2px;
+}
+.imgPlay {
+	background-image: url(../player/icn-play.png);
+	background-position: center center;
+}
+.imgPause {
+	background-image: url(../player/icn-pause.png);
+	background-position: center center;
+	
+}
+.imgReplay {
+	background-image: url(../player/icn-replay.png);
+	background-position: center center;
+	
+}
+.imgStop {
+	background-image: url(../player/icn-stop.png);
+	background-position: center center;
+	
+}
+.imgVal {
+	background-image: url(../player/icn-sound-mid.png);
+	background-position: center center;
+	
+	
+}
+.imgValm {
+	background-image: url(../player/icn-sound-less.png);
+	background-position: center center;
+	
+}
+.imgValx {
+	background-image: url(../player/icn-sound-full.png);
+	background-position: center center;
+	
+	
+}
+.imgMute {
+	background-image:url(../player/icn-sound-mute.png);
+	background-position: center center;
+	
+}
+.imgFS { 
+	background-image:url(../player/icn-fc-max.png); 
+	background-position: center center;
+	float:right;
+
+}
+.imgFSLow { 
+	background-image:url(../player/icn-fc-min.png);
+	background-position: center center;
+}
+ .timevalues  {
+	font-family: arial,sans-serif;
+    font-size  : 10px;
+    color: #fff;
+    margin:11px 0px 9px 0px;
+    float: right;   
+}
+ .timevalues2 
+ {
+     font-family: arial,sans-serif;
+    font-size  : 10px;
+    color: #fff;
+    margin:5px 0px 9px 0px;
+    float: right;   
+    float: left;  
+    padding-right: 5px;
+}
+.imgp1 {
+    width:110px;
+   /*  width:81px;*/
+}
+.imgp3 {
+    /*width:65px;*/
+    /*width:52px;
+    padding:0px 2px 0px 2px;*/
+}
+.imgp5 {
+    width:30px;
+}
+.imgcontrols {
+    padding: 10px 10px;
+    width: 100%;
+  background-color: #1b1b1b;
+}
+/*Custom controls -End- */
+
+/*question related css*/
+.lblQues {
+margin-left: 0px;
+font-family: 'open_sansregular';
+font-size: 12px;
+color:black;
+}
+.divMsg, .divPass, .divFail {
+	font-family: 'open_sansregular';
+	font-size: 15px;
+	margin: 50px 0px 0px 0px;
+	padding: 0px 5px 0px 5px;
+}
+.divPass {
+	color: green;
+}
+.divFail {
+	color: red;
+}
+.qutbtn
+{
+    width: 30% ;
+	margin: 3px;
+	padding: 5px 0px;
+	font-size: 15px;
+	border: 1px solid #2B7DAF;
+	background: #D8D8D8;
+	border-radius:5px;
+}
+.qutbtn:hover {
+    background:#2B7DAF;
+    color:White;
+}
+.vtbl {
+    margin:4px 0px 0px 25px;
+}
+.vidcontainer {    
+    position: relative;
+}
+.tdStyle 
+{   color:#C60;font-family:arial;
+  font-size:13px;vertical-align:middle;
+  padding: 10px; text-align: left;
+   background-color:Black; display:block;font-weight:bold;
+  }
+            
+ #annotates {
+    background-color: chocolate;
+    border: groove;
+}
+.imgOverlay { position: absolute; top:0px; left:0px; z-index:2147483640; display:inline-block; float:left; margin-top:40px; }
+.hotspotCircle {
+    width: 23px;
+    height: 23px;
+    background-image: url(../../new/image/icn-info.png);
+    float: right;
+    margin-top: 5px;
+    display: none;
+    color: white;
+    text-align: center;
+    -moz-box-shadow: 1px 1px 3px #000000;
+    -webkit-box-shadow: 1px 1px 3px #000000;
+    box-shadow: 1px 1px 3px #000000;
+    opacity: inherit;
+}
+.circleBase {
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+    cursor: pointer;
+}
+.hotspotBox {
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha'(Opacity=0.24);
+    -moz-border-radius: 28px;
+    -webkit-border-radius: 28px;
+    color: black;
+    font-family: Arial;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 15px;
+    position: absolute;
+    top: 20px;
+    display: none;
+    width: auto;
+    z-index: 2147483640;
+    float: right;
+    background: rgba(0,0,0,0.5); 
+    background-color: #f7f7f7;
+    display: none;
+    overflow-y: auto;
+    text-align: left;
+    left: -7px;
+    min-width: 120px;
+    min-height: 50px;
+    max-height: 180px;
+    border: 2px double red;
+}
+.closeHS {
+    padding: 0px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    margin-top: -5px;
+    float: right;
+}
+
+/* whiteboard */
+
+.whiteBoardWrapper {
+    top: 35px;
+    position: absolute;
+    width: 540px;
+    display: none;
+}
+
+.wbContainer {
+    float: right;
+    position: absolute;
+    background-color: white;
+    top: 0px;
+    display: none;
+    z-index: 120;
+}
+
+.wbdragbar {
+    background-color: gray;
+    height: 100%;
+    width: 4px;
+    cursor: col-resize;
+}
+
+.wbLeftPos {
+    width: 50%;
+    left: 0px;
+    max-width: 100%;
+    min-width: 50%;
+    display: none;
+}
+
+.wbRightPos {
+    width: 50%;
+    right: 0px;
+    max-width: 100%;
+    min-width: 50%;
+    display: none;
+}
+
+.wbLeftOutPos {
+    position: relative;
+    width: 50%;
+    left: -540px;
+    max-width: 540px;
+    min-width: 50%;
+    display: none;
+}
+
+.wbRightOutPos {
+    width: 50%;
+    left: 540px;
+    max-width: 382px;
+    min-width: 50%;
+    display: none;
+}
+
+.wbDragbarRight {
+    float: left;
+}
+
+.wbDragbarLeft {
+    float: right;
+}
+
+.textcontainerWBLeft {
+margin-left:0px;
+}
+.textcontainerWBRight {
+margin-left:4px;
+}
+
+#cmtWiteboard {
+    display: none;
+}
+
+#textcontent {
+    top: 0px;
+    width: 98%;
+    margin-left: 5px;
+    overflow-y: auto;
+    text-align: left;
+    display: none;
+    z-index: -1;
+}
+
+.textcontainerWB {
+    position: absolute;
+    float: left;
+    width: 98%;   
+}
+
+.WbimgOverlay {
+    position: absolute;
+    top: 0px;
+    width:94%
+}
+/* End of whiteboard*/
+
+.closeicon {
+    cursor: pointer;
+    float: right;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../player/icn-close.png);
+    width: 16px;
+    height: 14px;
+    line-height: 14px;
+}

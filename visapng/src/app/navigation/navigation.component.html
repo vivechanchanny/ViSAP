@@ -1,0 +1,43 @@
+<md-toolbar color="primary" *ngIf="toolbarVisible">
+    <img class="logo" src="v-sap.png">
+
+    <div fxLayout="row" fxFlex="50" fxShow="false" fxShow.gt-sm>
+        <button routerLinkActive="active" md-button class="mat-button top-nav" routerLink="/gallery" [class.parentActive]="isActive('/gallery')"
+        (click)="resetSearch()" i18n>GALLERY</button>
+        <div *ngIf="role !== userRole.student">
+            <button routerLinkActive="active" [class.parentActive]="isActive('/myspace')" md-button class="mat-button" routerLink="/myspace"
+            (click)="resetSearch()" i18n>MY SPACE</button>
+            <button routerLinkActive="active" [class.parentActive]="isActive('/collaboration')" md-button class="mat-button" routerLink="/collaboration"
+                (click)="resetSearch()" i18n>COLLABORATION</button>
+            <span>
+                <span class="divider-top"></span>
+                <button routerLinkActive="active" md-button class="mat-button" (click)="group()" i18n>GROUP</button>
+            </span>
+        </div>
+    </div>
+
+    <button md-button [md-menu-trigger-for]="menuTabs" class="menubtn"  style="order: -1;" fxHide="false" fxHide.gt-sm>
+        <md-icon>menu</md-icon>
+    </button>
+    <span class="spacer" ></span>
+    <vis-search  fxFlex.gt-sm="30" fxFlex="45"  [hidden]="isSearchHidden"></vis-search>
+    <button md-icon-button [mdMenuTriggerFor]="menu">
+            <md-icon mdTooltip="{{ userName }}">account_circle</md-icon>
+     </button>
+</md-toolbar>
+
+<md-menu #menu="mdMenu" xPosition="before" [overlapTrigger]="false" #posXMenuOverlay="mdMenu">
+        <label class="user-menu" md-menu-item>{{ userName }}</label>
+        <label class="user-menu" md-menu-item>
+            <b>You are in: </b>{{ workspaceName }}</label>
+        <button md-menu-item (click)="logout()">
+            <md-icon>power_settings_new</md-icon>
+            <span class="user-menu">Logout</span>
+        </button>
+    </md-menu>
+
+<md-menu x-position="before" [overlapTrigger]="false" #menuTabs="mdMenu">
+    <button md-menu-item routerLink="/gallery">Gallery</button>
+    <button md-menu-item routerLink="/myspace" *ngIf="role !== userRole.student">Myspace</button>
+    <button md-menu-item routerLink="/collaboration" *ngIf="role !== userRole.student">Collaboration</button>
+</md-menu>

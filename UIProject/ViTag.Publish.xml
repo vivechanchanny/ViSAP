@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="\\192.168.1.224\D$\Projects\published\vitag" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/ViTag.dll" publishTime="02/05/2014 14:14:10" />
+    <file relUrl="canvas.htm" publishTime="11/25/2013 18:22:55" />
+    <file relUrl="can1/images/marker-outline.png" publishTime="07/24/2010 20:18:00" />
+    <file relUrl="canvas1.htm" publishTime="11/22/2013 19:31:22" />
+    <file relUrl="test.aspx" publishTime="12/04/2013 12:56:56" />
+    <file relUrl="can1/html5-canvas-drawing-app.js" publishTime="05/22/2013 19:37:58" />
+    <file relUrl="can1/images/marker-background.png" publishTime="07/24/2010 20:18:00" />
+    <file relUrl="can1/images/watermelon-duck-outline.png" publishTime="07/24/2010 20:18:00" />
+    <file relUrl="test/fullscreen.htm" publishTime="11/22/2013 15:21:35" />
+    <file relUrl="test/overlay.htm" publishTime="11/22/2013 15:20:48" />
+    <file relUrl="videos/mov_bbb.mp4" publishTime="10/28/2013 19:12:18" />
+    <file relUrl="can1/images/color-swatch-erase.png" publishTime="07/24/2010 20:18:00" />
+    <file relUrl="scripts/edit.js" publishTime="02/05/2014 18:58:13" />
+    <file relUrl="can1/index.html" publishTime="11/20/2013 18:50:41" />
+    <file relUrl="scripts/JSON2.js" publishTime="10/31/2013 16:14:52" />
+    <file relUrl="can1/images/crayon-texture.png" publishTime="07/24/2010 20:18:00" />
+    <file relUrl="can1/images/color-swatch-yellow.png" publishTime="07/24/2010 20:18:00" />
+    <file relUrl="images/html5.jpg" publishTime="11/25/2013 17:37:53" />
+    <file relUrl="scripts/smoothness.css" publishTime="12/20/2013 20:27:34" />
+    <file relUrl="scripts/download.js" publishTime="02/04/2014 12:24:07" />
+    <file relUrl="can1/images/Copy of crayon-texture.png" publishTime="07/24/2010 20:18:00" />
+    <file relUrl="bin/ViTag.pdb" publishTime="02/05/2014 14:14:09" />
+    <file relUrl="can1/images/color-swatch-brown.png" publishTime="07/24/2010 20:18:00" />
+    <file relUrl="bin/Svg.dll" publishTime="09/25/2013 19:53:17" />
+    <file relUrl="videos/Wildlife.wmv" publishTime="10/28/2013 19:07:47" />
+    <file relUrl="scripts/scripts.js" publishTime="02/05/2014 19:14:23" />
+    <file relUrl="can1/images/html5-drawing-tool-example-marker.png" publishTime="07/24/2010 20:18:00" />
+    <file relUrl="scripts/svgcanvas.js" publishTime="02/04/2014 14:58:04" />
+    <file relUrl="bin/Svg.pdb" publishTime="09/25/2013 19:53:17" />
+    <file relUrl="videos/Moving_digits.mp4" publishTime="10/28/2013 19:06:18" />
+    <file relUrl="can1/excanvas.js" publishTime="07/24/2010 20:18:00" />
+    <file relUrl="scripts/canvas.js" publishTime="02/05/2014 19:11:22" />
+    <file relUrl="edit.htm" publishTime="02/05/2014 18:52:23" />
+    <file relUrl="scripts/excanvas.js" publishTime="11/20/2013 18:39:52" />
+    <file relUrl="images/controls.png" publishTime="11/12/2013 15:11:31" />
+    <file relUrl="videos/HTML5_1.mp4" publishTime="10/28/2013 18:55:09" />
+    <file relUrl="can1/images/color-swatch-purple.png" publishTime="07/24/2010 20:18:00" />
+    <file relUrl="data/data.js" publishTime="02/05/2014 19:08:49" />
+    <file relUrl="test/undoStep.htm" publishTime="11/25/2013 15:13:05" />
+    <file relUrl="videos/web.config" publishTime="10/31/2013 11:05:04" />
+    <file relUrl="can1/images/crayon-outline.png" publishTime="07/24/2010 20:18:00" />
+    <file relUrl="scripts/jquery.fileDownload.js" publishTime="02/03/2014 17:33:05" />
+    <file relUrl="videos/mov_bbb.ogg" publishTime="10/30/2013 15:45:15" />
+    <file relUrl="data/Copy of data.js" publishTime="11/05/2013 11:14:38" />
+    <file relUrl="can1/images/html5-drawing-tool-example.png" publishTime="07/24/2010 20:18:00" />
+    <file relUrl="videos/HTML5_1.ogg" publishTime="10/30/2013 11:12:40" />
+    <file relUrl="can1/images/eraser-background.png" publishTime="07/24/2010 20:18:00" />
+    <file relUrl="can1/images/color-swatch-green.png" publishTime="07/24/2010 20:18:00" />
+    <file relUrl="scripts/jquery-ui-1.10.3.js" publishTime="12/20/2013 06:48:42" />
+    <file relUrl="scripts/jquery-1.10.2.min.js" publishTime="10/28/2013 18:20:00" />
+    <file relUrl="videos/Moving_digits.ogg" publishTime="10/30/2013 17:30:36" />
+    <file relUrl="Web.config" publishTime="02/07/2014 11:57:07" />
+    <file relUrl="images/DeleteRed.png" publishTime="11/05/2013 19:21:35" />
+    <file relUrl="index.htm" publishTime="02/04/2014 17:23:28" />
+    <file relUrl="can1/images/crayon-background.png" publishTime="07/24/2010 20:18:00" />
+    <file relUrl="can1/images/eraser-outline.png" publishTime="07/24/2010 20:18:00" />
+    <file relUrl="can1/images/_notes/dwsync.xml" publishTime="07/28/2010 09:30:10" />
+    <file relUrl="scripts/styles.css" publishTime="02/03/2014 15:33:59" />
+  </publishProfile>
+</publishData>

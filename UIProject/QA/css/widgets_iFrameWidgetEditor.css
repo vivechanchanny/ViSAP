@@ -1,0 +1,129 @@
+.widget-placeholder {
+	pointer-events: all;
+    position:relative;
+}
+
+.disabledWidgets {
+	pointer-events: none;
+}
+.dummyWidget{border:solid 1px #E0E0E0;}
+
+.widgetFrame{
+    height: 150px;
+    width: 150px;
+    /*border: solid 1px #C7C7C7;*/
+	text-align:center;
+	display: table;
+	margin:20px 0;
+    position: relative;
+    /*left: 60%;*/
+}
+.move-icon{background: url(../images/widget_move.png) #eeeeee no-repeat top left;height:33px;width:33px;position:absolute;left:1px;top:1px;z-index:999;cursor:move;}
+.move-icon-compact {
+top: -36px;
+}
+.imageIconDummyWidget{
+
+    background: url(../images/img-dummy.png) no-repeat center;
+    width: 100%;
+    height: 68px;margin:auto;display:table-cell;vertical-align:middle;
+	}
+	
+.learnosityIconDummyWidget {
+    background: url(../images/learnosity_widget_editor_icon.png) no-repeat center;
+    width: 100%;
+    height: 68px;margin:auto;display:table-cell;vertical-align:middle;
+}
+
+.imageGalIconDummyWidget{
+    background: url(../images/img-gallery.png) no-repeat center;
+    width:  100%;
+    height: 61px;margin:auto;display:table-cell;vertical-align:middle;
+}
+
+.videoIconDummyWidget{
+    background: url(../images/video-dummy.png) no-repeat center;
+    width: 100%;
+    height: 70px;margin:auto;display:table-cell;vertical-align:middle;
+}
+.tipIconDummyWidget{
+    background: url(../images/tip-dummy.png) no-repeat center;
+    width: 100%;
+    height: 70px;margin:auto;display:table-cell;vertical-align:middle;
+}
+
+.ui-tip-list{}
+.audioIconDummyWidget{
+    background: url(../images/audio-dummy.png) no-repeat center;
+    width:  100%;
+    height: 59px;margin:auto;display:table-cell;vertical-align:middle;
+}
+
+.assessmentIconDummyWidget, .eowIconDummyWidget {
+    background: url(../images/quiz-dummy.png) no-repeat center;
+    width:  100%;
+    height: 79px;margin:auto;display:table-cell;vertical-align:middle;
+}
+.sarasIconDummyWidget {background: url(../images/saras-quiz-dummy.png) no-repeat center;
+    width:  100%;
+    height: 79px;margin:auto;display:table-cell;vertical-align:middle;}
+
+.HDLAssessIconDummyWidget {
+    background: url(../images/quiz-dummy.png) no-repeat center;
+    width:  100%;
+    height: 79px;margin:auto;display:table-cell;vertical-align:middle;
+}
+
+.HDLReportsIconDummyWidget {
+    background: url(../images/report-dummy.png) no-repeat center;
+    width:  100%;
+    height: 79px;margin:auto;display:table-cell;vertical-align:middle;
+}
+
+.widget-center {clear: both;margin: 0 auto;position: relative;}
+
+.widget-left {float: left;clear: left;position: relative;margin: 10px 15px 0 0;}
+.widget-right {float: right;clear: right;margin: 0.5em 15px 1em 1em;position: relative;}
+
+/*override jaqery-ui css*/
+.ui-icon-gripsmall-diagonal-se{
+z-index: 200 !important;
+background-position: -80px -224px !important;
+/*-webkit-filter: invert(65%);*/
+
+}
+.inverted{
+	-webkit-filter: invert(100%);  
+}
+
+.widget-loader {
+	background: none!important;
+}
+
+.widget-placeholder.ui-state-disabled{
+	opacity: 1;
+}
+
+.disablePlaceholder{
+	opacity: .50!important;
+}
+
+.hand-cursor {cursor: pointer;}
+.widget-html{display:table;}
+.htmlIconDummyWidget  {
+background: url(../images/html_widget_editor_icon.png) no-repeat center;
+width: 100%;
+height: 68px;
+margin: auto;
+display: table-cell;
+vertical-align: middle;
+}
+.fileIconDummyWidget  {
+background: url(../images/file_widget_editor_icon.png) no-repeat center;
+width: 100%;
+height: 68px;
+margin: auto;
+display: table-cell;
+vertical-align: middle;
+}
+

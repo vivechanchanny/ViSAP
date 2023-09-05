@@ -1,0 +1,52 @@
+﻿ 
+
+ 
+ <div ng-init="loadWorkspace()">
+ 
+<div ng-include src="'views/nav.html'"></div>
+ <!--/Submenu start-->
+<div class=" bg-submenu">
+  <div id='searchcontainer' class="container">
+    <div class="row">
+      <div class="col-md-6">
+         <table style="width:100%; border-spacing: 0; border: 0; padding: 0;" class="search-main">
+          <tr>
+            <td class="viewby"><span ng-i18next="common.searchLabel"></span>:</td>
+            <td style="width:100%"> 
+
+              <input type="text"  ng-model="serach" class="form-control" id="serach" ng-i18next="[placeholder]workspace.workspaceName;[title]workspace.title" ng-keyup="SearchWorkspace()" > </input>
+              
+           </td>
+            <td style="width:50px;"><button type="submit" class="btn btn-primary" 
+            ng-click="SearchWorkspace()" ng-i18next="common.search"></button></td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-md-6"> </div>
+    </div>
+  </div>
+</div>
+<!--/Submenu end -->
+
+<div class="container">
+ <div class="alert alert-success hideEle saveMsg" role="alert" id="saveMsg">
+        <strong ng-i18next="msg.success"></strong>  
+      </div>
+      </div>
+ 
+  <div class="container">
+  
+    <div style="margin-bottom:10px;"><a class="btn btn-default create-ws" ng-click="newWorkspace()" role="button" ng-i18next="workspace.create"></a></div>
+    
+    <div  class="gridtableWorkspace" ng-grid="gridOptions"> 
+      
+     
+      <!--Workspace data display's here...-->
+    </div>
+ 
+  <!--/content start--> 
+  
+  <!--/content end--> 
+  
+</div>
+<!-- /.container --> 

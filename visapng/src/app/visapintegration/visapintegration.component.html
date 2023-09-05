@@ -1,0 +1,23 @@
+<!-- <div class="container" fxLayout="row" fxLayoutAlign="center">
+  <div class='headertitle' fxFill i18n>
+      Visap Integration videoID
+  </div>
+  <div>
+    <md-icon class="md-icon closeBtn" (click)="cancel()" i18n>close</md-icon>
+  </div>
+</div> -->
+<div fxLayout="row" fxLayoutAlign="center">
+  <div class='headertitle' fxFill>
+    <span> ViSAP Integration ID</span>
+  </div>
+  <div>
+    <md-icon class="md-icon closeBtn mat-icon material-icons" role="img" aria-hidden="true" ng-reflect-class-base="md-icon closeBtn"
+      (click)="cancel()">close</md-icon>
+  </div>
+</div><br/>
+<md-input-container class="example-full-width">
+  <input mdInput  disabled class="intvideo" value="{{videoId}}">
+</md-input-container>
+<md-dialog-actions fxLayoutAlign="end">
+  <button md-raised-button class="full-width-input cancelBtn" color="primary" (click)="cancel()" i18n>Cancel</button>
+</md-dialog-actions>

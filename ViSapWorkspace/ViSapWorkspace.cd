@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ClassDiagram Zoom="1" MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="ViSapWorkspace.Metadata" Collapsed="False">
+    <Position X="0.5" Y="0.5" Width="1.618034" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.SearchVideos" Collapsed="False">
+    <Position X="0.5" Y="2.3" Width="1.618034" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.fileUploader" Collapsed="False">
+    <Position X="0.5" Y="4" Width="1.900124" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+      <Compartment Name="Fields" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.Videos" Collapsed="False">
+    <Position X="0.5" Y="6.2" Width="1.618034" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.VideoEntity" Collapsed="False">
+    <Position X="0.5" Y="7.9" Width="2.36674" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.CaptionParser" Collapsed="False">
+    <Position X="0.5" Y="10.8" Width="2.677536" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+      <Compartment Name="Fields" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.CaptionContent" Collapsed="False">
+    <Position X="0.5" Y="12.8" Width="1.41568" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.ValidateToken" Collapsed="False">
+    <Position X="0.5" Y="14.6" Width="1.979884" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+      <Compartment Name="Fields" Collapsed="False" />
+      <Compartment Name="Nested Types" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.Publish" Collapsed="False">
+    <Position X="0.5" Y="19.7" Width="1.618034" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.WhiteboardDataHandler" Collapsed="False">
+    <Position X="0.5" Y="21.4" Width="1.900124" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+      <Compartment Name="Fields" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.ImageUploader" Collapsed="False">
+    <Position X="0.5" Y="23.6" Width="1.900124" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+      <Compartment Name="Fields" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.AssignTestService" Collapsed="False">
+    <Position X="0.5" Y="25.7" Width="1.900124" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+      <Compartment Name="Fields" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.ReadConfig" Collapsed="False">
+    <Position X="0.5" Y="27.8" Width="1.618034" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.AelibTestDataHandler" Collapsed="False">
+    <Position X="0.5" Y="29.6" Width="1.900124" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+      <Compartment Name="Fields" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.Workspace" Collapsed="False">
+    <Position X="0.5" Y="31.7" Width="1.618034" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.ServiceUtility" Collapsed="False">
+    <Position X="0.5" Y="33.5" Width="2.192204" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+      <Compartment Name="Fields" Collapsed="False" />
+      <Compartment Name="Nested Types" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.RoleEntity" Collapsed="False">
+    <Position X="0.5" Y="37.2" Width="1.076408" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.Authentication" Collapsed="False">
+    <Position X="0.5" Y="38.6" Width="2.001906" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.AssignVideo" Collapsed="False">
+    <Position X="0.5" Y="40.5" Width="1.618034" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.logger" Collapsed="False">
+    <Position X="0.5" Y="42.2" Width="1.618034" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.RoleData" Collapsed="False">
+    <Position X="0.5" Y="44" Width="1.618034" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.TestDataHandler" Collapsed="False">
+    <Position X="0.5" Y="45.8" Width="1.900124" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+      <Compartment Name="Fields" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.AuthenticationModule" Collapsed="False">
+    <Position X="0.5" Y="47.9" Width="2.001906" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapworkspace.Search" Collapsed="False">
+    <Position X="0.5" Y="49.7" Width="1.618034" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.TocDataHandler" Collapsed="False">
+    <Position X="0.5" Y="51.5" Width="1.900124" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+      <Compartment Name="Fields" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.UsersData" Collapsed="False">
+    <Position X="0.5" Y="53.6" Width="1.618034" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.CategorySearch" Collapsed="False">
+    <Position X="0.5" Y="55.4" Width="1.618034" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ViSapWorkspace.Group" Collapsed="False">
+    <Position X="0.5" Y="57.1" Width="1.618034" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="mongoscript" Collapsed="False">
+    <Position X="0.5" Y="58.9" Width="1.178674" />
+    <Compartments />
+  </Class>
+  <Class Name="Auth" Collapsed="False">
+    <Position X="0.5" Y="60" Width="1.2984" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="config" Collapsed="False">
+    <Position X="0.5" Y="62.4" Width="1" />
+    <Compartments />
+  </Class>
+  <Class Name="app" Collapsed="False">
+    <Position X="0.5" Y="63.5" Width="1" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="group" Collapsed="False">
+    <Position X="0.5" Y="65.3" Width="1" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="navController" Collapsed="False">
+    <Position X="0.5" Y="69.5" Width="1.240495" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="services" Collapsed="False">
+    <Position X="0.5" Y="71.3" Width="1.700534" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="student" Collapsed="False">
+    <Position X="0.5" Y="78.2" Width="1" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="workspace" Collapsed="False">
+    <Position X="0.5" Y="81.6" Width="1.098107" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="user" Collapsed="False">
+    <Position X="0.5" Y="85.5" Width="1" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="angular-cookies.min" Collapsed="False">
+    <Position X="0.5" Y="90.2" Width="1" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="angular-route" Collapsed="False">
+    <Position X="0.5" Y="93.8" Width="1.841686" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="angular-ui-router" Collapsed="False">
+    <Position X="0.5" Y="100" Width="1.413068" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="angular.min" Collapsed="False">
+    <Position X="0.5" Y="101.6" Width="1" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="bootstrap" Collapsed="False">
+    <Position X="0.5" Y="298.6" Width="1.342228" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="jquery-1.10.2.min" Collapsed="False">
+    <Position X="0.5" Y="324.9" Width="1" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ng-grid-2.0.11.min" Collapsed="False">
+    <Position X="0.5" Y="413.7" Width="1" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="ui-bootstrap-tpls-0.13.3.min" Collapsed="False">
+    <Position X="0.5" Y="464.1" Width="1" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+</ClassDiagram>

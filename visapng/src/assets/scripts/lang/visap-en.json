@@ -1,0 +1,284 @@
+﻿{
+		"en": {
+			"translation": {
+				"header": {
+				    "title" : "V-SAP",
+				    "navigation" : "Toggle navigation",
+					"welcomeLabel" : "Welcome",
+					"workspaceLabel" : "You are in",
+					"logout" : "Logout"
+				},
+				"menu" : {
+				    "gallery" : "GALLERY",
+					"myspace" : "MY SPACE",
+					"collaboration" : "COLLABORATION",
+					"group" : "GROUP"
+				},
+				"search":{
+				     "label" : "Search By",
+				     "placeholderGallery" : "Category/Title/Tag/Caption",
+				     "placeholder" : "Title/Tag/Caption",
+				     "titleGallery" : "Search By Category/Title/Tag/Caption",
+				     "title" : "Search By Title/Tag/Caption",
+				     "clearText" : "Clear Text",
+				     "button" : "Search"
+				},
+				"subMenu":{
+				     "importVideo": "Import Video",
+				     "selectAll" : "Select All",
+				     "copyToMyspace" : "Copy to My Space",
+				     "title" : "Copy video from Collaboration to My Space",
+				     "titleSelectAll" : "Select all videos",
+				     "titleImportVideo" : "Import Video",
+                     "titelViewSubmission":"Question Response List"
+				},
+				"import" : {
+				     "title": "Title for Video",
+				     "description": "Description for Video",
+				     "uploadVideo" : "Upload video",
+				     "mp4" : "Supports only mp4 files",
+				     "captionByStatic" : "Upload Closed Caption",
+				     "uploadCcFile" : "Upload cc file for static videos",
+				     "vtt" : "Supports only vtt files",
+				     "uploadYT" : "Upload youtube videos",
+				     "placeholderYT" : "Enter Youtube video ID",
+				     "uploadDirectURL" : " Upload video by DirectURL",
+				     "captionByDirectURL" : "Upload caption by DirectURL",
+				     "vidFormate" : "Enter Direct video URL(MP4,WEBM,OGG)",
+				     "captionDirectVid" : "Upload caption",
+				     "dirCcFile" : "Upload cc File for direct url videos",
+				     "importButton" : "Import",
+				     "update" : "Update",
+				     "chooseText" : "No file chosen",
+				     "chooseFile" : "Choose File",
+				     "edit" : "Edit Video Properties"
+				},
+				"common":{
+				    "edit" : "Edit",
+                    "delete" : "Delete",
+                    "save": "Save",
+                    "cancel": "Cancel",
+                    "by" : "By",
+                    "close":"Close",
+                    "viewReport":"Reports"
+				},
+					"playerEdit": {
+					"save": "Save",
+					"cancel": "Cancel",
+					"tag": "Tag",
+					"link": "Link",
+					"sketch": "Sketch",
+					"annotation": "Annotation",
+					"question": "Question",
+					"whiteboard": "Whiteboard",
+					"hotspot": "Hotspot",
+					
+					"name":"Name",
+					"time":"Time",
+					"url":"URL",
+					"colors":"Colors",
+					"shapes":"Shapes",
+					"duration":"Duration",
+					"brushSize":"Brush Size",
+					"undo":"Undo",
+					"reset":"Reset",
+					"title":"Title",
+					"description":"Description",
+					"pauseOnShow":"Pause on show",
+					"preview":"Preview",
+					"text":"Text",
+					"left":"Left",
+					"right":"Right",
+					"noTag":"No Tags Found",
+					"noLink":"No Links Found",
+					
+					
+					"vidduration":"Video Duration",
+                    "sec":"secs",
+                    "msg_saving":"Saving",
+                    "msg_saved":"Saved successfully",
+                    "msg_error":"There was an error saving data",
+                    "msg_title":"Please enter title",
+                    "msg_description":"Please enter Description",
+                    
+                    "msg_nonsupportedtitle":"Title contained non supported characters.",
+                    "msg_duplicatetitle":"Duplicate title, a video of same title already exists. Please use a different title",
+                    "msg_nochange":"no changes made to title,desc and category",
+                    "msg_deleting":"Deleting",
+                    "msg_deleted":"Deleted successfully",
+                    
+                    "msg_actionpresent":"There is an action present at this pausetime",
+                    "msg_totduration":"Total duration of the actionlist should be less than the video duration",
+                    "msg_options":"More than 4 options cannot be added",
+                    "msg_emptyduration":"Duration cannot not be empty.It should be greater than 1 sec",
+                    "msg_name":"Please enter name",
+                    "msg_tagpresent":"The tag is already present in the list",
+                    "msg_time":"Please enter time",
+                    "msg_tagtime":"Time should be less than the duration of the video.",
+                    
+                    "msg_linktime":"The Link is already present in the list",
+                    "msg_url":"Please enter URL",
+                    "msg_validurl":"Please enter valid URL",
+                    
+                    
+                     "msg_duration":"Please enter duration",
+                     "msg_greaterduration":"Duration should be more than 0 secs",
+                     "msg_validnumbers":"Please enter valid numbers",
+                     "msg_maxduration":"Sorry,Maximum duration is 3 min",
+                     "msg_maxdurationreached":"Maximum duration is reached",
+                     "msg_lessduration":"Duration for this action should be less than",
+                     "msg_sketch":"Please add sketch",
+                     "msg_wbempty":"Whiteboard cannot be empty",
+                     
+                     "msg_timelinecapture":"Atleast one video should be captured to save timeline videos.",
+                     
+                     "msg_categoryblank":"category field name cannot be blank",
+                     "msg_nonsupportedcategory":"category contains non supported characters.",
+                     
+                     "msg_tag":"Select Tag",
+                     "msg_mappedtag":"This tag is mapped to question and cannot be deleted or edited",
+                     "msg_questtitle":"Question title should not be blank",
+                     "msg_nonsupportedchar":"your input contained non supported characters",
+                     "msg_tagnotexist":"Given tag does not exist",
+                     "msg_moreoptions":"Options should be more than one",
+                     "msg_blankoption":"None of the options should be blank",
+                     "msg_correctanswer":"Correct answer should be selected",
+                     
+                     "msg_deletevideo":"You cannot Delete the video which is in play or pause mode.",
+                     "msg_deleteerror":"Error in Deleting  data",
+                     "msg_loadingerror":"Error in loading  data",
+                     "msg_publishing":"Publishing",
+                     "msg_publish":"copied to myspace successfully",
+                     "msg_publishfailed":"Publish Failed",
+                     
+                     "msg_uploadyt":"Upload fails, Youtube video id not entered.",
+                     "msg_verifyurl":"Url contains single quote, please verify url.",
+                     "msg_uploadsuccessful":"Video uploaded successfully....",
+                     "msg_uploaddirecturl":"Upload fails, video URL is not entered.",
+                     "msg_videourl":"Please enter valid Video URL",
+                     "msg_uploadfails":"Upload fails, video URL supports only .MP4,.OGG,.WEBM",
+                     "msg_uploadvtt":"Upload fails, please select vtt caption file to upload.",
+                     "msg_illegalcaption":"Caption file name contains illegal characters.",
+                     "msg_uploading":"Uploading........",
+                     "msg_unabletoimport":"Unable to Import video due to Incorrect URL/URL not Found. Please try to import with proper URL.",
+                     "msg_uploadingerror":"There was error in uploading files!",
+                     "msg_onesnippet":"Timeline video should contain atleast one video snippet.",
+                     "msg_capturedifferentvideo":"This video added to time line.Please choose different video to capture.",
+                     "msg_starttimeline":"Please play video to start Timeline",
+                     "msg_startendtime":"StartTime should be less than the Endtime of the video",
+                     "msg_uploadmp4":"Upload fails, please select MP4 videos to upload.",
+                     "msg_illegalvideofilename":"Video file name contains illegal characters.",
+                     "msg_onevideotopublish":"Please select atleast one video to publish",
+                     
+                     "msg_format":"please use the correct format(hh:mm:ss)",
+                     "msg_correctformat":"please use the correct format(mm:ss)",
+					
+					"msg_video":"Video",
+                     "msg_newvideo":"already exists in the repository,please upload new video"
+				},
+                "category" : {
+                    "category" : "Category",
+                    "any" : "Any"
+                },
+                "content" : {
+                   "backToVideo" : "Back to Videos"
+                },
+                  "questresponse" : {
+                   "submission" : "Grades"
+                },
+                "snippet" : {
+                    "by":"By",
+                    "updated" : "Upadated",
+                    "integration" : "Get Integration ID",
+                    "edit" : "edit",
+                    "delete" : "Delete"
+                },
+                "assign" : {
+                    "videoName" : "Video Name",
+                    "assign" : "Assign",
+                    "unAssign" : "Unassign"
+                },
+                "integration" : {
+                    "visapIntModal" : "Visap Integration videoID",
+                    "VideoId" : "VideoId"
+                },
+                "question" : {
+                    "selectAnswer" : "Select answer below.",
+                    "selectQuestion" : "Select Question",
+                    "mcqSingleResponse" : "MCQ Single Response",
+                    "mcqMultipleResponse" : "MCQ Multiple Response",
+                    "fibText" : "FIB Text",
+                    "fibTapAndPlace" : "FIB Tap and Place",
+                    "fibDropDown" : "FIB Drop Down",
+                    "matchingQuestion" : "Matching Question",
+                    "groupingQuestion" : "Grouping Question",
+                    "trueOrFalse" : "True or False"
+                },
+                "timeLine" : {
+                    "label" : "Create new timeline video",
+                    "timeLine" : "Timeline",
+                    "startCapture" :"Start Capture",
+                    "endCapture" : "End Capture"                    
+              },
+              "msg" : {
+                    "errorMsg" : "Error in loading data",
+                    "AppSettings" : "Error in getting AppSettings Values",
+                    "tags" : "No tags found for this video",
+                    "onYTError" : "This video is either no longer available, or unplayable for technical reasons",
+                    "WrkSpaceError" : "Error while fetching workspace Name",
+                    "ownerid" : "Error in getting owner id",
+                    "checkVideos" : "No videos found",
+                    "checkCategory" : "No Category found",
+                    "confirmation" : "Do you want to Cancel",
+                    "loadingMsg" : "Please Wait while this video is loading...",
+                    "validateDigits" : "Digits only",
+                    "sketch" : "Sketch exists at this postion.Please choose different action",
+                    "timeLine" : "Timeline video saved successfully.",
+                    "getAssignment" : "error while getting assignment details",
+                    "getGroups" : "Error in getting groups",
+                    "assignVideo" : "Error while assigning video",
+                    "mappedUsers" : "No users found in this group",
+                    "groupOrUser" : "Atleast one group or user should be selected",
+                    "unAssigningVideo" : "This video is not assigned to any group or user",
+                    "checkUsers" : "No users found",
+                    "timeAgoError" :"Error in loading time ago script",
+                    "delVid" : "This video is used to create Time line video."
+              },
+              "toc" : {
+                   "label" : "Video Catalogue"      
+              },
+              "confirmationMsg": {
+                   "title" : "Confirmation",
+                   "ok" :"OK",
+                   "cancel" : "Cancel",
+                   "deleteMsg" : "Do you want to delete",
+                   "cancelMsg" :"Do you want to cancel",
+                   "videoMsg" :"Video",
+                   "snapshotMsg" : "Snapshot",
+                   "videoIdMsg" : "Video ID",
+                   "ytVideoIdMsg" : "Already exists in the repository do you want to replace it",
+                   "unAssignMsg" : "Are you sure you want to Unassign selected Groups or Users"
+                   
+               },
+				"footer":{
+                    "aboutUs" : "About Us",					
+                    "contact" : "Contact",
+                    "copyRight" : "2015 Excelsoft technologies Pvt Ltd. All rights reserved",
+                    "privacyPolicy" : "Privacy Policy"
+				},
+				"player":{
+				
+					"play":"Play",
+					"pause":"Pause",
+					"replay":"Replay",
+					"stop":"Stop",
+					"mute":"Mute",
+					"fullscreen":"FullScreen",
+					"exitFullscreen":"Exit FullScreen",
+					"captionOrSubtitle":"Caption/Subtitles",
+					"unmute" : "UnMute"
+				
+				}
+			}
+		}
+		}

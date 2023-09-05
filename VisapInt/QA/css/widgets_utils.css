@@ -1,0 +1,76 @@
+.popUpContainer.onshow{	
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1100;
+}
+.loading-indicator {
+    display: none;
+    height: 10%;
+    width: 10%!important;
+    top: 42%;
+    left: 45%;
+    position: absolute!important;
+    z-index: 9999!important;
+}
+.popup-alert-cover.modal > .modal-dialog.popup-alert {
+	width: 350px !important
+;
+	z-index: 1500 !important;
+}
+.popup-alert-cover.modal .modal-body {
+	padding: 15px;
+}
+.popup-alert-cover.modal .alert-text {
+  color: #6e6e6e;
+  font-weight: normal;
+  margin: 0 0 30px;
+  text-align: left;
+}
+
+.toastContainer div {
+    height: auto;
+    width: 100%;
+    text-align: center;
+	/*background: transparent;*/
+}
+
+.loading-indicator img{
+	background: url(../images/loading.gif) no-repeat center;
+	height: 32px;
+	width: 32px;
+    top: 35%;
+    left: 40%;
+    position: absolute;
+}
+.toastContainer .modal-content{
+	border-radius:0!important;}
+.toastContainer {
+	display: none;
+	width: 40%!important;
+	left: 30%;
+	position: absolute!important;
+	border-radius: 0;
+	line-height: 1.8;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+/*
+@media screen and (min-width: 768px){
+.toastContainer.modal-dialog {
+margin-left:-20% !important;
+}
+}
+*/
+
+.infoIcon {
+    background: url(../images/infoIcon.png) no-repeat center;
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 5px auto;
+}
+.noData { padding: 10px 0; text-align: center; background: white;/*border: 1px solid #c9c9c9; */}

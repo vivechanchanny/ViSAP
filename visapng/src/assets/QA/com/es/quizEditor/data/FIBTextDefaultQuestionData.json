@@ -1,0 +1,20 @@
+
+						{
+                        "id": "",
+                        "heading": [],
+                        "answers": [],
+                        "leftCol": [],
+                        "modelParagraph": "",
+                        "options": [],
+                        "optionsLayout": "",
+                        "questionBody": [],
+                        "questionLayout": "",
+                        "responseType": "TEXT",
+                        "rightCol": [],
+                        "rubric": [],
+                        "title": "",
+                        "maxpoints": ["1"],
+                        "type": "FIB",
+                        "metadata":"Metadata"
+
+}    

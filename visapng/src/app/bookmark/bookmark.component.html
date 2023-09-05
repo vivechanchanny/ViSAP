@@ -1,0 +1,22 @@
+<div *ngFor="let tag of tags">
+        <button md-menu-item (click)="playTag(tag)" mdTooltip="{{ tag.d }}" [mdTooltipClass]="'md-tooltip'">
+                <md-icon>bookmark</md-icon>
+                <span class="maxwidth"> {{tag.d}}</span>
+                <span class="floatright">{{getTimeFormat(tag.t)}} </span>
+        </button>
+</div>
+
+<button md-menu-item *ngIf="!showTags">
+        <md-icon>bookmark</md-icon>
+        <span>No Tags</span>
+</button>
+<div *ngFor="let link of links">
+        <button md-menu-item (click)="onNavigate(link.u)"  mdTooltip="{{link.n }}" [mdTooltipClass]="'md-tooltip'">
+                <md-icon>links</md-icon>
+                <span>{{link.n}}</span>
+        </button>
+</div>
+<button md-menu-item *ngIf="!showLinks">
+        <md-icon>links</md-icon>
+        <span>No Links</span>
+</button>

@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{88A21345-EF2B-4F56-89C0-3C8899F27EDF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ViSapWorkspace</RootNamespace>
+    <AssemblyName>ViSapWorkspace</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <SignAssembly>False</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
+    <UseIISExpress>False</UseIISExpress>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\bharathi.jl\AppData\Roaming\ICSharpCode\SharpDevelop5\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <StartAction>StartURL</StartAction>
+    <StartURL>http://localhost/ViSapWorkspace/Views/login.html</StartURL>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\ExternalAssemblies\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\ExternalAssemblies\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core">
+      <HintPath>..\ExternalAssemblies\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Legacy">
+      <HintPath>..\ExternalAssemblies\MongoDB.Driver.Legacy.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\ExternalAssemblies\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SubtitlesParser">
+      <HintPath>..\packages\SubtitlesParser.1.4.7\lib\net40-client\SubtitlesParser.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="services\AuthService.cs" />
+    <Compile Include="services\ssoAuthService.cs" />
+    <Compile Include="services\UserService.cs" />
+    <Compile Include="services\VideoService.cs" />
+    <Compile Include="svc\aelibTestService.cs" />
+    <Compile Include="svc\Assign.cs" />
+    <Compile Include="svc\AssignTestService.cs" />
+    <Compile Include="svc\Auth.cs" />
+    <Compile Include="svc\AuthenticationModule.cs" />
+    <Compile Include="svc\BaseHttpHandler.cs" />
+    <Compile Include="svc\category.cs" />
+    <Compile Include="svc\FileManager.cs" />
+    <Compile Include="svc\Email.cs" />
+    <Compile Include="svc\fileUploader.cs" />
+    <Compile Include="svc\Group.cs" />
+    <Compile Include="svc\imageUploader.cs" />
+    <Compile Include="svc\log.cs" />
+    <Compile Include="svc\metadata.cs" />
+    <Compile Include="svc\publish.cs" />
+    <Compile Include="svc\QuestionResponse.cs" />
+    <Compile Include="svc\readConfig.cs" />
+    <Compile Include="svc\resetPassword.cs" />
+    <Compile Include="svc\Roles.cs" />
+    <Compile Include="svc\search.cs" />
+    <Compile Include="svc\SearchVideo.cs" />
+    <Compile Include="svc\ssoAuth.cs" />
+    <Compile Include="svc\testService.cs" />
+    <Compile Include="svc\tocService.cs" />
+    <Compile Include="svc\Users.cs" />
+    <Compile Include="svc\ValidateToken.cs" />
+    <Compile Include="svc\Videos.cs" />
+    <Compile Include="svc\whiteboardService.cs" />
+    <Compile Include="svc\Workspace.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="css\default.css" />
+    <None Include="css\fonts.css" />
+    <None Include="css\login-box.css" />
+    <None Include="css\ng-grid.min.css" />
+    <None Include="css\style.css" />
+    <None Include="css\workspace.css" />
+    <None Include="css\bootstrap.css" />
+    <None Include="css\bootstrap.min.css" />
+    <None Include="css\font-awesome.min.css" />
+    <None Include="css\customer.css" />
+    <None Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="fonts\glyphicons-halflings-regular.svg" />
+    <None Include="fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="fonts\opensans-bolditalic_0-webfont.eot" />
+    <None Include="fonts\opensans-bolditalic_0-webfont.svg" />
+    <None Include="fonts\opensans-bolditalic_0-webfont.ttf" />
+    <None Include="fonts\opensans-bolditalic_0-webfont.woff" />
+    <None Include="fonts\opensans-bold_0-webfont.eot" />
+    <None Include="fonts\opensans-bold_0-webfont.svg" />
+    <None Include="fonts\opensans-bold_0-webfont.ttf" />
+    <None Include="fonts\opensans-bold_0-webfont.woff" />
+    <None Include="fonts\opensans-extrabolditalic_0-webfont.eot" />
+    <None Include="fonts\opensans-extrabolditalic_0-webfont.svg" />
+    <None Include="fonts\opensans-extrabolditalic_0-webfont.ttf" />
+    <None Include="fonts\opensans-extrabolditalic_0-webfont.woff" />
+    <None Include="fonts\opensans-extrabold_0-webfont.eot" />
+    <None Include="fonts\opensans-extrabold_0-webfont.svg" />
+    <None Include="fonts\opensans-extrabold_0-webfont.ttf" />
+    <None Include="fonts\opensans-extrabold_0-webfont.woff" />
+    <None Include="fonts\opensans-italic_0-webfont.eot" />
+    <None Include="fonts\opensans-italic_0-webfont.svg" />
+    <None Include="fonts\opensans-italic_0-webfont.ttf" />
+    <None Include="fonts\opensans-italic_0-webfont.woff" />
+    <None Include="fonts\opensans-light_0-webfont.eot" />
+    <None Include="fonts\opensans-light_0-webfont.svg" />
+    <None Include="fonts\opensans-light_0-webfont.ttf" />
+    <None Include="fonts\opensans-light_0-webfont.woff" />
+    <None Include="fonts\opensans-regular_0-webfont.eot" />
+    <None Include="fonts\opensans-regular_0-webfont.svg" />
+    <None Include="fonts\opensans-regular_0-webfont.ttf" />
+    <None Include="fonts\opensans-regular_0-webfont.woff" />
+    <None Include="fonts\opensans-semibolditalic_0-webfont.eot" />
+    <None Include="fonts\opensans-semibolditalic_0-webfont.svg" />
+    <None Include="fonts\opensans-semibolditalic_0-webfont.ttf" />
+    <None Include="fonts\opensans-semibolditalic_0-webfont.woff" />
+    <None Include="fonts\opensans-semibold_0-webfont.eot" />
+    <None Include="fonts\opensans-semibold_0-webfont.svg" />
+    <None Include="fonts\opensans-semibold_0-webfont.ttf" />
+    <None Include="fonts\opensans-semibold_0-webfont.woff" />
+    <None Include="fonts\oswald-bold-webfont.eot" />
+    <None Include="fonts\oswald-bold-webfont.svg" />
+    <None Include="fonts\oswald-bold-webfont.ttf" />
+    <None Include="fonts\oswald-bold-webfont.woff" />
+    <None Include="fonts\oswald-light-webfont.eot" />
+    <None Include="fonts\oswald-light-webfont.svg" />
+    <None Include="fonts\oswald-light-webfont.ttf" />
+    <None Include="fonts\oswald-light-webfont.woff" />
+    <None Include="fonts\oswald-regular-webfont.eot" />
+    <None Include="fonts\oswald-regular-webfont.svg" />
+    <None Include="fonts\oswald-regular-webfont.ttf" />
+    <None Include="fonts\oswald-regular-webfont.woff" />
+    <None Include="fonts\oswald-stencil-webfont.eot" />
+    <None Include="fonts\oswald-stencil-webfont.svg" />
+    <None Include="fonts\oswald-stencil-webfont.ttf" />
+    <None Include="fonts\oswald-stencil-webfont.woff" />
+    <None Include="images\arrowclose.png" />
+    <None Include="images\arrowopen.png" />
+    <None Include="images\arroworange.png" />
+    <None Include="images\back.jpg" />
+    <None Include="images\bg.jpg" />
+    <None Include="images\bgBar.png" />
+    <None Include="images\bluestrip.png" />
+    <None Include="images\common\v-sap.ico" />
+    <None Include="images\controls.png" />
+    <None Include="images\create-group.png" />
+    <None Include="images\create-user.png" />
+    <None Include="images\DeleteRed.png" />
+    <None Include="images\divider.png" />
+    <None Include="images\edit-icon.png" />
+    <None Include="images\flodericon.png" />
+    <None Include="images\flodericonWhite.png" />
+    <None Include="images\forward.png" />
+    <None Include="images\fullscreen.png" />
+    <None Include="images\fullscreen_low.png" />
+    <None Include="images\greystrip.png" />
+    <None Include="images\html5.jpg" />
+    <None Include="images\icn-actions.png" />
+    <None Include="images\icn-contact.png" />
+    <None Include="images\icn-delete.png" />
+    <None Include="images\icn-edit1.png" />
+    <None Include="images\icn-links.png" />
+    <None Include="images\icn-play-big.png" />
+    <None Include="images\icn-tags.png" />
+    <None Include="images\icn-youtube.png" />
+    <None Include="images\loading.gif" />
+    <None Include="images\login-btn.png" />
+    <None Include="images\logo.png" />
+    <None Include="images\logout-off.png" />
+    <None Include="images\logout.png" />
+    <None Include="images\manage-user.png" />
+    <None Include="images\narrationBack.png" />
+    <None Include="images\nexttrack.png" />
+    <None Include="images\pause.png" />
+    <None Include="images\pause2.png" />
+    <None Include="images\plalerTopMid.png" />
+    <None Include="images\play.png" />
+    <None Include="images\play2.png" />
+    <None Include="images\playerBotMid.png" />
+    <None Include="images\playerBotMidN.png" />
+    <None Include="images\playercontrolBack.png" />
+    <None Include="images\playerInner.png" />
+    <None Include="images\playerleftBot.png" />
+    <None Include="images\playerleftBotN.png" />
+    <None Include="images\playerLeftMid.png" />
+    <None Include="images\playerleftTop.png" />
+    <None Include="images\playerRightBot.png" />
+    <None Include="images\playerRightBotN.png" />
+    <None Include="images\playerRightMid.png" />
+    <None Include="images\playerRightTop.png" />
+    <None Include="images\previoustrack.png" />
+    <None Include="images\replay.png" />
+    <None Include="images\replay2.png" />
+    <None Include="images\reverse.png" />
+    <None Include="images\search-icon.png" />
+    <None Include="images\searchicon.png" />
+    <None Include="images\spacer.gif" />
+    <None Include="images\stop.png" />
+    <None Include="images\stop2.png" />
+    <None Include="images\tabbuttons.png" />
+    <None Include="images\tabbuttonsBlue.png" />
+    <None Include="images\tool_Circle.png" />
+    <None Include="images\tool_Line.png" />
+    <None Include="images\tool_pencil.png" />
+    <None Include="images\tool_reactangle.png" />
+    <None Include="images\tool_reactangleFill.png" />
+    <None Include="images\tool_text.png" />
+    <None Include="images\v-sap-big.png" />
+    <None Include="images\v-sap.ico" />
+    <None Include="images\v-sap.png" />
+    <None Include="images\visap1.png" />
+    <None Include="images\visap2 %282%29.png" />
+    <None Include="images\visap2.png" />
+    <None Include="images\visap3.png" />
+    <None Include="images\volumedrag.png" />
+    <None Include="images\volumeLess.png" />
+    <None Include="images\volumeMid.png" />
+    <None Include="images\volumeMore.png" />
+    <None Include="images\volumeMute.png" />
+    <None Include="images\whitestrip.png" />
+    <None Include="images\youtube.png" />
+    <None Include="index.html" />
+    <None Include="locales\workspace-en.json" />
+    <None Include="mongodb Scripts\mongoscript.js" />
+    <None Include="packages.config" />
+    <None Include="scripts\app.js" />
+    <None Include="scripts\controllers\Auth.js" />
+    <None Include="scripts\controllers\config.js" />
+    <None Include="scripts\controllers\group.js" />
+    <None Include="scripts\controllers\msgService.js" />
+    <None Include="scripts\controllers\navController.js" />
+    <None Include="scripts\controllers\localize.js" />
+    <None Include="scripts\controllers\services.js" />
+    <None Include="scripts\controllers\student.js" />
+    <None Include="scripts\controllers\workspace.js" />
+    <None Include="scripts\controllers\user.js" />
+    <None Include="scripts\externals\angular-cookies.min.js" />
+    <None Include="scripts\externals\angular-route.js" />
+    <None Include="scripts\externals\angular-ui-router.js" />
+    <None Include="scripts\externals\angular.min.js" />
+    <None Include="scripts\externals\bootstrap.js" />
+    <None Include="scripts\externals\i18next.min.js" />
+    <None Include="scripts\externals\i18nextSprintfPostProcessor.min.js" />
+    <None Include="scripts\externals\i18nextXHRBackend.min.js" />
+    <None Include="scripts\externals\jquery-1.10.2.min.js" />
+    <None Include="scripts\externals\ng-grid-2.0.11.min.js" />
+    <None Include="scripts\externals\ng-i18next.js" />
+    <None Include="scripts\externals\ng-sanitize.js" />
+    <None Include="scripts\externals\ui-bootstrap-tpls-0.13.3.min.js" />
+    <None Include="views\forgot.password.html" />
+    <None Include="Views\modal.confirmation.html" />
+    <None Include="views\group.create.html" />
+    <None Include="views\group.view.html" />
+    <None Include="views\groupheader.html" />
+    <None Include="Views\login.html" />
+    <None Include="views\nav.html" />
+    <None Include="views\resetPassword.html" />
+    <None Include="Views\searchworkspace.html" />
+    <None Include="views\studentlist.html" />
+    <None Include="Views\user.create.html" />
+    <None Include="Views\user.view.html" />
+    <None Include="views\workspace.create.html" />
+    <None Include="views\workspace.view.html" />
+    <None Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Security\Security.csproj">
+      <Project>{7AA07062-918B-4ED8-A358-F3ED3106FC19}</Project>
+      <Name>Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ViSapDAL\ViSapDAL.csproj">
+      <Project>{E4AA8728-B17A-4E73-BFD0-769F8B1759E7}</Project>
+      <Name>ViSapDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="fonts" />
+    <Folder Include="images" />
+    <Folder Include="images\common" />
+    <Folder Include="locales" />
+    <Folder Include="mongodb Scripts" />
+    <Folder Include="services" />
+    <Folder Include="scripts\externals" />
+    <Folder Include="svc" />
+    <Folder Include="scripts" />
+    <Folder Include="scripts\controllers" />
+    <Folder Include="views" />
+    <Folder Include="css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ViSapWorkspace.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349C5851-65DF-11DA-9384-00065B846F21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>8080</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/ViSapWorkspace/#/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

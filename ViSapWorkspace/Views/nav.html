@@ -1,0 +1,40 @@
+﻿<nav class="navbar navbar-inverse navbar-static-top bg-banner">
+  <div class="container" ng-controller="navController" ng-init="hideworkSpaceName()">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only" ng-i18next="header.navigation"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" ><img src="images/v-sap.png"  ng-i18next="[title]header.title" width="91" height="24" alt="V-SAP"></a> </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav top-nav" id="navtabs">
+        
+        <li id="workspace" class="active" ng-init="workspace()" ng-model="workspace"><a href="#/workspace" ng-show="isVisible"  ng-i18next="header.workspace"></a></li>
+        <li id="user" ng-init="user()" ng-model="user"><a href="#/users" ng-i18next="header.user"></a></li>
+      </ul>
+       <ul class="nav navbar-nav navbar-right">
+      <li class="top-nav-rt" style="text-align:right"><span ng-i18next="header.welcomeLabel"></span><span>, </span><span id="uName" class="wsName">{{loginname}}</span> <a href="#" class="logout" ng-i18next="[title]header.logout" ng-click="logout()"></a><br>
+        <span class="youareIn" ng-if="issuperAdmin"><span ng-i18next="header.workspaceLabel"></span><span>: </span><span class="wsName" >{{workSpaceName}}</span></span></li>
+      </ul>
+    </div>
+    <!--/.nav-collapse --> 
+  </div>
+</nav>
+
+<!--/footer start-->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-6 pull-right">
+        <ul class="footer-links navbar-right footer-links-rt">
+          <li><a href="/VISAP/visaptest/aboutus.html" ng-i18next="footer.aboutUs"></a> | <a href="/VISAP/visaptest/contact.html" ng-i18next="footer.contact"> </a></li>
+          
+          <li>© <span ng-i18next="footer.copyRight"></span> | <a href="/VISAP/visaptest/privacypolicy.html" ng-i18next="footer.privacyPolicy"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--/footer end--> 
+
+
+
+

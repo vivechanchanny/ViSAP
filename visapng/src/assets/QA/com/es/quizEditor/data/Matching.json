@@ -1,0 +1,80 @@
+{
+    "title": "Matching",
+    "testid": "",
+    "questionsData" : [
+						{
+                            "id": "2",
+                            "answers": [
+                                
+                            ],
+                            "leftCol": [
+                                
+                            ],
+                            "modelParagraph": "",
+                            "options": [
+                                {
+                                    "data": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "data": "2",
+                                    "type": "text"
+                                },
+                                {
+                                    "data": "3",
+                                    "type": "text"
+                                },
+                                {
+                                    "data": "4",
+                                    "type": "text"
+                                },
+                                {
+                                    "data": "5",
+                                    "type": "text"
+                                }
+                            ],
+                            "optionsLayout": "",
+                            "questionBody": [
+                                {
+                                    "data": "The impulse passes along a motor neurone.",
+                                    "type": "text"
+                                },
+                                {
+                                    "data": "The impulse passes along a sensory neurone.",
+                                    "type": "text"
+                                },
+                                {
+                                    "data": "Muscles in the arm contract.",
+                                    "type": "text"
+                                },
+                                {
+                                    "data": "Receptors in skin detect a stimulus.",
+                                    "type": "text"
+                                },
+                                {
+                                    "data": "The impulse passes along a relay neurone.",
+                                    "type": "text"
+                                }
+                            ],
+                            "heading": [],
+                            "questionMedia" : [],
+                            "optionsMedia" : [],
+                            "questionLayout": "",
+                            "responseType": "",
+                            "rightCol": [
+                                
+                            ],
+                            "rubric": [
+                                {
+                                    "data": "When your hand touches a hot object, your body responds automatically. Sort the statements describing what happens during the reflex action into the correct order.",
+                                    "type": "text"
+                                }
+                            ],
+                            "title": "Matching",
+                            "maxpoints": [
+                                "1"
+                            ],
+                            "type": "MATCHSORT",
+                            "metadata":"Metadata"
+                        }]
+}    

@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Video Tag</title>
+
+        <link href="style/default/jquery-ui.1.10.4.css" rel="Stylesheet" />
+        <script src="scripts/frameworks/jquery/jquery-1.10.2.min.js" type="text/javascript"></script>
+        <script src="scripts/frameworks/jquery/jquery-ui.1.10.4.js" type="text/javascript"></script>
+        <script src="scripts/frameworks/jquery/jquery.blockUI.js" type="text/javascript"></script>
+        <script src="https://www.youtube.com/iframe_api"></script>
+        
+        <link href="style/default/default.css" rel="stylesheet" />
+        <link href="style/default/search.css" rel="Stylesheet" />
+        <script src="scripts/frameworks/visap.js" type="text/javascript"></script>
+        <script src="scripts/frameworks/player.js" type="text/javascript"></script>
+        <script src="scripts/index.js" type="text/javascript"></script>
+
+        <script type="text/javascript">var editMode = false;$(function () { video.fillUserDetails(false) });</script>
+
+    </head>
+    <body onkeyup="javascript:ViTag.setFocus(window.event);">
+        <div class="container">
+        <div class="divStyle5">
+            <div class="topbar">
+                <div class="logovisap">
+                </div>
+                <div class="logomid">
+                    <div class="logout">
+                        <div class="uname"><label id="username"></label>
+                        <a class="aLogout" href="#" onclick="video.fillUserDetails(true);">Logout</a>
+                        </div>                        
+                    </div>
+                    <div>
+                        <input id="vSearch" class="search" type="text" title="Search ( Type '/' )" 
+                        placeholder="Quick Search" name="search" accesskey="q">
+                    </div>
+                    <div class="tabmenu" id="tabEdit">
+                        <div class="iconfolder2" id="divTagging">
+                            <a class="ackStyle" href="edit.htm">Edit</a></div>
+                    </div>
+                    <div class="tabmenu">
+                        <div class="iconfolder" id="videoMenu">
+                            Video</div><div id="menuContainer"></div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="divStyle" id="videoContainer">
+                <table cellpadding="0" cellspacing="0" align="center" id="tblMain">
+                    <tr>
+                        <td>
+                            <table cellpadding="0" cellspacing="0" align="center" class="midmidN3 defaultVideo">
+                                <tr>
+                                    <td class="tdStyle">
+                                        Title: <span id="curSrcTitile"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="viStyle" id="videoMainContainer">
+                                            <div id="playerYT" class="hideEle"></div>
+                                            <video id="vid1" autoplay></video>
+                                            <div class="imgOverlay"><img alt="" id="imgOverlay" src="#" /></div>
+                                            <div class="divAnnotate" id="annotates"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="midmidN2">
+                                    <td class="tdStyle2">
+                                        <img id="imgPlay" alt="" src="images/spacer.gif" class="imgPause" />
+                                        <img id="imgStop" alt="" src="images/spacer.gif" class="imgStop" />
+                                        <div class="divSeekbar"><input type="range" id="seek-bar" value="0" /></div>
+                                        <img id="imgMute" alt="" src="images/spacer.gif" class="imgValx" />
+                                        <div class="divVolbar"><input type="range" id="volume-bar" value="1" class="bar" /></div>
+                                        <div class="divFullScreen"><img id="imgFS" alt="" src="images/spacer.gif" class="imgFS" /></div>
+                                    </td>
+                                </tr>
+                                <tr class="midmidN2 hideEle" id="trtags">
+                                    <td class="tdStyle2">
+                                        <div id="FStags"></div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <br />
+                <div class="vidouter" style="display:none;">
+                    <img id="imgValx" alt="" src="images/spacer.gif" class="imgValx" />
+                    <!--<img id="imgMute" alt="" src="images/spacer.gif" class="imgMute"/>-->
+                    <img id="imgValm" alt="" src="images/spacer.gif" class="imgValm" />
+                </div>
+            </div>
+            <div id="topics" class="topics">
+                <div id="tags"></div>
+            </div>
+            <br />
+            <div class="topics">
+                <div id="myLinks"></div>
+            </div>
+            </div>
+            <div class="footer">
+                HTML5 Support is required to use this site Recommended browsers: Firefox (version
+                21+), Google Chrome (version 28+), IE (version 9+)<br />
+                <a href="http://caniuse.com/#search=video" target="_blank">Refer here for browser comparision</a>
+            </div>
+        </div>
+    </body>
+</html>

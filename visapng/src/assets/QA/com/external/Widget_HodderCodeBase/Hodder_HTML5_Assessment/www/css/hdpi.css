@@ -1,0 +1,35 @@
+.leftcol, .rightcol { width: 45%; display: inline-block; vertical-align: middle; font-weight: bold; }
+.leftcol { text-align: left; margin-right: 10px; }
+.leftcol img { max-width: 100%; margin-right: 10px; width: 90%; }
+.leftcol img[src="interface/audio-start@2x.png"] { width: 70%; }
+.FIBblank {  margin: 10px 0; }
+.opentext textarea{ margin: 3px 0;}
+.quesx, #questionText, .mcq2 input[type="button"], .mcq2 ul li.vsort, .mcq4 ul li.vsort, .dropelement, .matchdrag  {font-weight: bold;}
+#across, #down { width: 48%; display: inline-block; }
+
+@media screen and (orientation: landscape)
+{
+.img2col { display:-webkit-box; }
+.qtext, .qoptions { -webkit-box-flex: 1;  }
+.qtext { -webkit-box-ordinal-group:2; -webkit-box-flex: 2; }
+#questionOptionsCover { -webkit-box-flex: 1; -webkit-box-ordinal-group:1; -webkit-box-pack: center; margin-top: 15px;  }
+.droppables .dropelement { width: 90%; display: block; margin: 10px 20px; padding: 10% 0; }
+/*#across, #down { width: 48%; display: inline-block; }*/
+.crosswordOptionTab {  border: 2px solid #c3c3c3; min-height: 300px; }
+.crosswordmultiplier1 { width: 50%; display: inline-block; vertical-align: top; }
+.crosswordmultiplier2 { width: 35%; display: inline-block; vertical-align: top; }
+
+
+}
+@media screen and (orientation: portrait){
+.crosswordmultiplier1 { width: 100%; display: block;  }
+.instructionTitle{ width: 40%;}
+.crosswordmultiplier2 {width: 80%;
+display: block;
+margin: 0 auto!important;}
+.col-grouping-four { width: 44%; }
+.questionMultipleImages img { width: 60%; }
+.crosswordOptionTab { border: 2px solid #c3c3c3; min-height: 300px;  }
+}
+#questionText {
+padding: 10px 15px 10px 15px!important;}

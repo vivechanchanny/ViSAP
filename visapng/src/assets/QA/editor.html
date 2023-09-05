@@ -1,0 +1,82 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title></title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+
+	<!--link rel="stylesheet" href="css/styles.css"-->
+	<link rel="stylesheet" type="text/css" media="all" href="com/external/jquery-ui/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" media="all" href="com/external/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" media="all" href="com/external/bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" media="all" href="com/external/jqtree/jqtree.css">
+	<link rel="stylesheet" type="text/css" href="css/widgets_header.css"/>	
+	<link rel="stylesheet" type="text/css" href="css/widgets_utils.css"/>
+	<link rel="stylesheet" type="text/css" href="css/widgets_popup.css"/>
+    <!--link rel="stylesheet" type="text/css" href="css/widgets_quizEditor.css"/-->    
+	<link link rel="shortcut icon" href="images/favicon.ico">
+	
+	<link rel="stylesheet" type="text/css" href="com/external/videojs/video-js.css" />
+	<link rel="stylesheet" type="text/css" href="css/widget_global.css"/>
+	<link rel="stylesheet" type="text/css" href="css/widget_color.css"/>
+	<link rel="stylesheet" type="text/css" href="css/widget.css"/>
+	<link rel="stylesheet" type="text/css" href="css/widget_Editor.css"/>	
+	<!--link rel="stylesheet" type="text/css" href="themes/cup/css/widgets_theme.css"/-->
+    <link rel="stylesheet" type="text/css" href="css/widgets_fonts.css"/>
+	<link rel="stylesheet" type="text/css" href="css/widgets_slidernav.css"/>
+    <link rel="stylesheet" type="text/css" href="css/widgets_editor.css">
+    <link rel="stylesheet" type="text/css" href="css/widgets_glossary.css"/>
+	<link rel="stylesheet" type="text/css" href="css/widgets_glossaryEditor.css"/>
+	<link rel="stylesheet" type="text/css" href="com/external/galleria/galleria.classic.css" />
+	
+	
+	<script src="com/external/jquery/jquery.js"></script>
+       	
+	<script src="com/external/backbone/underscore.js"></script>
+	<script src="com/external/backbone/backbone.js"></script>
+	<script src="com/external/jqtree/tree.jquery.js"></script>
+	<script src="com/external/iscroll.js"></script>
+	<script src="com/external/jplayer/mod.csstransforms.min.js"></script>
+	<script src="com/external/jquery-ui/jquery-ui.js"></script>
+        
+	<script src="com/external/bootstrap/js/bootstrap.js"></script>
+	<script src="com/external/rangy-core.js"></script>
+	<script src="com/external/galleria/galleria-1.2.9.js" ></script>
+	<script src="com/external/DetectMobileBrowser.js" ></script>
+	<script src="com/external/jquery.ui.touch.js" ></script>
+	<!--<script src="com/external/jquery.panzoom.js"></script-->
+		<script>
+
+$(window).on("qa_ready",function(){
+//<link rel="stylesheet" type="text/css" href="themes/"+/css/widgets_theme.css"/>
+var fileref, headref;
+fileref = window.document.createElement("link");
+headref = document.getElementsByTagName('head')[0];
+
+fileref.setAttribute("rel", "stylesheet");
+fileref.setAttribute("type", "text/css");
+fileref.setAttribute("href", "themes/" + require.s.contexts._.config.theme + "/css/widgets_theme.css");
+
+headref.appendChild(fileref);
+});
+
+var require ={
+baseUrl : './'
+};
+</script>
+	<script data-main="com/es/main" src="com/external/require.js"></script>
+</head>
+<body>
+
+<div id="container">	
+</div> 
+<div id='QAPlaceHolder'></div>
+<div id="overlay" class="overlay">
+</div>
+</body>
+</html>

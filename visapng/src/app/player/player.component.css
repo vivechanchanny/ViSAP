@@ -1,0 +1,88 @@
+.player-container{
+    margin-right: auto; 
+    margin-left: auto;
+}
+
+.player-container-editmode {
+    width: 100%;
+}
+
+.list-icon {
+    font-size: 31px;
+    margin: -8px 8px;
+    cursor: pointer;
+}
+
+ 
+
+.no-margin {
+    margin: 0;
+    padding: 0;
+}
+
+/*.tagCont {
+    float: left;
+}*/
+.questContent {
+    float: left!important;
+}
+
+.questClass {
+    width: 39.666667%;
+}
+
+ 
+.questContainerFS {
+    height: inherit;
+}
+.videoTag {
+    width: 100%;
+    max-width: 100%;
+}
+.vidcontainer table {
+    width: 100%;
+}
+
+.flex-item{
+    display: flex;
+}
+ 
+.slidernew{
+    margin: 90px 132px;
+    width: 100%;
+}
+
+.margin30{
+    margin: 20px;
+}
+ 
+@media(min-width: 960px) {
+    .player-container {
+        max-width: 60%;
+    }
+}
+
+  
+ .sidenav-container {
+   min-height: 450px;
+  }
+  
+  .scrolling-content {
+    overflow: auto;
+    height: 100%;
+  }
+   
+  
+  .quest-sidenav {
+    width: 30%;
+  }
+
+  .bookmark{
+    width:250px !important;
+    max-height: 482px;
+    overflow-y: auto;
+}
+
+
+
+  

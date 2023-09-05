@@ -1,0 +1,66 @@
+{
+    "title": "Complete the poem (fill in the blanks)",
+    "testid": "",
+    "questionsData" : [
+						{
+                        "id": "",
+                        "heading": [{
+                            "data": "",
+                            "type": "text"
+                        }],
+                        "answers": [
+                            [
+                                "spider"
+                            ],
+                            [
+                                "web"
+                            ],
+                            [
+                                "knows"
+                            ],
+                            [
+                                "flies"
+                            ],
+                            [
+                                "tea"
+                            ],
+                            [
+                                "artist"
+                            ]
+                        ],
+                        "leftCol": [],
+                        "modelParagraph": "",
+                        "options": [],
+                        "optionsLayout": "",
+                        "questionBody": [{
+                                "data": "Clever ",
+                                "type": "text"
+                            },
+                            "GAP", {
+                                "data": " spins a thread <br /> To make a trap we call a ",
+                                "type": "text"
+                            },
+                            "GAP", {
+                                "data": " .<br /> Clever spider ",
+                                "type": "text"
+                            },
+                            "GAP", {
+                                "data": " that she <br /> Will have some ",
+                                "type": "text"
+                            },
+                            "GAP",
+                            "GAP"
+                        ],
+                        "questionLayout": "",
+                        "responseType": "TEXT",
+                        "rightCol": [],
+                        "rubric": [{
+                            "data": "Listen to the poem. Then type in the missing words to complete the poem.",
+                            "type": "text"
+                        }],
+                        "title": "FIB Text",
+                        "maxpoints": ["10"],
+                        "type": "FIB",
+                        "metadata":"Metadata"
+                    }]
+}    

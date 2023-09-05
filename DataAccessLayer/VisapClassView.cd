@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Excel.Visap.Common.ServiceUtility.Utility">
+    <Position X="11" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Excel.Visap.User.User">
+    <Position X="6.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAIAAAAEAAAA=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Excel.Visap.SearchAccess.SearchVideo">
+    <Position X="8.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Search.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Excel.Visap.DataAccessLayer.EditableBaseEntity">
+    <Position X="3.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAgAAIAAAAAAAEAAAAACAAAIAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EditableBaseEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Excel.Visap.DataAccessLayer.BaseEntity">
+    <Position X="6.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAEAAAAAACAAAAAAAAIAAAAAAAAAgAAA=</HashCode>
+      <FileName>BaseEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Excel.Visap.StoreConsants.Constants">
+    <Position X="10.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAABAAAAAAIAABAAAAQAAACAAAAo=</HashCode>
+      <FileName>Consants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Excel.Visap.VideoAccess.Video">
+    <Position X="1" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAQAAAAgAAAEAAAAAAAAgAAAAAAgAAAAEAAAAAAAA=</HashCode>
+      <FileName>Video.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Excel.Visap.MetaDataAccess.VideoMetaData">
+    <Position X="3.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAgAAAEAAAEAAABIAAAAAQAAAAAAAAAAQAAA=</HashCode>
+      <FileName>MetaData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataAccessLayer.MongoDBconnection">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAABAAAAEAAAAAAAAAIAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>MongoDBconnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

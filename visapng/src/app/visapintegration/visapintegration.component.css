@@ -1,0 +1,18 @@
+.closeBtn{ 
+    font-size:18px!important;   
+    cursor: pointer;
+  }
+  .intvideo{
+    font-size: 1.0em;
+  }
+  .mat-input-container{
+  width: 100%;
+  }
+  .headertitle{
+    font-size: 1.3em;
+    font-family: Roboto;
+  }
+  .title{
+font-size: 1.1em;
+font-weight: 600;
+  }

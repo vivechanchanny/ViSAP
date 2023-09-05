@@ -1,0 +1,91 @@
+﻿
+ 
+
+<div class="modal-header">
+	<button type="button" class="close" ng-click="$dismiss('cancel')"
+	aria-label="Close">
+	<span aria-hidden="true" ng-i18next="[title]common.close">&times;</span>
+</button>
+<h4 class="modal-title" id="myModalLabel" ng-modal="UserModalName">{{UserModalName}}</h4>
+</div>
+<!--MODAL CREATE USER START--> 
+<!-- Modal -->
+<div class="modal-body">
+<div id="errormessage" class="alertDecorater" style="display: none;" >
+                    </div>
+<form  name="myForm" novalidate>
+
+    <div class="form-group">
+       <label for="exampleInputEmail1"><span ng-i18next="user.firstName"></span><span class="required">* </span>
+          <span class="wrgmsg"  ng-show="submitted && myForm.firstname.$error.required" ng-i18next="msg.fnBlank"></span>
+          <span class="wrgmsg" ng-show="submitted && myForm.firstname.$error.pattern" ng-i18next="msg.splChar"></span> 
+          <span class="wrgmsg"  ng-show="submitted && myForm.firstname.$error.maxlength" ng-i18next="msg.fnLongTxt"></span>
+       </label>
+       <input type="text" class="form-control" ng-i18next="[placeholder]user.firstName" name="firstname" ng-model="firstname"  ng-pattern="/[a-zA-Z0-9^ ]/" ng-trim="true"  ng-keyup="keyPress($event.value)"  maxlength="255" required>
+     </div>
+              
+    <div class="form-group">
+      <label for="exampleInputEmail1"><span ng-i18next="user.lastName"></span><span class="required">* </span>
+          <span class="wrgmsg"  ng-show="submitted && myForm.lastname.$error.required" ng-i18next="msg.lnBlank"></span>
+          <span class="wrgmsg" ng-show="submitted && myForm.lastname.$error.pattern" ng-i18next="msg.splChar"></span> 
+          <span class="wrgmsg"  ng-show="submitted && myForm.lastname.$error.maxlength" ng-i18next="lnLongTxt"></span>
+     </label>
+      <input type="text" class="form-control" name="lastname" ng-model="lastname" ng-i18next="[placeholder]user.lastName"  ng-pattern="/[a-zA-Z0-9^ ]/" maxlength="255" ng-trim="true"  ng-keyup="keyPress($event.value)" required>
+    </div>
+    
+     <div class="form-group">
+            <label for="exampleInputEmail1"><span ng-i18next="user.loginName"></span><span class="required">* </span>
+                 <span class="wrgmsg"  ng-show="submitted && myForm.Userloginname.$error.required" ng-i18next="msg.loginBlank"></span>
+                 <span class="wrgmsg" ng-show="submitted && myForm.Userloginname.$error.pattern" ng-i18next="msg.splChar"></span>
+                 <span class="wrgmsg"  ng-show="submitted && myForm.Userloginname.$error.maxlength" ng-i18next="msg.loginLongTxt"></span>
+            </label>
+            <input type="text" class="form-control" ng-i18next="[placeholder]user.loginName"  name="Userloginname" ng-model="Userloginname" ng-readonly="loginNameReadOnly" ng-pattern="/[a-zA-Z0-9^ ]/"  maxlength="15" ng-trim="true"  ng-keyup="keyPress($event.value)" required>
+     </div>
+    
+     <div class="form-group">
+       <label for="exampleInputPassword1"><span ng-i18next="login.password"></span><span class="required">* </span>
+           <span class="wrgmsg"  ng-show="submitted && myForm.password.$error.required" ng-i18next="msg.pwdBlank"></span>
+       </label>
+       <input type="password" class="form-control" ng-model="password" name="password" ng-trim="true" ng-i18next="[placeholder]login.password"   maxlength="15" required>
+     </div>
+  
+     <div class="form-group">
+          <label for="exampleInputEmail1"><span ng-i18next="user.email"></span><span class="required">* </span>
+                 <span class="wrgmsg"  ng-show="submitted && myForm.email.$error.required" ng-i18next="msg.emailBlank"></span>
+                 <span  class="wrgmsg" ng-show="(myForm.email.$invalid )&&(myForm.email.$error.email ||myForm.email.$error.pattern)" ng-i18next="msg.emailInvalid"></span>
+          </label>
+           <input type="email" class="form-control" ng-i18next="[placeholder]user.email"  name="email" ng-model="email" ng-pattern="/^([a-zA-Z0-9^ !”#$%&’()*\+,\/;^_`{|}~])+.([a-zA-Z0-9])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/" required >
+     </div>
+     
+      <div class="form-group">
+            <label for="exampleInputPassword1"><span ng-i18next="user.role"></span><span class="required">* </span>
+               <span class="wrgmsg"  ng-show="submitted && myForm.role.$error.required" ng-i18next="msg.selectRole"></span>
+            </label>
+            <select   class="form-control" ng-model="role"  ng-options="role.rolename for role in Roles" ng-change="selectedDropdown('role')">
+                <option ng-hide="role"  value="">{{role}}</option> 
+            </select>
+      </div>
+      
+       <div class="form-group" ng-show="isShow">
+            <label for="exampleInputPassword1"><span ng-i18next="user.workspace"></span><span class="required">* </span>
+                <span class="wrgmsg"  ng-show="submitted && myForm.workspace.$error.required" ng-i18next="msg.selectWorkspace"></span>
+            </label>
+                      
+            <select  id ="workspaceId" class="form-control">
+                <option value="" ng-i18next="user.userSelectDropdown"></option>            
+                <option ng-repeat="wrk in workspaces"  ng-selected="{{workspacename == wrk.name}}" title="{{wrk.name}}" value="{{wrk.nameValue}}" >
+                {{wrk.nameValue}}
+                </option>
+             </select>
+          </div>   
+
+</form>
+</div>
+      <div class="modal-footer">
+         <button type="button" class="btn btn-primary" ng-click="submitted=true;saveUser()"  id="save" ng-i18next="common.save"></button>
+	     <button type="button" ng-click="$dismiss('cancel')" class="btn btn-default" id="cancel" ng-i18next="common.cancel"></button>
+      </div>
+
+<!--MODAL CREATE USER END--> 
+
+	 

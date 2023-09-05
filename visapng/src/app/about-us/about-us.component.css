@@ -1,0 +1,18 @@
+.container{
+    margin: 10px;
+    margin-top: 5px;
+}
+
+.login-container {
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+ 
+.login {
+    background-image: url('../../assets/images/common/login/login.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    vertical-align: middle;
+    padding-right: 20px !important;
+    text-decoration: none;
+}

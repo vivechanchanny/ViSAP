@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViTag", "ViTag.csproj", "{E5F41E90-9233-411D-9C8F-1B418E640E68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestVisap", "..\UnitTestVisap\UnitTestVisap.csproj", "{58A5EDAE-71E6-4857-A7F5-BA65DDC2475D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "..\DataAccessLayer\DataAccessLayer.csproj", "{2DA6A330-6F84-423F-A0F0-5B4ACBE51AC8}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://es-tfs-2013.excelindia.com:8080/tfs/es%20products_services
+		SccProjectUniqueName0 = ViTag.csproj
+		SccProjectName0 = .
+		SccAuxPath0 = http://es-tfs-2013.excelindia.com:8080/tfs/es%20products_services
+		SccLocalPath0 = .
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = ..\\UnitTestVisap\\UnitTestVisap.csproj
+		SccProjectName1 = ../UnitTestVisap
+		SccAuxPath1 = http://es-tfs-2013.excelindia.com:8080/tfs/es%20products_services
+		SccLocalPath1 = ..\\UnitTestVisap
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = ..\\DataAccessLayer\\DataAccessLayer.csproj
+		SccProjectName2 = ../DataAccessLayer
+		SccAuxPath2 = http://es-tfs-2013.excelindia.com:8080/tfs/es%20products_services
+		SccLocalPath2 = ..\\DataAccessLayer
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5F41E90-9233-411D-9C8F-1B418E640E68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5F41E90-9233-411D-9C8F-1B418E640E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5F41E90-9233-411D-9C8F-1B418E640E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5F41E90-9233-411D-9C8F-1B418E640E68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58A5EDAE-71E6-4857-A7F5-BA65DDC2475D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58A5EDAE-71E6-4857-A7F5-BA65DDC2475D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58A5EDAE-71E6-4857-A7F5-BA65DDC2475D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58A5EDAE-71E6-4857-A7F5-BA65DDC2475D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DA6A330-6F84-423F-A0F0-5B4ACBE51AC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DA6A330-6F84-423F-A0F0-5B4ACBE51AC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DA6A330-6F84-423F-A0F0-5B4ACBE51AC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DA6A330-6F84-423F-A0F0-5B4ACBE51AC8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,50 @@
+{
+    "title": "MCQ - Single Response",
+    "testid": "",
+    "questionsData" : [
+						{
+							"id" : "1",
+							"answers":[2],
+							"heading":[],
+							"leftCol":[],
+							"modelParagraph":"",
+							"options":[
+									[{
+										"data":"he goes to parties all the time.",
+										"type":"text"
+									}],
+									[{
+										"data":"he never goes to parties.",
+										"type":"text"
+									}],
+									[{
+										"data":"he goes to parties all the time.",
+										"type":"text"
+									}],
+									[{
+										"data":"he never goes to parties.",
+										"type":"text"
+									}]
+							],
+							"optionsLayout":"",
+							"questionBody":[
+										{
+											"data":"He used to be shy but now...",
+											"type":"text"
+										}
+							],
+							"questionLayout":"",
+							"responseType":"BUTTON",
+							"rightCol":[],
+							"rubric":[{
+											"data":"Select the correct option.",
+											"type":"text"
+										}],
+							"questionMedia" : [],
+							"optionsMedia" : [],
+							"title": "MCQ - Single Response",
+							"maxpoints":["1"],
+							"type":"MCQ",
+							"metadata":"Metadata"
+						}]
+}	

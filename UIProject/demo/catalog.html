@@ -1,0 +1,135 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Video Tag</title>
+
+        <link href="../style/default/jquery-ui.1.10.4.css" rel="stylesheet" type="text/css" />
+        <link href="../style/default/jcarousel.basic.css" rel="stylesheet" type="text/css" />
+        <link href="../style/default/style_paging.css" rel="stylesheet" type="text/css" />
+        <script src="../scripts/frameworks/jquery/jquery-1.10.2.min.js" type="text/javascript"></script>
+        <script src="../scripts/frameworks/jquery/jquery-ui.1.10.4.js" type="text/javascript"></script>
+        <script src="../scripts/frameworks/jquery/jquery.blockUI.js" type="text/javascript"></script>
+        <script src="../scripts/frameworks/jquery/jquery.pages.js" type="text/javascript"></script>
+        <script src="https://www.youtube.com/iframe_api"></script>
+
+        <link href="../style/default/search.css" rel="stylesheet" type="text/css" />
+        <link href="../style/default/index.css" rel="stylesheet" type="text/css" />
+        <link href="../style/default/player.dark.css" rel="stylesheet" type="text/css" />
+        <script src="../scripts/catalog.js" type="text/javascript"></script>
+        <script src="../scripts/index.js" type="text/javascript"></script>
+        <script src="../scripts/frameworks/visap.js" type="text/javascript"></script>
+        <script src="../scripts/frameworks/player.js" type="text/javascript"></script>
+
+    </head>
+    <body>
+        <div class="header">
+            <div class="wrap">
+                <div class="logo">
+                    <a href="catalog.html">
+                        <img src="../images/logo.png" title="logo" />
+                    </a>
+                </div>
+                <div class="top-menu">
+                    <div class="top-nav">
+                        <ul>
+                            <li><a href="http://www.youtube.com/videoediting" target="_blank">Blog</a></li>
+                            <li id="tabCat_Edit"> <a href="../edit.htm">Edit </a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <br />
+                    <br />
+                    <div class="searchview">
+                        <input type="text" id="vSearchondemo" class="textbox" placeholder="Search Video">
+                        <input type="submit" value=" " onclick="searcher.init();" />
+                    </div>
+                    <div class="clear">
+                    </div>
+                    <div class="logout">
+                        <div class="uname">
+                            <label id="username"></label>
+                            <a class="aLogout" href="#" onclick="logout();">Logout</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <div class="main-content">
+            <div class="wrap">
+                <div class="right-content">
+                    <div class="right-content-heading">
+                        <div class="right-content-heading-left">
+                            <h3>
+                                Latest Colletcions of videos
+                            </h3>
+                        </div>
+                        <div class="right-content-heading-right">
+                            <div class="social-icons">
+                                <ul>
+                                    <li><a class="facebook" href="#" target="_blank"></a></li>
+                                    <li><a class="twitter" href="#" target="_blank"></a></li>
+                                    <li><a class="googleplus" href="#" target="_blank"></a></li>
+                                    <li><a class="pinterest" href="#" target="_blank"></a></li>
+                                    <li><a class="dribbble" href="#" target="_blank"></a></li>
+                                    <li><a class="vimeo" href="#" target="_blank"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                    <div class="content-grids" id="maintThumbnail">
+                        <div id="contentGrid">
+                        </div>
+                        <div class="clear">
+                        </div>
+                        <div class="holder"></div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div id="_tmpl" class="_tmpl" style="display: none">
+            <div class="content-grid">
+                <a href="#" onclick="showLightbox('#vSrc#','#YT#');">
+                    <img title="#ttl#" id="Img1" src="#src#"  height="170px" width="250px">
+                </a>
+                <h3>
+                    #description#
+                </h3>
+                <a href="#" onclick="showLightbox('#watchSrc#', '#YT#');" class="button">Watch now</a>
+            </div>
+        </div>
+        <div id="playContainer" style="display:none;">
+            <a href="#"><img class="jcarousel-control-close" onclick="javascript:catalog.closePlayer();" src="../demo/images/_close.png" /></a>
+            <div style="display:inline-flex;" class="jcarousel-wrapper">
+                <div class="left-sidebar">
+                    <div class="type-videos" id="tagspanel"></div>
+                </div>
+                <div>
+                     <div id="videoContainer" class="containervideo"></div>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <div class="copy-right">
+            <p>
+                Design by <a href="http://www.excelindia.com/">ExcelSoft</a>
+            </p>
+        </div>
+    </body>
+</html> 

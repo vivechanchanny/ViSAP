@@ -1,0 +1,23 @@
+.margin30{
+    margin: 0px 20px auto;
+}
+
+.toolwidth{
+    width:100%;
+}
+ 
+.spacebtn{
+    margin-right: 5px;
+}
+
+.max-error-msg {
+    margin-bottom: 5px;
+}
+
+
+@media (max-width:320px){
+    .toolwidth{
+        width:265px;
+    }
+    
+}

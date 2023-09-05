@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets"/>
+<Import Project="$(MSBuildExtensionsPath)\ExtensionPack\4.0\MSBuild.ExtensionPack.tasks"/>
+<UsingTask AssemblyFile="CustomTasks\Build.CustomTasks.dll" TaskName="Build.CustomTasks.UpdateBuildNumber"/>
+<UsingTask AssemblyFile="CustomTasks\Build.CustomTasks.dll" TaskName="Build.CustomTasks.UpdateincBuildNumber"/>
+ <!--$(MSBuildExtensionsPath)-C:\Program Files (x86)\MSBuild-->
+ <Import Project=".\DeploymentConfig.xml"/> 
+ <Import Project=".\Build.Properties"/>
+ 
+ <!-- Task to replace web.config changes STARTS -->
+ <UsingTask TaskName="FindandReplace" TaskFactory="CodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll">
+    <ParameterGroup>
+      <Path ParameterType="System.String" Required="true" />
+      <Token ParameterType="System.String" Required="true" />
+      <Replacement ParameterType="System.String" Required="true" />
+    </ParameterGroup>
+    <Task>
+     <Using Namespace="System.Text.RegularExpressions"/>
+     <Code Type="Fragment" Language="cs">
+       <![CDATA[
+        string cont = File.ReadAllText(Path);
+        cont = Regex.Replace(cont, Token, Replacement, RegexOptions.IgnoreCase);
+        File.WriteAllText(Path,cont);
+        ]]>
+     </Code>
+    </Task>
+  </UsingTask>
+  <!-- Task to replace web.config changes ENDS -->
+  
+  <!-- Creating Application Array list -->
+  <ItemGroup>
+    <Application Include="/$(RootVD)">
+		<PhysicalPath>$(RootPhysicalpath)</PhysicalPath>
+		<AppPool>$(Apppool)</AppPool>
+    </Application>
+	
+    <Application Include="/$(VisapUiVD)">
+		<PhysicalPath>$(VisapUIPhysicalpath)</PhysicalPath>
+		<AppPool>$(Apppool)</AppPool>
+    </Application>
+	
+    <Application Include="/$(VisapWsVD)">
+		<PhysicalPath>$(VisapWSPhysicalpath)</PhysicalPath>
+		<AppPool>$(Apppool)</AppPool>
+    </Application>
+	
+    <Application Include="/$(QuizVD)">
+		<PhysicalPath>$(QuizPhysicalpath)</PhysicalPath>
+		<AppPool>$(Apppool)</AppPool>
+	</Application>
+    
+    <Application Include="/$(SnapshotVD)">
+		<PhysicalPath>$(SnapRepoPhysicalpath)</PhysicalPath>
+		<AppPool>$(IMRepoApppool)</AppPool>
+    </Application>
+    
+    <Application Include="/$(ImageVD)">
+		<PhysicalPath>$(ImageRepoPhysicalpath)</PhysicalPath>
+		<AppPool>$(IMRepoApppool)</AppPool>
+    </Application>
+	
+    <Application Include="/$(VideoCpVD)">
+		<PhysicalPath>$(VideoCPPhysicalpath)</PhysicalPath>
+		<AppPool>$(VIRepoApppool)</AppPool>
+    </Application>
+	
+    <Application Include="/$(VideoVD)">
+		<PhysicalPath>$(VideoRepoPhysicalpath)</PhysicalPath>
+		<AppPool>$(VIRepoApppool)</AppPool>
+    </Application>
+	
+  </ItemGroup>
+ <!-- Creating Application Array list Ends-->
+ 
+   <Target Name="build" DependsOnTargets="Pull;IncrementBuildLabel;Tag;clean;compile;Assemble;IISAppConfig"/>
+	
+   <!-- IIS TARGETS START -->
+   <Target Name="IISAppConfig" DependsOnTargets="StartTime;Deployment;Applicationconfig;EndTime">  
+		<Exec Command="echo	IISAppConfig target is completed successfully >> &quot;.\Buildsummary.txt&quot;" />
+   </Target>
+   <!-- IIS TARGETS ENDS -->
+  
+	<!-- Pull TARGETS START -->
+	<Target Name="Pull">
+      <Exec Command="git checkout master" />
+      <Exec Command="git pull http://gitrepo:80/scm/git/ViSAP" WorkingDirectory="D:\GIT\ViSAP"/>
+    </Target>
+	<!-- Pull TARGETS ENDS -->
+	
+	<!-- TAG TARGETS START -->
+	<Target Name="Tag" >
+      <Exec Command="git tag $(Label)" />
+      <Exec Command="git push http://gitrepo:80/scm/git/ViSAP $(Label)" />
+    </Target>
+    <!-- TAG TARGETS ENDS -->
+	
+	<!-- CLEAN TARGETS START -->
+	<Target Name="clean">
+		<MSBuild Projects="..\ViTag.sln" Targets="clean" Properties="Configuration=$(configuration)"/>
+		<MSBuild Projects="..\ViSapWorkspace.sln" Targets="clean" Properties="Configuration=$(configuration)"/>
+		<MSBuild Projects="..\quizService\quizService.sln" Targets="clean" Properties="Configuration=$(configuration)"/>
+		<MSBuild Projects="..\VisapInt.sln" Targets="clean" Properties="Configuration=$(configuration)"/>
+		<MSBuild Projects="..\ssomock\ssomock.sln" Targets="clean" Properties="Configuration=$(configuration)"/>
+	</Target>
+	<!-- GET TARGETS ENDS -->
+	
+  	<!-- COMPILE TARGETS START -->
+	<Target Name="compile">
+		<MSBuild Projects="..\ViTag.sln" Properties="Configuration=$(configuration)" />
+		<MSBuild Projects="..\ViSapWorkspace.sln" Properties="Configuration=$(configuration)" />
+		<MSBuild Projects="..\quizService\quizService.sln" Properties="Configuration=$(configuration)" />
+		<MSBuild Projects="..\VisapInt.sln" Properties="Configuration=$(configuration)"/>
+		<MSBuild Projects="..\ssomock\ssomock.sln" Properties="Configuration=$(configuration)"/>
+	</Target>
+	<!-- COMPILE TARGETS ENDS -->
+	
+	<!-- Just to display start time  -->
+    <Target Name="StartTime">
+        <MSBuild.ExtensionPack.Framework.DateAndTime TaskAction="Get" Format="dd MMM yy HH:mm:ss">
+            <Output TaskParameter="Result" PropertyName="DeploymentStartTime"/>
+        </MSBuild.ExtensionPack.Framework.DateAndTime>
+    </Target>
+	
+	<!-- Assemble TARGETS START -->
+	<Target Name="Assemble">
+		<Exec Command="echo	Target- Assemble Starting, Start Time: ($([System.DateTime]::Now.ToString(&quot;yyyy-MM-dd  HH:mm:ss&quot;)))	>> &quot;.\Buildsummary.txt&quot;" />
+		
+		<Exec Command="Robocopy ..\UIProject .\Build\visap\VisapTest /S /E /XF *.cs *.csproj *.vb *.sln *.user *.vspscc /xd obj Properties svc" ContinueOnError="true" />
+       <Exec Command="Robocopy ..\ViSapWorkspace .\Build\visap\VisapWorkspace /S /E /XF *.cs *.csproj *.vb *.sln *.user *.vspscc /xd obj Properties svc" ContinueOnError="true" />	
+       <Exec Command="Robocopy ..\quizService .\Build\visap\quiz /S /E /XF *.cs *.csproj *.vb *.sln *.user *.vspscc /xd obj Properties svc" ContinueOnError="true" />
+       <Exec Command="Robocopy ..\ViSAPFx .\Build\ViSAPFx /S /E /XF *.cs *.csproj *.vb *.sln *.user *.vspscc /xd obj bin Properties svc" ContinueOnError="true" />	 	
+       		
+		<Exec Command="echo	Target- Assemble Completed, End Time : ($([System.DateTime]::Now.ToString(&quot;yyyy-MM-dd  HH:mm:ss&quot;)))	>> &quot;.\Buildsummary.txt&quot;" />
+		<Exec Command="echo.>> &quot;.\Buildsummary.txt&quot;" />
+   </Target>
+   <!-- Assemble TARGETS Ends -->
+   
+   <Target Name="Deployment">
+	<!-- DEPLOYMENT TARGETS START -->
+		<Exec Command="echo	Target- Deployment Starting, Start Time: ($([System.DateTime]::Now.ToString(&quot;yyyy-MM-dd  HH:mm:ss&quot;)))	>> &quot;.\Buildsummary.txt&quot;" />
+		
+		<Exec Command="robocopy $(BuildFolderPath)\visap $(TADest) /e >>\deployment.txt" ContinueOnError="true" />
+		<Exec Command="robocopy $(BuildFolderPath)\ViSAPFx D:\Projects\ViSAPFx /e >>\deployment.txt" ContinueOnError="true" />
+		<Exec Command="echo	Target- Deployment Completed, End Time : ($([System.DateTime]::Now.ToString(&quot;yyyy-MM-dd  HH:mm:ss&quot;)))	>> &quot;.\Buildsummary.txt&quot;" />
+		<Exec Command="echo.>> &quot;.\Buildsummary.txt&quot;" />
+   </Target>
+  <!-- DEPLOYMENT TARGETS ENDS -->
+  
+   <!-- Creatting Appool TARGETS START -->
+	<Target Name="CreateApppool">
+		<Exec Command="echo	Target- CreateApppool Starting, Start Time: ($([System.DateTime]::Now.ToString(&quot;yyyy-MM-dd  HH:mm:ss&quot;)))	>> &quot;.\Buildsummary.txt&quot;" />
+		
+		<MSBuild.ExtensionPack.Web.Iis7AppPool TaskAction="CheckExists" Name="$(Apppool)" MachineName="$(Targetserver)">
+			<Output TaskParameter="Exists" PropertyName="DoesExist" />
+		</MSBuild.ExtensionPack.Web.Iis7AppPool>
+		<MSBuild.ExtensionPack.Web.Iis7AppPool TaskAction="Delete" Name="$(AppPool)" QueueLength="$(QueueLength)"  IdleTimeOut="$(IdleTimeOut)" IdentityType="NetworkService" PipelineMode="$(AppPipelinemode)" MachineName="$(Targetserver)" Condition="'$(DoesExist)'=='True'"/>
+		<MSBuild.ExtensionPack.Web.Iis7AppPool TaskAction="Create" Name="$(AppPool)" QueueLength="$(QueueLength)"  IdleTimeOut="$(IdleTimeOut)" IdentityType="NetworkService" PipelineMode="$(AppPipelinemode)" ManagedRuntimeVersion="$(ASPNetVersion)" MachineName="$(Targetserver)"/>
+		
+		<MSBuild.ExtensionPack.Web.Iis7AppPool TaskAction="CheckExists" Name="$(TestApppool)" MachineName="$(Targetserver)">
+			<Output TaskParameter="Exists" PropertyName="DoesExist" />
+		</MSBuild.ExtensionPack.Web.Iis7AppPool>
+		<MSBuild.ExtensionPack.Web.Iis7AppPool TaskAction="Delete" Name="$(TestAppPool)" QueueLength="$(QueueLength)"  IdleTimeOut="$(IdleTimeOut)" IdentityType="SpecificUser" Enable32BitAppOnWin64 ="$(Enable32BitAppOnWin64)" PoolIdentity="$(IdentityUsername)" IdentityPassword="$(IdentityPassword)" PipelineMode="$(AppPipelinemode)" MachineName="$(Targetserver)" Condition="'$(DoesExist)'=='True'"/>
+		<MSBuild.ExtensionPack.Web.Iis7AppPool TaskAction="Create" Name="$(TestAppPool)" QueueLength="$(QueueLength)"  IdleTimeOut="$(IdleTimeOut)" IdentityType="SpecificUser" Enable32BitAppOnWin64 ="$(Enable32BitAppOnWin64)" PoolIdentity="$(IdentityUsername)" IdentityPassword="$(IdentityPassword)" PipelineMode="$(AppPipelinemode)" ManagedRuntimeVersion="$(ASPNetVersion)" MachineName="$(Targetserver)"/>
+		
+		<MSBuild.ExtensionPack.Web.Iis7AppPool TaskAction="CheckExists" Name="$(RepoApppool)" MachineName="$(Targetserver)">
+			<Output TaskParameter="Exists" PropertyName="DoesExist" />
+		</MSBuild.ExtensionPack.Web.Iis7AppPool>
+		<MSBuild.ExtensionPack.Web.Iis7AppPool TaskAction="Delete" Name="$(RepoApppool)" QueueLength="$(QueueLength)"  IdleTimeOut="$(IdleTimeOut)" IdentityType="SpecificUser" Enable32BitAppOnWin64 ="$(Enable32BitAppOnWin64)" PoolIdentity="$(RepServerusername)" IdentityPassword="$(RepServerpassword)" PipelineMode="$(AppPipelinemode)" MachineName="$(Targetserver)" Condition="'$(DoesExist)'=='True'"/>
+		<MSBuild.ExtensionPack.Web.Iis7AppPool TaskAction="Create" Name="$(RepoApppool)" QueueLength="$(QueueLength)"  IdleTimeOut="$(IdleTimeOut)" IdentityType="SpecificUser" Enable32BitAppOnWin64 ="$(Enable32BitAppOnWin64)" PoolIdentity="$(RepServerusername)" IdentityPassword="$(RepServerpassword)" PipelineMode="$(AppPipelinemode)" ManagedRuntimeVersion="$(ASPNetVersion)" MachineName="$(Targetserver)"/>
+		
+		<Exec Command="echo	Target- CreateApppool Completed, End Time: ($([System.DateTime]::Now.ToString(&quot;yyyy-MM-dd  HH:mm:ss&quot;)))	>> &quot;.\Buildsummary.txt&quot;" />
+		<Exec Command="echo.>> &quot;.\Buildsummary.txt&quot;" />
+	</Target>
+   <!-- Creatting Appool TARGETS ENDS -->
+
+   <!-- Creatting Virtual Directory TARGETS STARTS -->
+	<Target Name="CreateWebApp">
+		<Exec Command="echo	Target- CreateWebApp Starting, Start Time: ($([System.DateTime]::Now.ToString(&quot;yyyy-MM-dd  HH:mm:ss&quot;)))	>> &quot;.\Buildsummary.txt&quot;" />
+		
+		<MSBuild.ExtensionPack.Web.Iis7Application TaskAction="CheckExists" Website="$(WebSiteName)" Applications="@(Application)"  MachineName="$(Targetserver)">
+			<Output TaskParameter="Exists" PropertyName="DoesExist"/>
+		</MSBuild.ExtensionPack.Web.Iis7Application>
+		<MSBuild.ExtensionPack.Web.Iis7Application TaskAction="Delete" Website="$(WebSiteName)" Applications="@(Application)"  MachineName="$(Targetserver)" Condition="'$(DoesExist)'=='True'"/>
+        <MSBuild.ExtensionPack.Web.Iis7Website TaskAction="AddApplication" Name="$(WebSiteName)" Applications="@(Application)" MachineName="$(Targetserver)" Force="true"/>
+		
+		
+    <MSBuild.ExtensionPack.Web.Iis7Application TaskAction="CheckExists" Website="$(WebSiteName)" Applications="@(Repository)"  MachineName="$(RepositoryServer)">
+      <Output TaskParameter="Exists" PropertyName="DoesExist"/>
+    </MSBuild.ExtensionPack.Web.Iis7Application>
+    <MSBuild.ExtensionPack.Web.Iis7Application TaskAction="Delete" Website="$(WebSiteName)" Applications="@(Repository)"  MachineName="$(RepositoryServer)" Condition="'$(DoesExist)'=='True'"/>
+    <MSBuild.ExtensionPack.Web.Iis7Website TaskAction="AddApplication" Name="$(WebSiteName)" Applications="@(Repository)" MachineName="$(RepositoryServer)" Force="true"/>
+	
+		<Exec Command="echo	Target- CreateWebApp Completed, End Time: ($([System.DateTime]::Now.ToString(&quot;yyyy-MM-dd  HH:mm:ss&quot;)))	>> &quot;.\Buildsummary.txt&quot;" />
+		<Exec Command="echo.>> &quot;.\Buildsummary.txt&quot;" />
+  </Target>
+  <!-- Creatting Virtual Directory TARGETS ENDS -->
+ <Target Name="IISCaching">
+    <Exec Command="echo	Target- IISCaching Starting, Start Time: ($([System.DateTime]::Now.ToString(&quot;yyyy-MM-dd  HH:mm:ss&quot;)))	>> &quot;.\Buildsummary.txt&quot;" />
+    <Exec Command="PsExec \\$(Targetserver) -c -f -d iiscp.bat $(AdminVD) $(StudentVD) $(TestPlayerVD) $(EMSVD) $(Apppool) -u $(Serverusername) -p $(Serverpassword)" ContinueOnError="true" />
+    <Exec Command="echo	Target- IISCaching Completed, End Time: ($([System.DateTime]::Now.ToString(&quot;yyyy-MM-dd  HH:mm:ss&quot;)))	>> &quot;.\Buildsummary.txt&quot;" />
+    <Exec Command="echo.>> &quot;.\Buildsummary.txt&quot;" />
+  </Target>
+
+ <Target Name="Applicationconfig">
+    
+    <Exec Command="echo	Target- Applicationconfig Starting, Start Time: ($([System.DateTime]::Now.ToString(&quot;yyyy-MM-dd  HH:mm:ss&quot;)))	>> &quot;.\Buildsummary.txt&quot;" />
+       <Exec Command="dir /s /b $(TADest) | find /I &quot;web.config&quot; > webconfigfiles.txt" /> <!--To find web.config files in all folders-->
+       <Exec Command="type webconfigfiles.txt | findstr /v /c:&quot;Copy of Web.config&quot; > webconfig.txt" />    <!--To remove unwanted lines from webconfig file-->
+       <Exec Command="del webconfigfiles.txt" />    <!--Delete temporary file-->
+       <ReadLinesFromFile File="webconfig.txt">
+      <Output TaskParameter="Lines" ItemName="WebConfigPath"/>
+       </ReadLinesFromFile>
+
+    <Message Text="@(WebConfigPath->'%(Identity)', '%0a%0d')" /> <!--%0A-Linefeed, %0D-Carriage Return-->
+
+    <!--Remove read-only attribute-->
+    <Exec Command="attrib -R &quot;%(WebConfigPath.Identity)&quot;" />
+    <!--Admin connection string-->
+    <MSBuild.ExtensionPack.Xml.XmlFile TaskAction="UpdateAttribute" File="%(WebConfigPath.Identity)" XPath="/configuration/connectionStrings/add[@name='MongoConnectionString']" Key="connectionString" Value="$(adminconnectionstring)" />
+    
+	<MSBuild.ExtensionPack.Xml.XmlFile TaskAction="UpdateAttribute" File="%(WebConfigPath.Identity)" XPath="/configuration/log4net/appender/param[@name='File']" Key="value" Value="C:\Logs\visapTestLog.txt"/>
+	
+    <MSBuild.ExtensionPack.Xml.XmlFile TaskAction="UpdateAttribute" File="%(WebConfigPath.Identity)" XPath="/configuration/system.net/mailSettings/smtp/network[@port='587']" Key="host" Value="email-smtp.us-east-1.amazonaws.com" />
+	
+    <MSBuild.ExtensionPack.Xml.XmlFile TaskAction="UpdateAttribute" File="%(WebConfigPath.Identity)" XPath="/configuration/appSettings/add[@key='fromAddress']" Key="value" Value="visap@excelindia.com" />
+	
+	<!--Repository Path and URL update-->
+	
+	 <MSBuild.ExtensionPack.Xml.XmlFile TaskAction="UpdateAttribute" File="%(WebConfigPath.Identity)" XPath="/configuration/appSettings/add[@key='videoRepository']" Key="value" Value="\\192.168.1.229\Repository\VISAP\ViTagRepo\" />
+	 
+	 <MSBuild.ExtensionPack.Xml.XmlFile TaskAction="UpdateAttribute" File="%(WebConfigPath.Identity)" XPath="/configuration/appSettings/add[@key='snapshotRepository']" Key="value" Value="\\192.168.1.229\Repository\VISAP\SnapshotRepo\" />
+	 
+	 <MSBuild.ExtensionPack.Xml.XmlFile TaskAction="UpdateAttribute" File="%(WebConfigPath.Identity)" XPath="/configuration/appSettings/add[@key='imageRepository']" Key="value" Value="\\192.168.1.229\Repository\VISAP\ViTagImageRepo\" />
+	 
+	 <MSBuild.ExtensionPack.Xml.XmlFile TaskAction="UpdateAttribute" File="%(WebConfigPath.Identity)" XPath="/configuration/appSettings/add[@key='captionRepository']" Key="value" Value="\\192.168.1.229\Repository\VISAP\Videocaption\" />
+	 
+	 <MSBuild.ExtensionPack.Xml.XmlFile TaskAction="UpdateAttribute" File="%(WebConfigPath.Identity)" XPath="/configuration/appSettings/add[@key='videoRepositoryURL']" Key="value" Value="http://visapqa.excelindia.com/VISAP/visaptest/VideoRepo/" />
+	 
+	 <MSBuild.ExtensionPack.Xml.XmlFile TaskAction="UpdateAttribute" File="%(WebConfigPath.Identity)" XPath="/configuration/appSettings/add[@key='snapshotRepositoryURL']" Key="value" Value="http://visapqa.excelindia.com/VISAP/SnapshotRepo/" />
+	 
+	 <MSBuild.ExtensionPack.Xml.XmlFile TaskAction="UpdateAttribute" File="%(WebConfigPath.Identity)" XPath="/configuration/appSettings/add[@key='imageRepositoryURL']" Key="value" Value="http://visapqa.excelindia.com/VISAP/ViTagImageRepo/" />
+	 
+	 <MSBuild.ExtensionPack.Xml.XmlFile TaskAction="UpdateAttribute" File="%(WebConfigPath.Identity)" XPath="/configuration/appSettings/add[@key='visapURL']" Key="value" Value="http://visapqa.excelindia.com/visap/visaptest/gallery.html" />
+	 
+	 <MSBuild.ExtensionPack.Xml.XmlFile TaskAction="UpdateAttribute" File="%(WebConfigPath.Identity)" XPath="/configuration/appSettings/add[@key='captionRepositoryURL']" Key="value" Value="http://visapqa.excelindia.com/VISAP/visaptest/Videocaption/" />
+	 
+	 <MSBuild.ExtensionPack.Xml.XmlFile TaskAction="UpdateAttribute" File="%(WebConfigPath.Identity)" XPath="/configuration/appSettings/add[@key='UserTokenValidatorEndpoint']" Key="value" Value="http://visapqa.excelindia.com/VISAP/visapworkspace/ValidateToken.do" />
+	 <!--Data Base name update-->
+	 
+	 <MSBuild.ExtensionPack.Xml.XmlFile TaskAction="UpdateAttribute" File="%(WebConfigPath.Identity)" XPath="/configuration/appSettings/add[@key='AdminDB']" Key="value" Value="VisapAdminDB" />
+	 
+	 <MSBuild.ExtensionPack.Xml.XmlFile TaskAction="UpdateAttribute" File="%(WebConfigPath.Identity)" XPath="/configuration/appSettings/add[@key='DbName']" Key="value" Value="VisapAdminDB" />
+    <!--<Delete Files="webconfig.txt" />-->
+    
+    <!--Identity Impersonate-->
+    <XmlUpdate XPath="configuration/system.web/identity/@userName" XmlFileName="%(WebConfigPath.Identity)" Value="$(IdentityUsername)"/>
+    <XmlUpdate XPath="configuration/system.web/identity/@password" XmlFileName="%(WebConfigPath.Identity)" Value="$(IdentityPassword)"/>
+    
+    
+	
+	
+
+
+
+
+    <!--Folder permission STARTS-->
+    <MSBuild.ExtensionPack.FileSystem.Folder TaskAction="AddSecurity" Path="%(folderpermission.Identity)" Users="NETWORK SERVICE" AccessType="Allow" Permission="FullControl" />
+    <MSBuild.ExtensionPack.FileSystem.Folder TaskAction="AddSecurity" Path="%(folderpermission.Identity)" Users="IUSR" AccessType="Allow" Permission="FullControl" />
+    <MSBuild.ExtensionPack.FileSystem.Folder TaskAction="AddSecurity" Path="%(folderpermission.Identity)" Users="IIS_IUSRS" AccessType="Allow" Permission="FullControl" />
+    <MSBuild.ExtensionPack.FileSystem.Folder TaskAction="AddSecurity" Path="%(folderpermission.Identity)" Users="NETWORK" AccessType="Allow" Permission="FullControl" />
+    <MSBuild.ExtensionPack.FileSystem.Folder TaskAction="AddSecurity" Path="%(folderpermission.Identity)" Users="Users" AccessType="Allow" Permission="FullControl" />
+    <Exec Command="echo	Target- Applicationconfig Completed, End Time: ($([System.DateTime]::Now.ToString(&quot;yyyy-MM-dd  HH:mm:ss&quot;)))	>> &quot;.\Buildsummary.txt&quot;" />
+    <Exec Command="echo.>> &quot;.\Buildsummary.txt&quot;" />
+    <!--Folder permission ENDS-->
+  </Target>
+
+ <Target Name="Copylog">
+  <Exec Command="copy .\Buildsummary.txt C:\Users\autodep\.jenkins\jobs\SARAS_AutomationDeployment\workspace\" ContinueOnError="true" />
+  <Exec Command="copy C:\Projects\TandA\TATesting\TandA\Report\AutomationReport.zip C:\Users\autodep\.jenkins\jobs\SARAS_AutomationTesting\workspace\" ContinueOnError="true" />
+  </Target>
+
+ <Target Name="mail">
+    <ItemGroup>
+      <!-- Specify some attachments -->
+      <Attachment Include=".\Buildsummary.txt"/>
+
+      <!-- Specify some recipients -->
+      <Recipient Include="anilkumar.mn@excelindia.com"/>
+      <Recipient Include="kumara.chikkaboraiah@excelindia.com"/>
+
+    </ItemGroup>
+
+    <MSBuild.ExtensionPack.Communication.Email TaskAction="Send" Subject="Test Email" SmtpServer="192.168.1.25:587" MailFrom="sarasadmin@excelindia.com" MailTo="anilkumar.mn@excelindia.com" Body="body text" Attachments="@(Attachment)"/>
+
+  </Target>
+  
+ <Target Name="EndTime">
+        <MSBuild.ExtensionPack.Framework.DateAndTime TaskAction="GetElapsed" Start="$(DeploymentStartTime)" Format="Minutes">
+            <Output TaskParameter="Result" PropertyName="DTResult"/>
+        </MSBuild.ExtensionPack.Framework.DateAndTime>
+        <Message Text="Slept For: $(DTResult)"/>
+		<Exec Command="echo	Total Deployment Time: $(DTResult)	>> &quot;.\Buildsummary.txt&quot;" />
+  </Target>
+  
+    <Target Name="IncrementBuildLabel">
+    <Message Text="Updating the build label.." />
+	<Build.CustomTasks.UpdateBuildNumber FileWithBuildNumber="%(FilesWithBuildNumber.Identity)"   />
+    <Build.CustomTasks.UpdateBuildNumber FileWithBuildNumber=".\build.properties"  />
+	<Message Text="Updated Build label for %(FilesWithBuildNumber.Identity)" />
+    <Exec Command="git add -u :/"/>
+    <Exec Command="git commit -m &apos;Incrementing_Tag_Version&apos;"/>
+    <Exec Command="git push origin master"/>
+  </Target>
+
+  <Target Name="IncrementincBuildLabel">
+    <Message Text="Updating the build label.." />
+	<Build.CustomTasks.UpdateincBuildNumber FileWithBuildNumber="%(FilesWithBuildNumber.Identity)"   />
+    <Build.CustomTasks.UpdateincBuildNumber FileWithBuildNumber=".\build.properties"  />
+	<Message Text="Updated Build label for %(FilesWithBuildNumber.Identity)" />
+    <Exec Command="git add -u :/"/>
+    <Exec Command="git commit -m &apos;Incrementing_Tag_Version&apos;"/>
+    <Exec Command="git push origin master"/>
+  </Target>
+</Project>

@@ -1,0 +1,86 @@
+{
+    "title": "Grouping",
+    "testid": "",
+    "questionsData": [
+        {
+            "id": "6",
+            "answers": [
+               	1,
+                2,
+                1,
+                1,
+                2,
+                2
+            ],
+            "leftCol": [],
+            "modelParagraph": "",
+            "options": [
+                {
+                    "data": "Aluminium ions",
+                    "type": "text"
+                },
+                {
+                    "data": "Magnesium ions",
+                    "type": "text"
+                }
+            ],
+            "optionsLayout": "",
+            "questionBody": [
+                [
+                    {
+                        "data": "React with acids to form carbon dioxide",
+                        "type": "text"
+                    }
+                ],
+                [
+                    {
+                        "data": "Form a brown precipitate with sodium hydroxide solution",
+                        "type": "text"
+                    }
+                ],
+                [
+                    {
+                        "data": "Form a white precipitate with sodium hydroxide solution, and dissolve in excess sodium hydroxide",
+                        "type": "text"
+                    }
+                ],
+                [
+                    {
+                        "data": "Form a white precipitate with acidified silver nitrate solution",
+                        "type": "text"
+                    }
+                ],
+                [
+                    {
+                        "data": "Form a white precipitate with sodium hydroxide solution, which remains in excess sodium hydroxide",
+                        "type": "text"
+                    }
+                ],
+                [
+                    {
+                        "data": "Form a white precipitate with acidified barium chloride solution",
+                        "type": "text"
+                    }
+                ]
+            ],
+            "heading": [],
+            "questionMedia": [],
+            "optionsMedia": [],
+            "questionLayout": "",
+            "responseType": "",
+            "rightCol": [],
+            "rubric": [
+                {
+                    "data": "Tick the column for the correct option.",
+                    "type": "text"
+                }
+            ],
+            "title": "Grouping",
+            "maxpoints": [
+                "6"
+            ],
+            "type": "GROUPING",
+            "metadata":"Metadata"
+        }
+    ]
+}

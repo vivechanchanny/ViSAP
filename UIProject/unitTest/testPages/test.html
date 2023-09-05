@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Tag</title>
+    <link rel="stylesheet" href="../css/qunit.css" />
+    <link href="../../style/default/jquery-ui.1.10.4.css" rel="Stylesheet" />
+    <link href="../../style/default/jquery.dataTables.css" rel="Stylesheet" />
+    <script src="../../scripts/frameworks/jquery/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="../../scripts/frameworks/jquery/jquery-ui.1.10.4.js" type="text/javascript"></script>
+    <script src="../../scripts/frameworks/jquery/JSON2.js" type="text/javascript"></script>
+    <script src="../../scripts/frameworks/jquery/jquery.blockUI.js" type="text/javascript"></script>
+    <script src="../../scripts/frameworks/jquery/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="../../scripts/frameworks/jquery/i18next.js" type="text/javascript"></script>
+    <script src="../../scripts/frameworks/jquery/jquery.cookie.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../scripts/visap.localize.js"></script>
+    <script type="text/javascript" src="../../scripts/visap.message.js" ></script>
+    <script type="text/javascript"src="https://www.youtube.com/iframe_api"></script>
+    <script type="text/javascript" src="http://visapdemo.excelindia.com/ViSAPFx/scripts/visap.js"></script>
+    <script type="text/javascript" src="http://visapdemo.excelindia.com/ViSAPFx/scripts/visap.edit.js"></script>
+    <script type="text/javascript" src="http://visapdemo.excelindia.com/ViSAPFx/scripts/sketcher.js"></script>
+    <script type="text/javascript" src="http://visapdemo.excelindia.com/ViSAPFx/scripts/logger.js"></script>
+    <script type="text/javascript" src="http://visapdemo.excelindia.com/ViSAPFx/scripts/visap.logger.js"></script>
+    
+     <script src="../../config.js" type="text/javascript"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="qunit">
+    </div>
+    <div id="qunit-fixture">
+    </div>
+    <canvas id="canvas1"></canvas>
+    <div id="menuContainer">
+    </div>
+    <div class="viStyle" id="videoContainer">
+        <video id="vid1" autoplay controls></video>
+        
+        <div class="imgOverlay">
+            <img alt="" id="imgOverlay" src="#" /></div>
+        <div class="divAnnotate" id="annotates">
+        </div>
+         
+    </div>
+    <div id="editContainer">
+        <div id="message" class="decorater">
+            Message</div>
+        <div id="editTags">
+            <input type="text" name="txtTag" id="txtTag" value="" />
+            <input type="button" name="btn" id="btn" value="Save" />
+            <input type="button" name="btnCancel" id="btnCancel" value="Cancel" /><br />
+            <br />
+            <label id="lblTagTime" for="chkTagTime">
+                <input type="checkbox" name="chkTagTime" id="chkTagTime" />
+            </label>
+            <div id="tagList">
+            </div>
+        </div>
+        <div id="annotate">
+            <input type="text" name="txtAnnotate" id="cmtTitle" value="" class="ipStyle" />
+            <input type="number" min="0" step="1" pattern="\d+" name="txtAnnotate" id="cmtDuration"
+                class="ipStyle2" value="5" />
+            <textarea cols="30" rows="5" id="cmtDesc"></textarea>
+            <input type="button" name="btn" id="cmtSave" value="Save" class="lblStyle3" />
+            <input type="button" name="btnCancel" id="cmtCancel" value="Cancel" />
+            <div id="annotateList">
+            </div>
+        </div>
+
+        <div id="questions" class="decorater">
+            <div id="divOptions">
+                <input type="text" id="qTitle" class="ipStyle4" />
+                <input id="tagTitle" list="dtTagList" class="ipStyle1" /><datalist id="dtTagList"></datalist>
+                <span>
+                    <input type="radio" name="optGroup" /><input type="text" name="optGroup" />
+                    <img src="images/DeleteRed.png" alt="" class="imgStyle1" onclick="ViTag.question.deleteOption(this);" /></span>
+            </div>
+            <br />
+            <input type="button" id="btnAddOpt" value="ADD Options" onclick="ViTag.question.addOption();"
+                class="ipStyle3" />
+            <input type="button" id="saveQues" value="Save" /><input type="button" id="cancelQues"
+                value="Cancel" />
+            <table id="tblQuestions" class="tblStyle1">
+            </table>
+        </div>
+        <div id="hotspot">
+            <div class="row">
+                <div class="col-lft-50">
+                    <dl>
+                        <dt>Title</dt>
+                        <dd>
+                            <label class="required">
+                                <input name="" type="text" id="hotspotTittle" class="modal-textfield" maxlength="50"
+                                    size="50"></label></dd>
+                        <dt>Duration</dt>
+                        <dd>
+                            <label class="required">
+                                <input name="" type="text" id="hotspotDuration"  
+                                    class="modal-textfield" size="3" maxlength="3">
+                            </label>
+                        </dd>
+                        <dt>Show on Pause</dt>
+                        <dd>
+                            <label>
+                                <input name="" type="checkbox" id="hotspotOnpause" class="modal-textfield" size="3"
+                                    maxlength="3">
+                            </label>
+                        </dd>
+                        <dt>Description</dt>
+                        <dd>
+                            <label class="required">
+                                <textarea name="" cols="" rows="4" id="hotspotContent" class="modal-textfield" style="width: 90%"></textarea></label></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="btn-edit">
+                <button type="button" class="btn-primary" id="hotspotsave" name="btn">
+                    Save</button>
+                <button type="button" class="btn-secondary" data-dismiss="modal" id="hotspotcanel"
+                    name="btnCancel">
+                    Cancel</button>
+                <button type="button" class="btn-secondary">
+                    Preview</button>
+            </div>
+        </div>
+        <div id="sketch"></div>
+        <div id="links" class="decorater">
+            <input type="text" id="linkName" />
+            <input type="text" id="linkUrl" />
+            <div class="divStyle4">
+                <input type="button" id="saveLink" value="Save" />
+                <input type="button" id="cnlLink" value="Cancel" />
+                <div id="LinkList">
+                </div>
+            </div>
+        </div>
+    </div>
+     <div id="pausetm0" class="ans actions-border-selected">
+            <a class="pausetime" id="pauseTmanchor0" style="display: block;">00:01</a>
+            <input type="text" maxlength="8" id="pauseTmText0" value="00:01" style="display: inline-block;">
+            <a class="actions-list-edit" onclick="javascript:ViTagUI.editPauseTime(pauseTmanchor0,pauseTmText0)">
+            </a><a class="savePauseTime" onclick="javascript:ViTagUI.SaveActionTime(pauseTmanchor0,pauseTmText0)">
+            </a>
+        </div>
+    <div id="tags">
+    </div>
+    <div id="myLinks">
+    </div>
+    </form>
+      <script src="../scripts/testdata.js" type="text/javascript"></script>
+    <script src="../scripts/testfx.js" type="text/javascript"></script>
+    <script src="../scripts/qunit.js" type="text/javascript"></script>
+    <script src="../scripts/qunit-reporter-junit.js" type="text/javascript"></script>
+    <script src="../scripts/test.js" type="text/javascript"></script>
+  
+</body>
+</html>

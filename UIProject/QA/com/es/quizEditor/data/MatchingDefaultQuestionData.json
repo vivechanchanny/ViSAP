@@ -1,0 +1,48 @@
+
+						{
+                            "id": "",
+                            "answers": [
+                                
+                            ],
+                            "leftCol": [
+                                
+                            ],
+                            "modelParagraph": "",
+                            "options": [
+                                 {
+                                    "data": "Answer 1",
+                                    "type": "text"
+                                },
+                                {
+                                    "data": "Answer 2",
+                                    "type": "text"
+                                }
+                            ],
+                            "optionsLayout": "",
+                            "questionBody": [
+                                {
+                                    "data": "Question 1",
+                                    "type": "text"
+                                },
+                                {
+                                    "data": "Question 2",
+                                    "type": "text"
+                                }
+                               ],
+                            "heading": [],
+                            "questionMedia" : [],
+                            "optionsMedia" : [],
+                            "questionLayout": "",
+                            "responseType": "",
+                            "rightCol": [
+                                
+                            ],
+                            "rubric": [],
+                            "title": "",
+                            "maxpoints": [
+                                "1"
+                            ],
+                            "type": "MATCHSORT",
+                            "metadata":"Metadata"
+                       
+}    

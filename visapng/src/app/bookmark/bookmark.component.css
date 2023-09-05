@@ -1,0 +1,14 @@
+ .poniter{
+     cursor: pointer;
+ }
+
+ .maxwidth{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80% !important;
+ }
+ .floatright{
+     float: right;
+ }
+ 

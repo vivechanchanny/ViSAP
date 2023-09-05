@@ -1,0 +1,35 @@
+/*resets*/
+body, p, div, h1, h2, h3, h4, h5, h6, table, tbody, tr, td, span, blockquote, a, abbr, address, cite, code, img, ul, ol, li, dl, dd, dt, form, label, fieldset, caption, input,  button {
+	border: 0;
+	outline: 0;
+	list-style: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	
+}
+* {
+	-webkit-user-select: none; /* prevent copy paste for all elements */
+	margin: 0;
+	padding: 0;
+	 -webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+html {
+	-webkit-text-size-adjust: none;
+	height: 100%;
+}
+ul, li {
+	list-style: none;
+	line-height:1.5;
+}
+.clearfix:before,.clearfix:after{content:""; display:table;}
+.clearfix:after{clear:both;}
+
+/* working */
+body {
+	height: 100%;
+	font: .8em opensans;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+/*resets*/

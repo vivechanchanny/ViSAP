@@ -1,0 +1,17 @@
+.margin30{
+    margin: 0px 20px auto;
+}
+
+.margin10{
+    margin: 10px;
+}
+
+
+.labelrobota{
+    font-family: Roboto;
+    font-size: 15px;
+}
+
+.max-error-msg {
+    margin-bottom: 5px;
+}

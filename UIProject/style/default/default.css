@@ -1,0 +1,1213 @@
+﻿@charset "utf-8"; 
+/* CSS Document */
+
+.ind-category{
+    background-image: url(../../images/actions/ind-category.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 23px;
+    width: 34px;
+}
+
+.YTimg {
+    background: url(../../images/icn-youtube.png) center center no-repeat;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 23px;
+    width: 34px;
+}
+.hideEle {
+    display: none;
+}
+/*publish message related css starts*/
+.whitemsg {
+    color: white;
+    font-size: 14px;
+}
+/*publish message related css ends*/
+.Timelineimg {
+    background-image: url(../../images/common/ind-tl.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 23px;
+    width: 34px;
+}
+
+.wrgmsg {
+    font-weight: bold;
+    color: Red;
+}
+
+
+.file-upload {
+    margin: 4% 0 4%;
+}
+.uploadlbl {
+    padding: 1px;
+    float: left;
+}
+.uploadfile, .uploadckbox {
+    float: left;
+}
+.contact_form span {
+    text-align: left;
+    font-family: 'open_sansregular';
+    font-size: 0.8925em;
+    color: #808080;
+    text-transform: capitalize;
+    margin: 20px 0 10px;
+    display: block;
+    -webkit-text-stroke: 0.5px;
+    text-stroke : 0.5px;
+}
+.uplmandatory {
+    color: Red !important;
+    float: right !important;
+    margin-top: -32px !important;
+    margin-right: 60px !important;
+}
+.uplmandatory1 {
+    color: red !important;
+    float: right;
+    font-size:12px;
+}
+.contact_form input[type="text"] {
+	 box-sizing: border-box;
+    font-family: 'open_sansregular';
+    padding: 15px;
+    display: block;
+    width: 80%;
+    background: #ffffff;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    border: 1px solid #999;
+    -webkit-appearance: none;
+    
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 30px;
+}
+.lblLoading {
+    font-size: 15px;
+    color: White;
+}
+/* model popup for the import video starts*/
+.imgArrow
+{
+    display:block; background: url(../../images/common/video/icn-play-big.png) center center no-repeat;  left:230px; height:50px;width:50px;position: relative; z-index: 100; opacity: 1.0;cursor:pointer; 
+}
+.modal-textfield {
+    line-height: 20px;
+    padding: 5px;
+    border: 1px solid #999;
+}
+dl {
+    margin: 0;
+    padding: 0;
+}
+
+dt {
+    margin-bottom: 5px;
+}
+
+dd {
+    display: block;
+    margin-left: 0;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.sketch-colors li.selected{
+	box-sizing: border-box;
+	 height: 15px;
+    width: 15px;
+    display: block;
+    border: solid 1px #eee;
+}
+
+.sketch-colors li {
+    height: 15px;
+    width: 15px;
+    display: block;
+    cursor: pointer;
+    float: left;
+}
+
+.required:after {
+    content: " *";
+    font-weight: bold;
+    font-size: 15px;
+    color: red;
+}
+.maskElement{
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  display: inline-block; 
+}
+/* whiteboard*/
+
+.whiteBoardWrapper {
+    top: 0;
+    position: absolute;
+    width:100%;
+    height:100%;
+    display: none;
+}
+
+.wbContainer {
+    float: right;
+    position: absolute;
+    background-color: white;
+    top: 0px;
+    display: none;
+    z-index: 530;
+}
+
+.wbdragbar {
+    background-color: gray;
+    height: 100%;
+    width: 5px;
+    cursor: col-resize;
+}
+
+.wbLeftPos {
+    position:absoulte;
+	box-sizing: border-box;	
+    border-left:1px solid black;
+    max-width: 100%;
+    min-width: 53%;
+    display: none;
+}
+
+.wbRightPos {
+    position: relative;
+	box-sizing: border-box;
+    border-right:1px solid black;
+    max-width: 100%;
+    min-width: 53%;
+    display: none;
+}
+.wbRightFSPos{
+	box-sizing: border-box;
+    width: 53%;
+    right:0px;
+    max-width: 100%;
+    min-width: 53%;
+    border-right:1px solid black;
+    display: none;
+}
+.wbLeftOutPos {
+	 box-sizing: border-box;
+    position: relative;
+    width: 53%;
+    left: -540px;
+    max-width: 540px;
+    min-width: 53%;
+    border-left:1px solid black;
+    display: none;
+}
+
+.wbRightOutPos {
+	box-sizing: border-box;
+    width: 53%;
+    left: 540px;
+    max-width: 382px;
+    min-width: 53%;
+    border-left:1px solid black;
+    display: none;
+}
+
+.wbDragbarRight {
+    float: left;
+}
+
+.wbDragbarLeft {
+    float: right;
+}
+
+.textcontainerWBLeft {
+margin-left:0;
+}
+.textcontainerWBRight {
+margin-left:4px;
+}
+
+.cmt-whiteboard {
+    display: none;
+}
+
+.textcontent {
+    position: absolute;
+    top: 0;
+    width:95%;
+    height:95%;
+    text-align: left;
+    display: none;
+    z-index: -1;
+    margin-left:10px;
+    margin-top: 15px;
+    word-wrap:break-word;
+    font-family: sans-serif;
+}
+.textcontent ul{
+   list-style:disc;
+}
+.annotate-ul ul{
+   list-style:disc; 
+}
+.annotationresizer{
+    width: 12px;
+    height: 12px;
+    background: white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: se-resize;
+}
+.annotContent{
+    width:100%;
+    height:100%;
+    position:absolute;
+    overflow-y:auto;
+    border-radius: 15px;
+}
+.textcontainerWB {
+    position: absolute;
+    float: left;
+    width: 100%;   
+}
+
+.WbimgOverlay {
+    position: absolute;
+    top: 0;
+   
+   /* width:94%;*/
+}
+.wrapperTxtSketch{
+  overflow:auto;
+  height:100%;
+  width:100%;
+  position:absolute;
+  z-index:-1;
+}
+/* End of whiteboard*/
+
+/* css to create timeline videos (video list creation) starts*/
+.vi-list {
+	float: left;
+	width: 100px;
+	height: 70px;
+	
+	margin: 5px;
+
+	background-repeat: no-repeat;
+	background-position: center center;
+	position:relative;
+}
+.vi-list1{
+float: left;
+	width: 100px;
+	height: 70px;
+	
+	margin: 5px;
+cursor: pointer;
+	background-repeat: no-repeat;
+	background-position: center center;
+	position:relative;
+
+
+}
+.vi-list-control {
+	box-sizing: border-box;
+	position: absolute;
+	bottom: -5px;
+	left: 5px;
+	background-color: rgba(0,0,0,.5);
+	height: 30px;
+	width: 100px;
+	line-height: 30px;
+	color: #999;
+	font-size: 11px;
+cursor: pointer;
+	padding-left: 5px;
+}
+	.vi-list-control .lft {
+		float:left;}
+		.vi-list-control .rt {
+		float:right;}
+		
+		.add-vi {
+	color: #CCC;
+	background-image: url(../images/video/add-vi-n.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 20px;
+	float:right;
+	text-decoration:none;
+	}
+	.add-vi:hover, .add-vi:focus {
+	color: #f58220;
+	background-image: url(../images/video/add-vi-s.png);
+	text-decoration:none;
+	}
+   .lft{
+   clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+   max-width: 40px;
+   color: #f58220;
+   font-size: 13px;
+   text-overflow: ellipsis;
+   }
+   
+  /*TimeLine Css*/
+   .startCapture{
+    cursor: pointer;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+	background-position: left center;
+	height:40px;
+    width:114px;
+    background-color:#4ead4f;  
+    color:white;
+   }
+.endCapture{
+    cursor: pointer;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+	background-position: left center;
+	height:40px;
+    width:114px; 
+    background-color:#cf423b;
+    color:white;
+   } 
+
+.timeline {
+    margin-top: 20px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    padding-bottom: 40px;
+}
+
+.timeline-main {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /*background-image: url(../image/bg-timeline.png);*/
+    background-repeat: repeat-x;
+    background-position: left top;
+    overflow: auto;
+}
+
+.bg-timeline {
+    /*background-image: url(../image/bg-timeline.png);*/
+    background-repeat: repeat-x;
+    background-position: left top;
+    display: table;
+}
+
+.tl {
+	box-sizing: border-box;
+    background-color: #cccccc;
+    height: 80px;
+    width: 60px;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #FFF;
+    cursor: pointer;
+}
+
+.tl-video {
+    height: 60px;
+    width: 60px;
+    overflow: hidden;
+    display: block;
+    border-radius: 5px;
+}
+
+.tl-duration {
+    height: 20px;
+    width: 60px;
+    overflow: hidden;
+    display: block;
+    font-size: 11px !important;
+    line-height: 20px;
+    color: black;
+    text-align: center;
+}
+
+.tl-title {
+    font-weight: bold;
+    color: #C60;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.tldetails {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+ .decoraterTimeline {
+   color: #D56600 !important;
+    font-size: 15px;
+    width: 100%;
+    font-weight: bold;
+    margin-left: 0px;
+}
+.timelineimg{
+   display: inline-block;
+    width: 30px;
+    height: 20px;
+    background-image: url(../../images/common/video/ind-tl-small.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.youtubeimg{
+
+display: inline-block;
+    width: 30px;
+    height: 20px;
+    background-image: url(../../images/common/video/ind-yt-small.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+/* End of TimeLine Css*/
+  .deleteicon {
+    display: inline-block;
+    background: url(../../images/common/video/icn-delete.png) center center no-repeat;
+    top: -18px;
+    right: -37px;
+    height: 18px;
+    width: 34px;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+    
+}
+ 
+/* css to create timeline videos (video list creation) ends*/
+.decorater {
+    color: #D56600 !important;
+    font-size: 14px;
+    margin-left: 733px;/* temporarily should be removed*/
+    margin-bottom: 5px;
+    margin-top: -17px;
+    width:auto;
+}
+
+.alertDecorater {
+	position:absolute;
+    color: #FFFFFF !important;
+     top: 50%;
+     left:40%;
+    font-size: 15px;
+    width: 25%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+	filter: alpha(opacity=80);
+	z-index:1001;
+	background-color:rgba(144, 7, 7, 0.48);
+}
+.assignDecorater1 {
+    color: #D56600 !important;
+    font-size: 14px;
+    width: 100%;
+    margin-left: auto;
+   margin-right:auto;
+     margin-bottom: 10px;
+   
+    text-align: center;
+    background-color: white;
+}
+.tag-delete{
+    display: inline-block;
+    background: url(../../images/actions/icn-delete.png) center center no-repeat;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+.tag-edit{
+    display: inline-block;
+    background: url(../../images/actions/icn-edit.png) center center no-repeat;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+.bg-login {
+	background-image: url(../../images/common/login/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #000;
+}
+.login-main {
+	width: 700px;
+	margin-top: 70px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.logo-big {
+	margin-bottom: 50px;
+}
+.login-text {
+	width: 260px;
+	float: left;
+	color: #fff;
+}
+.login-box {
+	background-color: #fff;
+	float: left;
+	width: 400px;
+	margin-left: 40px;
+
+}
+.logintext-big {
+	color: #f58220;
+	font-size: 30px;
+	font-family: "open_sanslight";
+	
+}
+.login-fields {
+	padding:40px;
+		overflow:hidden;}
+		.btn-login {
+				border-color: #e6791d !important;
+
+	
+	
+	float:right;
+	background-color: #de761d !important;
+	color:#fff;
+	font-size:14px;
+	font-family: "open_sanssemibold";
+	}
+/* css for Login Page -- End
+
+
+/**** sketer ***/
+
+
+
+.sketch-colors li.selected{
+	box-sizing: border-box;
+	 height: 15px;
+    width: 15px;
+    display: block;
+    border: solid 1px #eee;
+}
+
+.sketch-colors li {
+    height: 15px;
+    width: 15px;
+    display: block;
+    cursor: pointer;
+    float: left;
+}
+.shapes {
+    margin: 0;
+    padding: 0;
+}
+
+    .shapes li {
+        padding: 0;
+        float: left;
+        list-style-type: none;
+        margin-top: 0;
+        margin-right: 5px;
+        margin-bottom: 0;
+        margin-left: 0;
+        display: inline-block;
+        height: 25px;
+        width: 25px;
+    }
+
+    .shapes li {
+        display: inline-block;
+        float: left;
+        height: 25px;
+        list-style-type: none;
+        margin: 0 5px 0 0;
+        padding: 0;
+        width: 25px;
+    }
+
+.pencil {
+    background-image: url("../../images/actions/icn-pencil.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.line {
+    background-image: url("../../images/actions/icn-line.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.box {
+    background-image: url("../../images/actions/icn-box.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.box-fill {
+    background-image: url("../../images/actions/icn-box-fill.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.circle {
+    background-image: url("../../images/actions/icn-circle.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.tooltext {
+    background-image: url("../../images/actions/icn-text.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.eraser {
+    background-image: url("../../images/actions/icn-eraser.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.sketch-brush-size {
+    position: absolute;
+    height: 7px !important;
+    width: 92% !important;
+    background-color: Black !important;
+}
+
+.div-block {
+    display: block !important;
+    clear: both;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.brush_main{
+    margin-bottom: 47px;
+    margin-top: 40px;
+    cursor: pointer;
+    position: relative;
+}
+
+input[name="brush"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #333;
+    height: 10px;
+    width: 100%;
+    background-repeat: repeat-x;
+    /* margin-left: -7px; */
+    cursor: pointer;
+    padding: 0;
+}
+.sketchbrush{
+position: absolute;
+    background-image: linear-gradient(#444444, #999999);
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+    font: bold 12px/26px Georgia;
+    bottom: 14px;
+}
+.sketchbrush:after { 
+	box-sizing: border-box;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 10px solid #999999;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+     top: 90%;
+    left: 55%;
+  margin-left: -10px;
+}
+.btn-edit{
+    margin-top: 6%;
+}
+
+.buttonselected {
+	box-sizing: border-box;
+    height: 25px;
+    width: 25px;
+    border: solid 1px #000;
+}
+
+.image-Temp{
+ position: absolute;
+   /*top: 1px;
+    left: 1px;*/
+    display: inline;
+}
+/*#imageTemp {
+    position: absolute;
+   /*top: 1px;
+    left: 1px;*/
+  /*  display: inline;
+}*/
+.sketchcontainer-Default{
+top:0;
+}
+ 
+
+
+.text-tool {
+    position: absolute;
+    border: 1px dashed black;
+    outline: 0;
+    display: none;
+    font: 14px Verdana;
+    overflow: hidden;
+}
+
+
+.canvascontainer {
+    cursor: crosshair;
+    position: absolute;
+    z-index: 100;
+    display: inline-block;
+    float: left;
+    /*margin-left: 20px;*/
+}
+
+.sketchCanvas {
+    display: none;
+    position:absolute;
+}
+.whiteboardContainer {
+    position: absolute;
+    z-index: 100;
+      float: left;
+      width:540px;
+      height:100%;
+}
+
+.canvascontainerWB {
+    cursor: crosshair;
+    height:auto;
+}
+
+.canvascontainerLeft {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.canvascontainerRight {
+    margin-left: 0.5px;
+    margin-right: 0;
+}
+
+.canvasWB {
+    position: absolute;
+    display: none;
+}
+
+#imageTempWB {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 90%;
+    height: 100%;
+}
+
+
+.accordion-Actions{
+    max-height: 300px;
+    overflow: auto;
+}
+
+.actionedittime{
+    display: none;
+    width: 60px;
+    text-align: center;
+}
+
+.closetext{
+       padding: 0;
+    list-style-type: none;
+    display: none;
+    margin-top: 0;
+    margin-right: 3px;
+    margin-bottom: 0;
+    margin-left: 3px;
+    cursor: pointer;
+      background-image: url("../../images/common/video/icn-cancel-small.png");
+      background-repeat: no-repeat;
+    background-position: center center;
+    height: 20px;
+    width: 20px;
+}
+
+
+.closeHS {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    margin-top: -5px;
+    float: right;
+}
+
+
+.hotspotBox {
+	box-sizing: border-box;
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha'(Opacity=0.24);
+    -moz-border-radius: 28px;
+    -webkit-border-radius: 28px;
+    color: black;
+    font-family: Arial;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 15px;
+    position: absolute;
+    top: 20px;
+    display: none;
+    width: auto;
+    z-index: 500;
+    float: right;
+    background: rgba(0,0,0,0.5);
+    background-color: #f7f7f7;
+    display: none;
+    overflow-y: auto;
+    text-align: left;
+    left: -7px;
+    min-width: 120px;
+    min-height: 50px;
+    max-height: 180px;
+    border: 2px double red;
+}
+
+.hstitle {
+    color: black;
+    font-size: 14px;
+}
+
+.circleBase {
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+    cursor: pointer;
+}
+
+.hotspotCircle {
+    width: 23px;
+    height: 23px;
+    background-image: url("../../images/actions/icn-info.png");
+    float: right;
+    margin-top: 5px;
+    display: none;
+    color: white;
+    text-align: center;
+    -moz-box-shadow: 1px 1px 3px #000000;
+    -webkit-box-shadow: 1px 1px 3px #000000;
+    box-shadow: 1px 1px 3px #000000;
+}
+
+.tooltip {
+    position: absolute;
+    z-index: 1070;
+    display: block;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+    visibility: visible;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+.tline{
+margin-left:8px;
+}
+
+.tags-links {
+    padding-top: 0;
+    padding-right: 40px;
+    padding-bottom: 0;
+    padding-left: 40px;
+    background-color: #E2E2E2;
+}
+
+.tags {
+    padding-top: 15px;
+    padding-bottom: 5px;
+    width: 100% !important;
+}
+
+
+.links {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #999;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    width: 100% !important;
+}
+
+
+    .links span a {
+        color: #FFF;
+    }
+
+        .links span a:hover {
+            color: #333;
+        }
+
+.tagDiv1, .linkDiv1 {
+    margin-left: 4px;
+}
+
+.tags span {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    line-height: 20px;
+    cursor: pointer;
+    background-color: #666;
+    margin-right: 3px;
+    margin-left: 3px;
+    margin-bottom: 3px;
+    color: #FFF;
+    border-radius: 2px;
+}
+
+    .tags span:hover {
+        display: inline-block;
+        padding-right: 5px;
+        padding-left: 5px;
+        color: #333;
+        line-height: 20px;
+        background-color: #CCC;
+    }
+
+.links span {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    background-color: #666;
+    margin-right: 3px;
+    margin-left: 3px;
+    margin-bottom: 3px;
+    color: #FFF;
+    border-radius: 2px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+    .links span:hover {
+        display: inline-block;
+        padding-right: 5px;
+        padding-left: 5px;
+        line-height: 20px;
+        background-color: #CCC;
+        color: #333;
+    }
+
+
+.tags-links-title {
+    font-weight: bold;
+    cursor: default !important;
+    background-color: #E2E2E2;
+}
+
+.tags .tags-links-title, .tags .tags-links-title:hover {
+    font-weight: bold;
+    cursor: default !important;
+    background-color: #E2E2E2;
+    padding-left: 15px;
+    background-image: url(../../images/player/icn-tags.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.links .tags-links-title, .links .tags-links-title:hover {
+    font-weight: bold;
+    cursor: default !important;
+    background-color: #E2E2E2;
+    padding-left: 15px;
+    background-image: url(../../images/player/icn-links.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.video-description{
+    padding-bottom: 10px;
+    padding-left: 45px;
+}
+
+.navigatelink{
+    color: #333;
+}
+.contact-box {
+    background-color: #fff;
+    float: left;
+    width: 500px;
+    margin-left: 40px;
+
+}
+.act-heading{
+text-align:center;
+}
+.truncate-text{
+    overflow:hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    white-space:nowrap;
+    cursor:default;
+    vertical-align: bottom;
+}
+.text-width{
+    max-width:175px;
+}
+.small-width{
+    max-width:240px;
+}
+.medium-width{
+    max-width:360px;
+}
+
+.large-width{
+    max-width:425px;
+}
+ .err-msg
+ {
+      font-size: 20px;
+      color:red;
+ }
+ .video-List
+ {
+ min-height:150px;
+ }
+ /*Assign Video and pop up  message related css strat*/
+ #displaygroups1
+ {
+   font-size: 20px;
+   width: 520px;
+   margin-left: 35px;
+   top: 10px;
+ }
+
+ .groupname
+ {
+  font-size:14px;
+ cursor:pointer;
+ }
+ .username
+ {
+   font-size:14px;
+ }
+ .groupPanelbody{
+ padding:3px;
+ font-size:15px;
+ padding-left:15px;
+ }
+ .checkBoxGroup,.checkBoxspan{
+ margin-left:10px;
+ }
+ .checkBoxUser{
+ margin-left:27px;
+ margin-right:3px;
+ }
+.sel-AllCheck
+ {
+ margin-left:15px !important;
+ }
+ 
+ /* Assign Video and pop up related css ends*/ 
+ /*abouts html page related css*/
+ .aboutus-main{
+    width: 850px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+
+}
+.aboutus-box {
+    background-color: #fff;
+   
+}
+.title-modal
+{
+font-size:18px;
+}
+.page-title {
+	font-size: 30px;
+	font-family: "open_sanslight";
+	color: #999;
+	margin-bottom: 15px;
+}
+/* Category autocomplete related css starts*/
+ 
+.filecategory{width:570px;}
+.autocomplete-suggestions { border: 1px solid #999; background: #fff; cursor: default; overflow: auto; }
+.autocomplete-suggestion { padding: 2px 5px; font-size:14px; white-space: nowrap; overflow: hidden; }
+.autocomplete-selected { background: #f0f0f0; }
+.autocomplete-suggestions strong { font-weight: normal; color: #3399ff; }
+
+/* Category autocomplete related css ends*/
+
+.login {
+    background-image: url(../../images/common/login/login.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    vertical-align: middle;
+    padding-right: 20px !important;
+}
+/* This css will apply for devices smaller than 768px*/
+@media (max-width: 768px) { 
+    .container-body
+    {
+     margin-top:30px;
+    }
+}
+/* This css will apply for devices greater than 769px*/
+@media (min-width: 769px) { 
+  .container-body{
+     margin-top:150px;
+  }
+  .navBar{
+    top:0;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+
+  }
+  .playerpart
+   {
+    margin-top:-150px;
+   }
+}
+.default-cursor
+{
+ cursor: default;
+}
+.iframeErr{
+   margin-top:25%;
+}
+/**quest resp*/
+.float-left { float:left;}
+.float-right { float:right;}
+.btn { margin:0 10px;}
+
+ 
+ 

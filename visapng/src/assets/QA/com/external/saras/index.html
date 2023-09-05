@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+	<script type="text/javascript" src="../../es/utilities/TPComm.js"></script>
+
+	<script type="text/javascript">
+        var config,data;
+
+        var success = function(obj)
+        {
+            config = obj.config;
+            data = obj.data;
+            
+            TPComm.exec(getContextData,getContextError,TPCommActionConst.GET_CONTEXT_DATA);
+
+            
+        }
+        var error = function()
+        {
+            console.log("error in fetching TPComm data");
+        }
+        var getContextData = function(cdata)
+        {
+            launchQuiz(config.url,cdata.userId,cdata.bookId,data.testId,cdata.accessToken);
+        }
+        var getContextError = function()
+        {
+            console.log("error receiving context data");
+        }
+        function launchQuiz(url,uid,bid,testId,token)
+        {
+            url = url+"/user/"+uid+"/book/"+bid+"/launchQuiz";
+
+            var f = document.createElement("FORM");
+            f.action = url;
+            f.method = "post";
+            var token_tf = document.createElement("INPUT");
+            token_tf.type="hidden";
+            token_tf.name  = "accessToken";
+            token_tf.value = token;
+            var test_tf = document.createElement("INPUT");
+            test_tf.type="hidden";
+            test_tf.name  = "testId";
+            test_tf.value = testId;
+
+            f.appendChild(token_tf);
+            f.appendChild(test_tf);
+
+            document.body.appendChild(f);
+            f.submit();
+        }
+
+        function init(){
+            TPComm.exec(success,error,TPCommActionConst.GET_INITIAL_DATA);
+        }
+</script> 
+
+	</head>
+	<body onload="init()">
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<div>
+    <h3>Videos: List</h3>
+    <ul>
+        <li *ngFor="let item of playlist; let $index = index" (click)="onClickPlaylistItem(item, $index)" [class.selected]="item === currentItem">
+            {{ item.title }}
+        </li>
+    </ul>
+</div>
+
+<div class="playercontainer">
+
+    <vg-player (onPlayerReady)="onPlayerReady($event)">
+        <vg-controls>
+            <vg-play-pause></vg-play-pause>
+
+            <vg-time-display vgProperty="current"></vg-time-display>
+
+            <vg-scrub-bar>
+                <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+            </vg-scrub-bar>
+
+            <vg-time-display vgProperty="total"></vg-time-display>
+
+            <!--<div class="duration-control fa fa-clock-o">
+                <ul class="durations">
+                    <li class="duration-option" *ngFor="let dur of durations" (click)="duration = dur">
+                        {{ dur }}s
+                    </li>
+                </ul>
+            </div>-->
+            <vg-mute></vg-mute>
+            <vg-volume></vg-volume>
+            <vg-fullscreen></vg-fullscreen>
+        </vg-controls>
+
+        <!--<div *ngIf="currentItem.type === 'video/mp4' then staticVideo; else youtubeVideo"></div>-->
+
+        <ng-template [ngIf]="currentItem.type === 'video/mp4'">   <video #media [vgMedia]="media" [src]="currentItem.src" id="player" preload="auto" crossorigin></video></ng-template>
+        <ng-template [ngIf]="currentItem.type === 'youtube'"><app-yt-player class="ytsize"  #svgRefYT id="ytplayer" [vgMedia]="svgRefYT" [src]="currentItem.src" [duration]="duration"></app-yt-player></ng-template>
+        <ng-template [ngIf]="currentItem.type === 'streaming'"><video #media  [vgMedia]="media" [vgDash]="currentItem.src" [vgHls]="currentItem.src" id="streaming" crossorigin> </video></ng-template>
+
+        <!--<ng-template #staticVideo>
+            <video #media [vgMedia]="media" [src]="currentItem.src" id="player" preload="auto" crossorigin></video>
+        </ng-template>-->
+
+        <!--<ng-template #youtubeVideo>
+            <app-yt-player  #svgRefYT id="ytplayer" [vgMedia]="svgRefYT" [src]="currentItem.src" [duration]="duration"></app-yt-player>
+        </ng-template>-->
+    </vg-player>
+</div>

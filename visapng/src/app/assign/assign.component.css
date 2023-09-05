@@ -1,0 +1,41 @@
+.expander-headers-align .mat-expansion-panel-header-title, 
+.expander-headers-align {
+   
+  align-items: center;
+  color:rgba(0,0,0,.54);
+}
+
+.expander-headers-align .mat-expansion-panel-header-description {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.pr10{
+    padding-left:10px;
+    padding-bottom: 10px;
+}
+
+.margin10{
+    margin: 10px !important;
+}
+ 
+.headertitle{
+  font-size:x-large;
+  margin-left: 10px !important;
+  margin-bottom: 20px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  max-width: 80%;
+}
+
+.closebtn{
+  cursor: pointer;
+}
+
+.margin-btn {
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-top: 15px;
+}

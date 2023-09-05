@@ -1,0 +1,6 @@
+﻿ <div ng-init="searchloadWorkspace()">
+<div ng-include src="'views/nav.html'"></div>
+<input type="text" id="serach" ng-model="serach"/>
+<button ng-click="SearchWorkspace()" class="btn btn-success">Search Workspace</button>
+<div class="gridStyle" ng-grid="gridOptions"></div>
+</div>
